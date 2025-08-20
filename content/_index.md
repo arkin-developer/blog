@@ -1,13 +1,12 @@
 ---
 title: "欢迎来到我的博客"
-description: "这是一个使用Hugo和Congo主题构建的个人博客"
 ---
 
 {{< lead >}}
 欢迎来到我的个人博客
 {{< /lead >}}
 
-这是一个使用Hugo和Congo主题构建的个人博客。在这里，我会分享我的想法、经验和学习心得。
+这是个人开发者Arkin的博客。在这里，我会分享我的想法、经验和学习心得。
 
 <!-- <div class="flex px-4 py-2 mb-8 text-base rounded-md bg-primary-100 dark:bg-primary-900">
   <span class="flex items-center pe-3 text-primary-400">
