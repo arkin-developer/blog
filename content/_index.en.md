@@ -9,7 +9,7 @@ Welcome to my personal blog
 
 This is a personal blog built with Hugo and Congo theme. Here I will share my thoughts, experiences, and learning insights.
 
-<div class="flex px-4 py-2 mb-8 text-base rounded-md bg-primary-100 dark:bg-primary-900">
+<!-- <div class="flex px-4 py-2 mb-8 text-base rounded-md bg-primary-100 dark:bg-primary-900">
   <span class="flex items-center pe-3 text-primary-400">
     {{< icon "triangle-exclamation" >}}
   </span>
@@ -22,14 +22,8 @@ This is a personal blog built with Hugo and Congo theme. Here I will share my th
       Switch layout &orarr;
     </button>
   </span>
-</div>
+</div> -->
 
 ## Latest Posts
 
 Please check the article list below to see my recent posts.
-
-## About Me
-
-I'm a passionate technology developer focused on web development and open source projects. I love exploring new technologies, sharing learning experiences, and helping others grow.
-
-Thank you for visiting my blog! If you have any questions or suggestions, feel free to contact me anytime.
