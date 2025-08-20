@@ -15,15 +15,15 @@
   pageRef = "posts"
   weight = 10
 
-[[main]]
-  name = "标签"
-  pageRef = "tags"
-  weight = 20
+# [[main]]
+#   name = "标签"
+#   pageRef = "tags"
+#   weight = 20
 
-[[main]]
-  name = "分类"
-  pageRef = "categories"
-  weight = 21
+# [[main]]
+#   name = "分类"
+#   pageRef = "categories"
+#   weight = 21
 
 [[main]]
   name = "案例"
@@ -31,9 +31,14 @@
   weight = 22
 
 [[main]]
+  name = "Notebooks"
+  pageRef = "notebooks"
+  weight = 23
+
+[[main]]
   name = "简历"
   pageRef = "resume"
-  weight = 23
+  weight = 24
 
 [[main]]
   name = "GitHub"
@@ -60,7 +65,12 @@
 # The footer menu is displayed at the bottom of the page, just before
 # the copyright notice. Configure as per the main menu above.
 
-# [[footer]]
-#   name = "标签"
-#   pageRef = "tags"
-#   weight = 10
+[[footer]]
+  name = "标签"
+  pageRef = "tags"
+  weight = 10
+
+[[footer]]
+  name = "分类"
+  pageRef = "categories"
+  weight = 20
