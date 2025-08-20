@@ -1,13 +1,19 @@
-{{ $jsHome := resources.Get "js/home.js" | resources.Minify | resources.Fingerprint "sha512" }}
-<div id="page">
-  {{ partial "home/page.html" . }}
+<div class="relative min-h-screen">
+  <div class="absolute inset-0 z-0">
+    <img 
+      src="/img/homepage-bg.png" 
+      alt="主页背景" 
+      class="w-full h-full object-cover"
+      style="filter: brightness(0.7);"
+    />
+  </div>
+  
+  <div class="relative z-10 flex flex-col items-center justify-center min-h-screen text-center text-white">
+    {{ partial "profile.html" }}
+    <section class="prose prose-invert max-w-none">{{ .Content | emojify }}</section>
+  </div>
 </div>
-<div id="profile" class="hidden h-full">
-  {{ partial "home/profile.html" . }}
-</div>
-<script
-  defer
-  type="text/javascript"
-  src="{{ $jsHome.Permalink }}"
-  integrity="{{ $jsHome.Data.Integrity }}"
-></script>
+
+<section class="relative z-10">
+  {{ partial "recent-articles.html" . }}
+</section>

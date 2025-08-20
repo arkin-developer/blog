@@ -1,0 +1,32 @@
+/* 主页面背景图样式 */
+.homepage-hero {
+  background-image: url('/img/homepage-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  position: relative;
+}
+
+.homepage-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.homepage-hero > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* 深色模式下的背景图 */
+@media (prefers-color-scheme: dark) {
+  .homepage-hero::before {
+    background: rgba(0, 0, 0, 0.7);
+  }
+}
