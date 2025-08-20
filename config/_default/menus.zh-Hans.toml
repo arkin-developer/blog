@@ -21,14 +21,19 @@
   weight = 20
 
 [[main]]
+  name = "分类"
+  pageRef = "categories"
+  weight = 21
+
+[[main]]
   name = "案例"
   pageRef = "cases"
-  weight = 21
+  weight = 22
 
 [[main]]
   name = "简历"
   pageRef = "resume"
-  weight = 22
+  weight = 23
 
 [[main]]
   name = "GitHub"

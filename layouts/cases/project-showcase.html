@@ -1,0 +1,304 @@
+{{ define "main" }}
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1 class="text-center mb-4">{{ .Title }}</h1>
+      <p class="lead text-center mb-5">{{ .Description }}</p>
+      
+      <!-- 过滤器 -->
+      <div class="filter-container mb-4">
+        <div class="btn-group" role="group">
+          <button type="button" class="btn btn-outline-primary active" data-filter="all">全部</button>
+          <button type="button" class="btn btn-outline-primary" data-filter="web">Web应用</button>
+          <button type="button" class="btn btn-outline-primary" data-filter="mobile">移动应用</button>
+          <button type="button" class="btn btn-outline-primary" data-filter="tool">工具库</button>
+        </div>
+      </div>
+
+      <!-- 项目网格 -->
+      <div class="row" id="projectGrid">
+        <!-- 项目卡片将通过 JavaScript 动态生成 -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+.filter-container {
+  text-align: center;
+}
+
+.project-card {
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  border-color: #007bff;
+}
+
+.project-image {
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.project-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.project-description {
+  color: #6c757d;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.tech-tag {
+  background: #007bff;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.project-link {
+  padding: 0.5rem 1rem;
+  border: 1px solid #007bff;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #007bff;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.project-link:hover {
+  background: #007bff;
+  color: white;
+  text-decoration: none;
+}
+
+.project-link.primary {
+  background: #007bff;
+  color: white;
+}
+
+.project-link.primary:hover {
+  background: #0056b3;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.status-completed {
+  background: #28a745;
+  color: white;
+}
+
+.status-development {
+  background: #ffc107;
+  color: #212529;
+}
+
+.status-planning {
+  background: #6c757d;
+  color: white;
+}
+
+.hidden {
+  display: none !important;
+}
+</style>
+
+<script>
+// 项目数据
+const projects = [
+  {
+    id: 1,
+    title: "个人博客系统",
+    description: "基于 Hugo 构建的现代化个人博客，支持多语言、响应式设计和 SEO 优化。",
+    category: "web",
+    status: "completed",
+    image: "个人博客系统",
+    tech: ["Hugo", "GitHub Pages", "CSS3"],
+    links: {
+      source: "https://github.com/arkin-developer/blog",
+      demo: "https://arkin-developer.github.io/blog"
+    }
+  },
+  {
+    id: 2,
+    title: "在线笔记应用",
+    description: "支持实时协作的在线笔记应用，具有 Markdown 编辑器和版本控制功能。",
+    category: "web",
+    status: "development",
+    image: "在线笔记应用",
+    tech: ["React", "Node.js", "MongoDB"],
+    links: {
+      source: "#",
+      demo: "#"
+    }
+  },
+  {
+    id: 3,
+    title: "任务管理 App",
+    description: "跨平台任务管理应用，支持任务创建、分类、提醒和同步功能。",
+    category: "mobile",
+    status: "completed",
+    image: "任务管理 App",
+    tech: ["React Native", "Firebase", "Redux"],
+    links: {
+      source: "#",
+      demo: "#"
+    }
+  },
+  {
+    id: 4,
+    title: "代码生成器",
+    description: "自动化代码生成工具，支持多种项目模板和自定义配置。",
+    category: "tool",
+    status: "completed",
+    image: "代码生成器",
+    tech: ["Python", "Jinja2", "CLI"],
+    links: {
+      source: "#",
+      demo: "#"
+    }
+  },
+  {
+    id: 5,
+    title: "电商平台",
+    description: "全功能电商平台，包含商品管理、订单处理、支付集成等功能。",
+    category: "web",
+    status: "planning",
+    image: "电商平台",
+    tech: ["Vue.js", "Express", "PostgreSQL"],
+    links: {
+      source: "#",
+      demo: "#"
+    }
+  },
+  {
+    id: 6,
+    title: "API 测试工具",
+    description: "轻量级 API 测试和调试工具，支持多种请求方法和数据格式。",
+    category: "tool",
+    status: "development",
+    image: "API 测试工具",
+    tech: ["Electron", "TypeScript", "SQLite"],
+    links: {
+      source: "#",
+      demo: "#"
+    }
+  }
+];
+
+// 渲染项目卡片
+function renderProjectCard(project) {
+  const statusClass = `status-${project.status}`;
+  const statusText = {
+    completed: "已完成",
+    development: "开发中",
+    planning: "规划中"
+  }[project.status];
+
+  return `
+    <div class="col-lg-4 col-md-6 project-card" data-category="${project.category}">
+      <div class="project-image">${project.image}</div>
+      <span class="status-badge ${statusClass}">${statusText}</span>
+      <h3 class="project-title">${project.title}</h3>
+      <p class="project-description">${project.description}</p>
+      <div class="project-tech">
+        ${project.tech.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
+      </div>
+      <div class="project-links">
+        <a href="${project.links.source}" class="project-link" target="_blank">源码</a>
+        <a href="${project.links.demo}" class="project-link primary" target="_blank">演示</a>
+      </div>
+    </div>
+  `;
+}
+
+// 渲染所有项目
+function renderProjects(projectsToRender = projects) {
+  const grid = document.getElementById('projectGrid');
+  grid.innerHTML = projectsToRender.map(renderProjectCard).join('');
+}
+
+// 过滤项目
+function filterProjects(category) {
+  const filteredProjects = category === 'all' 
+    ? projects 
+    : projects.filter(project => project.category === category);
+  
+  renderProjects(filteredProjects);
+}
+
+// 初始化
+document.addEventListener('DOMContentLoaded', function() {
+  // 渲染初始项目
+  renderProjects();
+  
+  // 绑定过滤器事件
+  document.querySelectorAll('[data-filter]').forEach(button => {
+    button.addEventListener('click', function() {
+      // 更新按钮状态
+      document.querySelectorAll('[data-filter]').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      this.classList.add('active');
+      
+      // 过滤项目
+      const category = this.getAttribute('data-filter');
+      filterProjects(category);
+    });
+  });
+  
+  // 添加项目卡片点击效果
+  document.addEventListener('click', function(e) {
+    if (e.target.closest('.project-card') && !e.target.closest('.project-link')) {
+      const card = e.target.closest('.project-card');
+      card.style.transform = 'scale(0.98)';
+      setTimeout(() => {
+        card.style.transform = 'translateY(-5px)';
+      }, 150);
+    }
+  });
+});
+</script>
+{{ end }}
