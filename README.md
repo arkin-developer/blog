@@ -16,7 +16,7 @@
 - **静态站点生成器**：[Hugo](https://gohugo.io/)
 - **主题**：[Congo](https://github.com/jpanther/congo)
 - **样式**：Tailwind CSS
-- **部署**：GitHub Pages / Netlify / Vercel
+- **部署**：GitHub Pages
 
 ## 📁 项目结构
 
@@ -124,21 +124,23 @@ colorScheme = "congo"  # 可选：congo, avocado, cherry, fire, ocean, sapphire,
 
 ### GitHub Pages
 
-1. 在 GitHub 仓库设置中启用 Pages
-2. 选择 `main` 分支的 `/docs` 文件夹
-3. 构建命令：`hugo --minify --destination docs`
+本项目使用 GitHub Actions 自动部署到 GitHub Pages：
 
-### Netlify
+1. 推送代码到 `main` 分支
+2. GitHub Actions 自动构建和部署
+3. 访问：`https://arkin-developer.github.io/blog`
 
-1. 连接 GitHub 仓库
-2. 构建命令：`hugo --minify`
-3. 发布目录：`public`
+### 手动部署
 
-### Vercel
+```bash
+# 构建
+hugo --minify
 
-1. 导入 GitHub 仓库
-2. 框架预设：Hugo
-3. 自动部署
+# 推送到 GitHub
+git add .
+git commit -m "Update site"
+git push origin main
+```
 
 ## 🔧 自定义开发
 
