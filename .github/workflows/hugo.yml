@@ -29,13 +29,22 @@ jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
-    env:
-      HUGO_VERSION: 0.148.2
     steps:
-      - name: Install Hugo CLI
+      - name: Setup Go
+        uses: actions/setup-go@v4
+        with:
+          go-version: '1.23'
+      - name: Install Hugo Extended
+        env:
+          CGO_ENABLED: 1
         run: |
-          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
-          && sudo dpkg -i ${{ runner.temp }}/hugo.deb
+          # 安装 Hugo Extended 版本
+          go install -tags extended github.com/gohugoio/hugo@latest
+          # 验证安装
+          hugo version
+          # 确保 Hugo 在 PATH 中
+          echo "$GOPATH/bin" >> $GITHUB_PATH
+          export PATH="$GOPATH/bin:$PATH"
       - name: Checkout
         uses: actions/checkout@v4
         with:
@@ -44,16 +53,37 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
+      - name: Install Hugo modules
+        env:
+          PATH: "$GOPATH/bin:$PATH"
+        run: |
+          # 显示模块信息
+          echo "Go modules:"
+          cat go.mod
+          echo "Installing Hugo modules..."
+          hugo mod get -u
+          hugo mod tidy
+          echo "Modules installed successfully"
       - name: Build with Hugo
         env:
           # For maximum backward compatibility with Hugo modules
           HUGO_ENVIRONMENT: production
           HUGO_ENV: production
+          PATH: "$GOPATH/bin:$PATH"
         run: |
+          # 显示构建信息
+          hugo version
+          echo "Building site..."
           hugo \
             --gc \
             --minify \
-            --baseURL "${{ steps.pages.outputs.base_url }}/"
+            --baseURL "${{ steps.pages.outputs.base_url }}/" \
+            --logLevel info
+          # 检查构建输出
+          echo "Build output:"
+          ls -la public/
+          echo "Checking if index.html exists:"
+          ls -la public/index.html || echo "index.html not found!"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
