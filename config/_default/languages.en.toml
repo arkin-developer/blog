@@ -1,0 +1,24 @@
+languageCode = "en-AU"
+languageName = "English"
+languageDirection = "ltr"
+weight = 2
+
+title = "Arkin's Blog"
+
+[params]
+  dateFormat = "2 January 2006"
+
+  mainSections = ["posts"]
+  description = "A personal blog built with Hugo and Congo theme"
+
+[params.author]
+  name = "ArkinDev"
+  image = "img/author.jpg"
+  headline = "Full-stack Developer"
+  bio = "Focused on web development and open source projects, love exploring new technologies and sharing learning experiences"
+  links = [
+    { email = "mailto:your.email@example.com" },
+    { github = "https://github.com/yourusername" },
+    { x-twitter = "https://twitter.com/yourusername" },
+    { linkedin = "https://linkedin.com/in/your-profile" },
+  ]

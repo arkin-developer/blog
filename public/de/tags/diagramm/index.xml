@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Diagramm on </title>
+    <link>//localhost:1313/de/tags/diagramm/</link>
+    <description>Recent content in Diagramm on </description>
+    <generator>Hugo</generator>
+    <language>de</language>
+    <lastBuildDate>Wed, 06 Mar 2019 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/de/tags/diagramm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Diagramme und Flussdiagramme</title>
+      <link>//localhost:1313/de/samples/diagrams-flowcharts/</link>
+      <pubDate>Wed, 06 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/de/samples/diagrams-flowcharts/</guid>
+      <description>Mit Mermaid ist es einfach, Diagramme und Flussdiagramme zu Artikeln hinzuzufügen.</description>
+    </item>
+  </channel>
+</rss>

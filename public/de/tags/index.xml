@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on </title>
+    <link>//localhost:1313/de/tags/</link>
+    <description>Recent content in Tags on </description>
+    <generator>Hugo</generator>
+    <language>de</language>
+    <lastBuildDate>Sun, 04 May 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/de/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Beispiele</title>
+      <link>//localhost:1313/de/tags/beispiele/</link>
+      <pubDate>Fri, 14 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/de/tags/beispiele/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Icons</title>
+      <link>//localhost:1313/de/tags/icons/</link>
+      <pubDate>Fri, 14 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/de/tags/icons/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Shortcodes</title>
+      <link>//localhost:1313/de/tags/shortcodes/</link>
+      <pubDate>Fri, 14 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/de/tags/shortcodes/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>CSS</title>
+      <link>//localhost:1313/de/tags/css/</link>
+      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/de/tags/css/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>HTML</title>
+      <link>//localhost:1313/de/tags/html/</link>
+      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/de/tags/html/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Markdown</title>
+      <link>//localhost:1313/de/tags/markdown/</link>
+      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/de/tags/markdown/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Gist</title>
+      <link>//localhost:1313/de/tags/gist/</link>
+      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/de/tags/gist/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Privatsphäre</title>
+      <link>//localhost:1313/de/tags/privatsph%C3%A4re/</link>
+      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/de/tags/privatsph%C3%A4re/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Twitter</title>
+      <link>//localhost:1313/de/tags/twitter/</link>
+      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/de/tags/twitter/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Vimeo</title>
+      <link>//localhost:1313/de/tags/vimeo/</link>
+      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/de/tags/vimeo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>YouTube</title>
+      <link>//localhost:1313/de/tags/youtube/</link>
+      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/de/tags/youtube/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Latin</title>
+      <link>//localhost:1313/de/tags/latin/</link>
+      <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/de/tags/latin/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sample</title>
+      <link>//localhost:1313/de/tags/sample/</link>
+      <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/de/tags/sample/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Text</title>
+      <link>//localhost:1313/de/tags/text/</link>
+      <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/de/tags/text/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>KaTeX</title>
+      <link>//localhost:1313/de/tags/katex/</link>
+      <pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/de/tags/katex/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mathematik</title>
+      <link>//localhost:1313/de/tags/mathematik/</link>
+      <pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/de/tags/mathematik/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Chart</title>
+      <link>//localhost:1313/de/tags/chart/</link>
+      <pubDate>Wed, 06 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/de/tags/chart/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Diagramm</title>
+      <link>//localhost:1313/de/tags/diagramm/</link>
+      <pubDate>Wed, 06 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/de/tags/diagramm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Graph</title>
+      <link>//localhost:1313/de/tags/graph/</link>
+      <pubDate>Wed, 06 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/de/tags/graph/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mermaid</title>
+      <link>//localhost:1313/de/tags/mermaid/</link>
+      <pubDate>Wed, 06 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/de/tags/mermaid/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Emoji</title>
+      <link>//localhost:1313/de/tags/emoji/</link>
+      <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/de/tags/emoji/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

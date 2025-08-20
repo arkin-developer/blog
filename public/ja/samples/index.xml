@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>サンプル on Congo</title>
+    <link>//localhost:1313/ja/samples/</link>
+    <description>Recent content in サンプル on Congo</description>
+    <generator>Hugo</generator>
+    <language>ja</language>
+    <copyright>&amp;copy; 2024 Congo contributors</copyright>
+    <lastBuildDate>Sun, 04 May 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/ja/samples/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>アイコン</title>
+      <link>//localhost:1313/ja/samples/icons/</link>
+      <pubDate>Fri, 14 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/ja/samples/icons/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Markdown</title>
+      <link>//localhost:1313/ja/samples/markdown/</link>
+      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/ja/samples/markdown/</guid>
+      <description>&lt;p&gt;この記事では、Congoで使用できる基本的なMarkdownフォーマットのサンプルを提供し、またいくつかの基本的なHTML要素がどのように装飾されているかを示します。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>リッチコンテンツ</title>
+      <link>//localhost:1313/ja/samples/rich-content/</link>
+      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/ja/samples/rich-content/</guid>
+      <description>&lt;strong&gt;リッチ&lt;/strong&gt; なコンテンツの &lt;em&gt;一例&lt;/em&gt;</description>
+    </item>
+    <item>
+      <title>プレースホルダー</title>
+      <link>//localhost:1313/ja/samples/placeholder-text/</link>
+      <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/ja/samples/placeholder-text/</guid>
+      <description>&lt;p&gt;Lorem est tota propiore conpellat pectoribus de pectora summo.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>数学的表記</title>
+      <link>//localhost:1313/ja/samples/mathematical-notation/</link>
+      <pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/ja/samples/mathematical-notation/</guid>
+      <description>&lt;p&gt;記事中の数学的表記にKaTeXを使用することができます。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>ダイアグラムとフローチャート</title>
+      <link>//localhost:1313/ja/samples/diagrams-flowcharts/</link>
+      <pubDate>Wed, 06 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/ja/samples/diagrams-flowcharts/</guid>
+      <description>It&amp;rsquo;s easy to add diagrams and flowcharts to articles using Mermaid.</description>
+    </item>
+    <item>
+      <title>チャート（グラフ）</title>
+      <link>//localhost:1313/ja/samples/charts/</link>
+      <pubDate>Wed, 06 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/ja/samples/charts/</guid>
+      <description>CongoにはChart.jsが含まれており、パワフルなチャートとデータのビジュアライゼーションが可能です。</description>
+    </item>
+    <item>
+      <title>絵文字 :parachute:</title>
+      <link>//localhost:1313/ja/samples/emoji/</link>
+      <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/ja/samples/emoji/</guid>
+      <description>📖🏞️🧗🏽🐉🧙🏽‍♂️🧚🏽👸</description>
+    </item>
+    <item>
+      <title>外部記事 - 私がFathom Analyticsに乗り換えた理由</title>
+      <link></link>
+      <pubDate>Thu, 24 Jan 2019 00:00:00 +0000</pubDate>
+      <guid></guid>
+      <description>&lt;code&gt;externalUrl&lt;/code&gt; フロントマターパラメーターは任意のURLにリンクすることができます。この記事は他の記事と同じように見えますが、このウェブサイトの外にある記事にリンクしています。</description>
+    </item>
+  </channel>
+</rss>

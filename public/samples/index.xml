@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>内容样例 on 我的博客</title>
+    <link>//localhost:1313/samples/</link>
+    <description>Recent content in 内容样例 on 我的博客</description>
+    <generator>Hugo</generator>
+    <language>zh-Hans</language>
+    <copyright>&amp;copy; 2024 我的博客</copyright>
+    <lastBuildDate>Sun, 04 May 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/samples/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>图标</title>
+      <link>//localhost:1313/samples/icons/</link>
+      <pubDate>Fri, 14 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/samples/icons/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Markdown</title>
+      <link>//localhost:1313/samples/markdown/</link>
+      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/samples/markdown/</guid>
+      <description>&lt;p&gt;这篇文章提供了一些在Congo中可用的基本Markdown格式的示例，同时展示了如何装饰一些基本的HTML元素。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>富文本</title>
+      <link>//localhost:1313/samples/rich-content/</link>
+      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/samples/rich-content/</guid>
+      <description>这是一个 &lt;em&gt;富&lt;/em&gt; 文本的 &lt;em&gt;简介&lt;/em&gt;</description>
+    </item>
+    <item>
+      <title>占位符文本</title>
+      <link>//localhost:1313/samples/placeholder-text/</link>
+      <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/samples/placeholder-text/</guid>
+      <description>&lt;p&gt;Lorem est tota propiore conpellat pectoribus de pectora summo.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>数学符号</title>
+      <link>//localhost:1313/samples/mathematical-notation/</link>
+      <pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/samples/mathematical-notation/</guid>
+      <description>&lt;p&gt;KaTeX可以用于在文章中呈现数学符号。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>表格</title>
+      <link>//localhost:1313/samples/charts/</link>
+      <pubDate>Wed, 06 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/samples/charts/</guid>
+      <description>Congo使用chart.js来提供强大的表格支持和数据可视化。</description>
+    </item>
+    <item>
+      <title>图表和流程图</title>
+      <link>//localhost:1313/samples/diagrams-flowcharts/</link>
+      <pubDate>Wed, 06 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/samples/diagrams-flowcharts/</guid>
+      <description>使用Mermaid来绘制图表和流程图是非常简单的</description>
+    </item>
+    <item>
+      <title>表情符号 :parachute:</title>
+      <link>//localhost:1313/samples/emoji/</link>
+      <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/samples/emoji/</guid>
+      <description>📖🏞️🧗🏽🐉🧙🏽‍♂️🧚🏽👸</description>
+    </item>
+    <item>
+      <title>外部文章 - 为什么我改用 Fathom Analytics</title>
+      <link></link>
+      <pubDate>Thu, 24 Jan 2019 00:00:00 +0000</pubDate>
+      <guid></guid>
+      <description>Front Matter中的&lt;code&gt;externalUrl&lt;/code&gt; 参数可以链接到任何 URL。这篇文章看起来和其他文章没什么区别，但会链接到 Hugo 网站之外的一篇文章。</description>
+    </item>
+    <item>
+      <title>Beispiele für Inhalte</title>
+      <link>//localhost:1313/samples/_index.de/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/samples/_index.de/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Páginas de ejemplo</title>
+      <link>//localhost:1313/samples/_index.es/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/samples/_index.es/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>サンプル</title>
+      <link>//localhost:1313/samples/_index.ja/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/samples/_index.ja/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
