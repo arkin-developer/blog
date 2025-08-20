@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>测试 on Arkin的博客</title><link>/tags/%E6%B5%8B%E8%AF%95/</link><description>Recent content in 测试 on Arkin的博客</description><generator>Hugo</generator><language>zh-Hans</language><lastBuildDate>Mon, 15 Jan 2024 00:00:00 +0000</lastBuildDate><atom:link href="/tags/%E6%B5%8B%E8%AF%95/index.xml" rel="self" type="application/rss+xml"/><item><title>我的第一篇博客文章</title><link>/posts/my-first-post/</link><pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate><guid>/posts/my-first-post/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>测试 on Arkin的博客</title>
+    <link>//localhost:1313/tags/%E6%B5%8B%E8%AF%95/</link>
+    <description>Recent content in 测试 on Arkin的博客</description>
+    <generator>Hugo</generator>
+    <language>zh-Hans</language>
+    <lastBuildDate>Mon, 15 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/%E6%B5%8B%E8%AF%95/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>我的第一篇博客文章</title>
+      <link>//localhost:1313/posts/my-first-post/</link>
+      <pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/my-first-post/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
