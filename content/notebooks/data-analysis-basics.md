@@ -31,7 +31,7 @@ notebook: "data-analysis-basics.ipynb"
 ## Notebook 预览
 
 <iframe 
-  src="https://nbviewer.jupyter.org/github/arkin-developer/blog/blob/main/static/notebooks/data-analysis-basics.ipynb"
+  src="https://nbviewer.jupyter.org/github/arkin-developer/blog/blob/main/static/notebooks/convlstm-time-series-prediction.ipynb"
   width="100%"
   height="800px"
   frameborder="0"
