@@ -69,11 +69,11 @@
   <!-- 项目信息卡片 -->
   {{ if or .Params.project.tech_stack .Params.project.features }}
     <div class="mb-12 rounded-xl border border-neutral-200 bg-neutral-50 p-8 dark:border-neutral-700 dark:bg-neutral-800">
-      <h2 class="mb-6 text-2xl font-bold text-neutral-900 dark:text-white">项目信息</h2>
+      <h2 class="mb-6 text-2xl font-bold text-neutral-900 dark:text-neutral">项目信息</h2>
       <div class="grid gap-8 md:grid-cols-2">
         {{ if .Params.project.tech_stack }}
           <div>
-            <h3 class="mb-3 text-lg font-semibold text-neutral-900 dark:text-white">技术栈</h3>
+            <h3 class="mb-3 text-lg font-semibold text-neutral-900 dark:text-neutral">技术栈</h3>
             <div class="flex flex-wrap gap-2">
               {{ range .Params.project.tech_stack }}
                 <span class="inline-flex items-center rounded-full bg-primary-100 px-3 py-1 text-sm font-medium text-primary-800 dark:bg-primary-900 dark:text-primary-200">
@@ -85,7 +85,7 @@
         {{ end }}
         {{ if .Params.project.features }}
           <div>
-            <h3 class="mb-3 text-lg font-semibold text-neutral-900 dark:text-white">主要功能</h3>
+            <h3 class="mb-3 text-lg font-semibold text-neutral-900 dark:text-neutral">主要功能</h3>
             <ul class="space-y-2 text-neutral-600 dark:text-neutral-400">
               {{ range .Params.project.features }}
                 <li class="flex items-start">
@@ -113,7 +113,7 @@
   
   {{ if $related }}
     <div class="mt-16 border-t border-neutral-200 pt-12 dark:border-neutral-700">
-      <h2 class="mb-8 text-2xl font-bold text-neutral-900 dark:text-white">相关项目</h2>
+      <h2 class="mb-8 text-2xl font-bold text-neutral-900 dark:text-neutral">相关项目</h2>
       <div class="grid gap-6 md:grid-cols-3">
         {{ range $related }}
           <div class="group overflow-hidden rounded-xl border border-neutral-200 bg-white shadow-sm transition-all duration-300 hover:shadow-lg dark:border-neutral-700 dark:bg-neutral-800">
@@ -123,7 +123,7 @@
               </div>
             {{ end }}
             <div class="p-6">
-              <h3 class="mb-2 font-semibold text-neutral-900 dark:text-white group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
+              <h3 class="mb-2 font-semibold text-neutral-900 dark:text-neutral group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
                 {{ .Title }}
               </h3>
               <p class="mb-4 text-sm text-neutral-600 dark:text-neutral-400">{{ .Description }}</p>

@@ -2,6 +2,7 @@
 title: "个人博客系统"
 description: "基于 Hugo 和 Congo 主题构建的多语言个人博客"
 date: 2024-08-21
+type: "cases"
 tags: ["Hugo", "静态网站", "多语言", "响应式设计"]
 categories: ["Web应用"]
 project:
