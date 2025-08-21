@@ -44,7 +44,7 @@ categories: ["技术演示"]
 ### 基础数据分析 Notebook
 
 <iframe 
-  src="https://nbviewer.jupyter.org/github/arkin-developer/blog/blob/main/static/notebooks/data-analysis-basics.ipynb"
+  src="https://nbviewer.org/github/arkin-developer/blog/blob/main/static/notebooks/convlstm-time-series-prediction.ipynb"
   width="100%"
   height="600px"
   frameborder="0"

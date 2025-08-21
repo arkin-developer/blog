@@ -31,7 +31,7 @@ notebook: "data-analysis-basics.ipynb"
 ## Notebook 预览
 
 <iframe 
-  src="https://nbviewer.jupyter.org/github/arkin-developer/blog/blob/main/static/notebooks/convlstm-time-series-prediction.ipynb"
+  src="https://nbviewer.org/github/arkin-developer/blog/blob/main/static/notebooks/data-analysis-basics.ipynb"
   width="100%"
   height="800px"
   frameborder="0"
@@ -72,7 +72,7 @@ notebook: "data-analysis-basics.ipynb"
      style="display: inline-block; padding: 1rem 2rem; background: #ff6b35; color: white; text-decoration: none; border-radius: 8px; font-weight: bold; margin: 0 1rem;">
     🚀 在 Colab 中打开
   </a>
-  <a href="https://nbviewer.jupyter.org/github/arkin-developer/blog/blob/main/static/notebooks/data-analysis-basics.ipynb" 
+  <a href="https://nbviewer.org/github/arkin-developer/blog/blob/main/static/notebooks/data-analysis-basics.ipynb" 
      target="_blank" 
      style="display: inline-block; padding: 1rem 2rem; background: #007bff; color: white; text-decoration: none; border-radius: 8px; font-weight: bold; margin: 0 1rem;">
     🔗 新窗口打开

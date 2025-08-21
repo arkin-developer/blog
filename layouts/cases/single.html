@@ -1,0 +1,144 @@
+{{ define "main" }}
+<article class="mx-auto max-w-4xl px-4 py-8">
+  <!-- 项目头部信息 -->
+  <header class="mb-12">
+    <div class="mb-6 flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+      <div class="flex-1">
+        <h1 class="mb-4 text-4xl font-bold text-neutral-900 dark:text-white">{{ .Title }}</h1>
+        <p class="text-lg text-neutral-600 dark:text-neutral-400">{{ .Description }}</p>
+      </div>
+      <div class="flex flex-wrap gap-3">
+        {{ if .Params.project.github }}
+          <a href="{{ .Params.project.github }}" target="_blank" class="inline-flex items-center rounded-lg bg-neutral-900 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-neutral-700 dark:bg-neutral-700 dark:hover:bg-neutral-600">
+            <svg class="mr-2 h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+            </svg>
+            GitHub
+          </a>
+        {{ end }}
+        {{ if .Params.project.demo }}
+          <a href="{{ .Params.project.demo }}" target="_blank" class="inline-flex items-center rounded-lg bg-primary-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-primary-700 dark:bg-primary-500 dark:hover:bg-primary-600">
+            <span class="mr-2">🚀</span>
+            在线演示
+          </a>
+        {{ end }}
+      </div>
+    </div>
+    
+    <!-- 项目状态和元信息 -->
+    <div class="flex flex-wrap items-center gap-4">
+      {{ if .Params.project.status }}
+        {{ $statusColor := "bg-neutral-500" }}
+        {{ $statusText := .Params.project.status }}
+        {{ if eq .Params.project.status "completed" }}
+          {{ $statusColor = "bg-emerald-500" }}
+          {{ $statusText = "已完成" }}
+        {{ else if eq .Params.project.status "development" }}
+          {{ $statusColor = "bg-amber-500" }}
+          {{ $statusText = "开发中" }}
+        {{ else if eq .Params.project.status "planning" }}
+          {{ $statusColor = "bg-blue-500" }}
+          {{ $statusText = "规划中" }}
+        {{ end }}
+        <span class="{{ $statusColor }} text-white px-3 py-1 rounded-full text-sm font-medium">{{ $statusText }}</span>
+      {{ end }}
+      
+      {{ if .Params.project.duration }}
+        <div class="flex items-center text-sm text-neutral-500 dark:text-neutral-400">
+          <span class="mr-2">⏱️</span>
+          <span>{{ .Params.project.duration }}</span>
+        </div>
+      {{ end }}
+      
+      {{ if .Params.project.team_size }}
+        <div class="flex items-center text-sm text-neutral-500 dark:text-neutral-400">
+          <span class="mr-2">👥</span>
+          <span>{{ .Params.project.team_size }}</span>
+        </div>
+      {{ end }}
+    </div>
+  </header>
+
+  <!-- 项目图片 -->
+  {{ if .Params.project.image }}
+    <div class="mb-12 overflow-hidden rounded-xl shadow-lg">
+      <img src="{{ .Params.project.image }}" alt="{{ .Title }}" class="h-auto w-full">
+    </div>
+  {{ end }}
+
+  <!-- 项目信息卡片 -->
+  {{ if or .Params.project.tech_stack .Params.project.features }}
+    <div class="mb-12 rounded-xl border border-neutral-200 bg-neutral-50 p-8 dark:border-neutral-700 dark:bg-neutral-800">
+      <h2 class="mb-6 text-2xl font-bold text-neutral-900 dark:text-white">项目信息</h2>
+      <div class="grid gap-8 md:grid-cols-2">
+        {{ if .Params.project.tech_stack }}
+          <div>
+            <h3 class="mb-3 text-lg font-semibold text-neutral-900 dark:text-white">技术栈</h3>
+            <div class="flex flex-wrap gap-2">
+              {{ range .Params.project.tech_stack }}
+                <span class="inline-flex items-center rounded-full bg-primary-100 px-3 py-1 text-sm font-medium text-primary-800 dark:bg-primary-900 dark:text-primary-200">
+                  {{ . }}
+                </span>
+              {{ end }}
+            </div>
+          </div>
+        {{ end }}
+        {{ if .Params.project.features }}
+          <div>
+            <h3 class="mb-3 text-lg font-semibold text-neutral-900 dark:text-white">主要功能</h3>
+            <ul class="space-y-2 text-neutral-600 dark:text-neutral-400">
+              {{ range .Params.project.features }}
+                <li class="flex items-start">
+                  <span class="mr-2 mt-1 h-1.5 w-1.5 rounded-full bg-primary-500"></span>
+                  <span>{{ . }}</span>
+                </li>
+              {{ end }}
+            </ul>
+          </div>
+        {{ end }}
+      </div>
+    </div>
+  {{ end }}
+
+  <!-- 项目内容 -->
+  <div class="prose prose-lg max-w-none dark:prose-invert prose-headings:text-neutral-900 prose-headings:dark:text-white prose-p:text-neutral-600 prose-p:dark:text-neutral-400 prose-a:text-primary-600 prose-a:dark:text-primary-400">
+    {{ .Content }}
+  </div>
+
+  <!-- 相关项目 -->
+  {{ $related := where .Site.RegularPages "Type" "cases" }}
+  {{ $related := where $related "File.TranslationBaseName" "!=" "_index" }}
+  {{ $related := where $related "File.TranslationBaseName" "!=" .File.TranslationBaseName }}
+  {{ $related := first 3 $related }}
+  
+  {{ if $related }}
+    <div class="mt-16 border-t border-neutral-200 pt-12 dark:border-neutral-700">
+      <h2 class="mb-8 text-2xl font-bold text-neutral-900 dark:text-white">相关项目</h2>
+      <div class="grid gap-6 md:grid-cols-3">
+        {{ range $related }}
+          <div class="group overflow-hidden rounded-xl border border-neutral-200 bg-white shadow-sm transition-all duration-300 hover:shadow-lg dark:border-neutral-700 dark:bg-neutral-800">
+            {{ if .Params.project.image }}
+              <div class="h-32 overflow-hidden">
+                <img src="{{ .Params.project.image }}" alt="{{ .Title }}" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105">
+              </div>
+            {{ end }}
+            <div class="p-6">
+              <h3 class="mb-2 font-semibold text-neutral-900 dark:text-white group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
+                {{ .Title }}
+              </h3>
+              <p class="mb-4 text-sm text-neutral-600 dark:text-neutral-400">{{ .Description }}</p>
+              <a href="{{ .RelPermalink }}" class="inline-flex items-center text-sm font-medium text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300">
+                查看详情
+                <svg class="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        {{ end }}
+      </div>
+    </div>
+  {{ end }}
+</article>
+{{ end }}
+
