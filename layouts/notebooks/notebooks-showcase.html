@@ -1,0 +1,64 @@
+{{ define "main" }}
+  <!-- 页面标题 -->
+  <header>
+    <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+      {{ .Title }}
+    </h1>
+  </header>
+
+  <!-- 页面内容 -->
+  <section class="prose mt-0 flex max-w-full flex-col dark:prose-invert">
+    <div class="min-h-0 min-w-0 max-w-full grow">
+      {{ .Content | emojify }}
+    </div>
+  </section>
+
+  <!-- 自定义样式 -->
+  <style>
+  /* 卡片总高度设置 */
+  .notebook-card {
+    height: 450px !important;
+    min-height: 450px !important;
+  }
+  
+  /* 文章容器高度 */
+  .notebook-card article {
+    height: 450px !important;
+    min-height: 450px !important;
+  }
+  
+  /* 内容容器总高度 */
+  .notebook-card article .flex.flex-col {
+    height: 450px !important;
+  }
+  
+  /* iframe预览区域 - 300px */
+  .notebook-card article .flex.flex-col > div:first-child {
+    height: 300px !important;
+  }
+  
+  /* 文字信息区域 - 150px (50px标题 + 100px内容) */
+  .notebook-card article .flex.flex-col > div:last-child {
+    height: 150px !important;
+    padding: 12px 24px !important;
+  }
+  
+  /* 标题区域 - 50px */
+  .notebook-card article .flex.flex-col > div:last-child h3 {
+    margin: 0 0 8px 0 !important;
+    font-size: 1.25rem !important;
+    line-height: 1.5 !important;
+  }
+  
+  /* 内容区域 - 100px */
+  .notebook-card article .flex.flex-col > div:last-child p {
+    margin: 0 !important;
+    font-size: 0.875rem !important;
+    line-height: 1.4 !important;
+    overflow: hidden !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 4 !important;
+    -webkit-box-orient: vertical !important;
+  }
+  </style>
+{{ end }}

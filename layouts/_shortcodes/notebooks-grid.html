@@ -1,0 +1,74 @@
+<!-- Notebooks 网格 -->
+<div class="mt-8 space-y-8 w-full" id="notebooks-grid">
+  {{ range where .Site.RegularPages "Section" "notebooks" }}
+    {{ if ne .File.TranslationBaseName "_index" }}
+      <div class="notebook-card group">
+        <article class="relative overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-[1.02] dark:border-neutral-700 dark:bg-neutral-600 cursor-pointer w-full" onclick="window.location.href='{{ .RelPermalink }}'">
+          <div class="flex flex-col">
+            <!-- 上方：Jupyter Notebook 预览 -->
+            <div class="w-full bg-white dark:bg-neutral-800 overflow-hidden border-b border-neutral-100 dark:border-neutral-700">
+              {{ if .Params.nbviewer }}
+                <iframe 
+                  src="{{ .Params.nbviewer }}"
+                  width="100%"
+                  height="100%"
+                  frameborder="0"
+                  style="border: none;"
+                  allowfullscreen>
+                </iframe>
+              {{ else }}
+                <div class="h-full bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 flex items-center justify-center">
+                  <div class="text-center p-8">
+                    <div class="text-5xl mb-4">📊</div>
+                    <div class="text-xl font-semibold text-neutral-700 dark:text-neutral-300 mb-3">{{ .Title }}</div>
+                    <div class="text-base text-neutral-500 dark:text-neutral-400">请在 front matter 中设置 nbviewer 参数</div>
+                  </div>
+                </div>
+              {{ end }}
+            </div>
+
+            <!-- 下方：文字信息 -->
+            <div class="flex-1 p-6 lg:p-8 flex flex-col justify-center">
+              <header class="mb-4">
+                <h3 class="text-2xl lg:text-3xl font-bold text-neutral-900 dark:text-neutral mb-3 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors leading-tight">
+                  {{ .Title }}
+                </h3>
+                <p class="text-base lg:text-lg text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                  {{ .Description }}
+                </p>
+              </header>
+            </div>
+          </div>
+        </article>
+      </div>
+    {{ end }}
+  {{ end }}
+</div>
+
+<style>
+/* 卡片悬停效果 */
+.notebook-card article {
+  transform: translateY(0);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.notebook-card article:hover {
+  transform: translateY(-4px);
+}
+
+/* 响应式调整 */
+@media (max-width: 1024px) {
+  .notebook-card article {
+    height: 600px !important;
+    min-height: 600px;
+  }
+  
+  .notebook-card article .flex.flex-col {
+    height: 600px !important;
+  }
+  
+  .notebook-card article .flex.flex-col > div:first-child {
+    height: 450px !important;
+  }
+}
+</style>
