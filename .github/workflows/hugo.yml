@@ -78,7 +78,7 @@ jobs:
           hugo \
             --gc \
             --minify \
-            --baseURL "${{ steps.pages.outputs.base_url }}/" \
+            --environment production \
             --logLevel info
           # 检查构建输出
           echo "构建输出:"

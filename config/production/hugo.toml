@@ -1,2 +1,3 @@
 # Production configuration for GitHub Pages
 baseURL = "https://arkin-developer.github.io/blog/"
+canonifyURLs = true
