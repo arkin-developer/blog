@@ -49,8 +49,22 @@ Describe your project overview, objectives, tech stack and other information her
 If you find this project helpful, you can buy the author a cup of Luckin Coffee ☕️
 
 <div style="text-align: center; margin: 2rem 0;">
-  <img src="/img/reward.jpg" alt="Reward QR Code" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-  <p style="margin-top: 1rem; color: #666; font-size: 0.9rem;">Scan to support the author</p>
+  <!-- <img src="/img/reward.jpg" alt="Reward QR Code" style="width: 100%; max-width: 400px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <p style="margin-top: 1rem; color: #666; font-size: 0.9rem;">Scan to support the author</p> -->
+  
+  <!-- Mobile-friendly payment links -->
+  <div style="display: flex; justify-content: center; gap: 2rem; margin-top: 1.5rem; flex-wrap: wrap;">
+    <a href="https://arkin-developer.github.io/blog/img/zhifubao-reward.jpg" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; background: #1677ff; color: white; text-decoration: none; border-radius: 8px; font-size: 0.9rem; transition: all 0.3s ease; box-shadow: 0 2px 4px rgba(22,119,255,0.3);">
+      <span style="font-size: 1.2rem;">🩵</span>
+      <span>Alipay Reward ¥9.9</span>
+    </a>
+    <a href="https://arkin-developer.github.io/blog/img/wechat-reward.png" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; background: #07c160; color: white; text-decoration: none; border-radius: 8px; font-size: 0.9rem; transition: all 0.3s ease; box-shadow: 0 2px 4px rgba(7,193,96,0.3);">
+      <span style="font-size: 1.2rem;">💚</span>
+      <span>WeChat Reward ¥9.9</span>
+    </a>
+  </div>
+  
+  <p style="margin-top: 1rem; color: #999; font-size: 0.8rem;">Click buttons to view QR codes</p>
 </div>
 
 ---
