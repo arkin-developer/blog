@@ -25,3 +25,6 @@ summaryLength = 0
 [services]
   [services.x]
     disableInlineCSS = true
+
+# URL handling - this will make URLs work in both local and production
+canonifyURLs = true
