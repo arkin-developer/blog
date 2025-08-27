@@ -32,8 +32,6 @@ nbviewer: "https://nbviewer.org/github/arkin-developer/notebooks/blob/main/qwen2
 **硬件建议**：A10 24GB；
 **软件建议**：Python 3.10+、CUDA 12.x、PyTorch 2.3+。
 
-------
-
 ### ✅ 本教程包括
 
 1. LoRA/QLoRA 简介
@@ -43,6 +41,14 @@ nbviewer: "https://nbviewer.org/github/arkin-developer/notebooks/blob/main/qwen2
 5. LoRA微调
 6. 模型测试评估
 
+## 🙏 支持作者
+
+如果您觉得这个项目对您有帮助，可以请博主喝杯瑞幸 ☕️
+
+<div style="text-align: center; margin: 2rem 0;">
+  <img src="/img/reward.jpg" alt="打赏二维码" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <p style="margin-top: 1rem; color: #666; font-size: 0.9rem;">扫码支持作者</p>
+</div>
 
 
 ---

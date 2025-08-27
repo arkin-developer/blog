@@ -43,6 +43,15 @@ nbviewer: "https://nbviewer.org/github/arkin-developer/notebooks/blob/main/{{ .N
 - 功能2
 - 功能3
 
+## 🙏 支持作者
+
+如果您觉得这个项目对您有帮助，可以请博主喝杯瑞幸 ☕️
+
+<div style="text-align: center; margin: 2rem 0;">
+  <img src="/img/reward.jpg" alt="打赏二维码" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+  <p style="margin-top: 1rem; color: #666; font-size: 0.9rem;">扫码支持作者</p>
+</div>
+
 ---
 
 *您可以从导航栏跳转到对应的 Jupyter Notebook 的云服务平台进行尝试，抑或是下载 Notebook文件到本地运行。*
