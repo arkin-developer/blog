@@ -5,12 +5,13 @@ date: {{ .Date }}
 tags: ["tag1", "tag2"]
 categories: ["notebooks"]
 nbviewer: "https://nbviewer.org/github/arkin-developer/notebooks/blob/main/{{ .Name }}/{{ .Name }}.ipynb"
-aliyun: "your-aliyun-url"
+github: "your-github-url"
+modelscope: "your-modelscope-url"
 colab: "your-colab-url"
 ---
 
 {{< lead >}}
-🚀[Alibaba Cloud](your-aliyun-url) 🚀[Colab](your-colab-url)
+🚀[ModelScope](your-modelscope-url) 🚀[Colab](your-colab-url) 🚀[Github](your-github-url)
 {{< /lead >}}
 
 ## Jupyter Notebook Preview
