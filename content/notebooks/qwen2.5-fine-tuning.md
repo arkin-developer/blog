@@ -4,13 +4,14 @@ description: "在单卡 A10（24GB）上，以 *小参数量* 的模型为例（
 date: 2025-08-20
 tags: ["LLM模型微调", "ModelScope", "Notebook", "LoRA/QLoRA"]
 categories: ["notebooks"]
+github: "https://github.com/arkin-developer/notebooks/blob/main/qwen2.5-fine-tuning/qwen2.5-fine-tuning.ipynb"
 nbviewer: "https://nbviewer.org/github/arkin-developer/notebooks/blob/main/qwen2.5-fine-tuning/qwen2.5-fine-tuning.ipynb"
 aliyun: "https://gallery.pai-ml.com/#/import/https://dsw-share.oss-cn-beijing.aliyuncs.com/1189516462147384/dsw-p7b6usueey5pxo2vcy_2025-08-26T18%3A08%3A34.770973Z/qwen2.5-fine-tuning.ipynb?Expires=1756318158&OSSAccessKeyId=LTAI5tDqiodkPVXWZzJ1h92J&Signature=lmoHZHPN0lLsGSom0pBgnZcfmCU%3D"
 colab: "https://colab.research.google.com/drive/1ncpNySba_USsDaKDmeJfG_WLBHBxIx9R?usp=sharing"
 ---
 
 {{< lead >}}
-🚀[阿里云](https://gallery.pai-ml.com/#/import/https://dsw-share.oss-cn-beijing.aliyuncs.com/1189516462147384/dsw-p7b6usueey5pxo2vcy_2025-08-26T18%3A08%3A34.770973Z/qwen2.5-fine-tuning.ipynb?Expires=1756318158&OSSAccessKeyId=LTAI5tDqiodkPVXWZzJ1h92J&Signature=lmoHZHPN0lLsGSom0pBgnZcfmCU%3D) 🚀[Colab](https://colab.research.google.com/drive/1ncpNySba_USsDaKDmeJfG_WLBHBxIx9R?usp=sharing)
+🚀[阿里云](https://gallery.pai-ml.com/#/import/https://dsw-share.oss-cn-beijing.aliyuncs.com/1189516462147384/dsw-p7b6usueey5pxo2vcy_2025-08-26T18%3A08%3A34.770973Z/qwen2.5-fine-tuning.ipynb?Expires=1756318158&OSSAccessKeyId=LTAI5tDqiodkPVXWZzJ1h92J&Signature=lmoHZHPN0lLsGSom0pBgnZcfmCU%3D) 🚀[Colab](https://colab.research.google.com/drive/1ncpNySba_USsDaKDmeJfG_WLBHBxIx9R?usp=sharing) 🚀[Github](https://github.com/arkin-developer/notebooks/blob/main/qwen2.5-fine-tuning/qwen2.5-fine-tuning.ipynb)
 {{< /lead >}}
 
 
@@ -50,7 +51,7 @@ colab: "https://colab.research.google.com/drive/1ncpNySba_USsDaKDmeJfG_WLBHBxIx9
 <div style="text-align: center; margin: 2rem 0;">
   <!-- <img src="/img/reward.jpg" alt="打赏二维码" style="width: 100%; max-width: 400px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
   <p style="margin-top: 1rem; color: #666; font-size: 0.9rem;">扫码支持作者</p> -->
-  
+
   <!-- 移动端友好的支付链接 -->
   <div style="display: flex; justify-content: center; gap: 2rem; margin-top: 1.5rem; flex-wrap: wrap;">
     <a href="https://arkin-developer.github.io/blog/img/zhifubao-reward.jpg" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; background: #1677ff; color: white; text-decoration: none; border-radius: 8px; font-size: 0.9rem; transition: all 0.3s ease; box-shadow: 0 2px 4px rgba(22,119,255,0.3);">
@@ -62,7 +63,7 @@ colab: "https://colab.research.google.com/drive/1ncpNySba_USsDaKDmeJfG_WLBHBxIx9
       <span>微信打赏¥9.9</span>
     </a>
   </div>
-  
+
   <p style="margin-top: 1rem; color: #999; font-size: 0.8rem;">点击按钮可查看二维码，方便手机扫码</p>
 </div>
 
