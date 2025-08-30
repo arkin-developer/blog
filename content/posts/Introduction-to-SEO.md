@@ -4,6 +4,7 @@ description: "详细介绍网站SEO优化的核心概念、技术要点和实用
 keywords: ["SEO优化", "搜索引擎优化", "网站排名", "关键词优化", "技术SEO", "内容SEO", "用户体验"]
 author: "Arkin"
 date: 2024-01-15
+lastmod: 2025-08-30
 draft: false
 tags: ["SEO", "网站优化", "搜索引擎", "技术教程", "数字营销"]
 categories: ["技术教程", "SEO优化"]

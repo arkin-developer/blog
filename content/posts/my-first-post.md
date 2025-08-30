@@ -4,6 +4,7 @@ description: "详细介绍如何使用Hugo和Congo主题创建个人技术博客
 keywords: ["Hugo", "博客搭建", "Congo主题", "静态网站", "技术博客", "Markdown", "代码高亮"]
 author: "Arkin"
 date: 2024-01-15
+lastmod: 2025-08-30
 tags: ["Hugo", "博客搭建", "Congo主题", "技术教程", "静态网站"]
 categories: ["技术教程", "Web开发"]
 draft: false
