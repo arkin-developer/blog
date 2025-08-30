@@ -1,0 +1,126 @@
+{{/* SEO优化模板 */}}
+
+{{/* 基础元数据 */}}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+{{/* 标题 */}}
+<title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
+
+{{/* 描述 */}}
+{{ $description := .Description | default .Summary | default .Site.Params.description }}
+<meta name="description" content="{{ $description | plainify | truncate 160 }}">
+
+{{/* 关键词 */}}
+{{ $keywords := .Keywords | default .Site.Params.keywords }}
+{{ if $keywords }}
+<meta name="keywords" content="{{ delimit $keywords ", " }}">
+{{ end }}
+
+{{/* 作者 */}}
+<meta name="author" content="{{ .Params.author | default .Site.Author | default "Arkin" }}">
+
+{{/* 语言 */}}
+<meta name="language" content="{{ .Site.LanguageCode | default "zh-Hans" }}">
+
+{{/* 规范链接 */}}
+<link rel="canonical" href="{{ .Permalink }}">
+
+{{/* Open Graph 元数据 */}}
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
+<meta property="og:title" content="{{ .Title }}">
+<meta property="og:description" content="{{ $description | plainify | truncate 160 }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:site_name" content="{{ .Site.Title }}">
+<meta property="og:locale" content="{{ .Site.LanguageCode | default "zh_CN" }}">
+
+{{/* Open Graph 图片 */}}
+{{ $ogImage := .Params.image | default .Site.Params.seo.images | default "img/logo.jpg" }}
+{{ if not (hasPrefix $ogImage "http") }}
+  {{ $ogImage = printf "%s%s" .Site.BaseURL $ogImage }}
+{{ end }}
+<meta property="og:image" content="{{ $ogImage }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+{{/* Twitter Card 元数据 */}}
+<meta name="twitter:card" content="{{ .Site.Params.seo.twitterCard | default "summary_large_image" }}">
+<meta name="twitter:title" content="{{ .Title }}">
+<meta name="twitter:description" content="{{ $description | plainify | truncate 160 }}">
+<meta name="twitter:image" content="{{ $ogImage }}">
+
+{{/* 文章特定元数据 */}}
+{{ if .IsPage }}
+  {{ if .Params.author }}
+  <meta property="article:author" content="{{ .Params.author }}">
+  {{ end }}
+  
+  {{ if .Date }}
+  <meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+  {{ end }}
+  
+  {{ if .Lastmod }}
+  <meta property="article:modified_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}">
+  {{ end }}
+  
+  {{ if .Params.tags }}
+  {{ range .Params.tags }}
+  <meta property="article:tag" content="{{ . }}">
+  {{ end }}
+  {{ end }}
+  
+  {{ if .Params.categories }}
+  {{ range .Params.categories }}
+  <meta property="article:section" content="{{ . }}">
+  {{ end }}
+  {{ end }}
+{{ end }}
+
+{{/* 结构化数据 */}}
+{{ if .Site.Params.structuredData.enable }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "{{ .Site.Params.structuredData.type | default "Blog" }}",
+  "name": "{{ .Site.Title }}",
+  "description": "{{ .Site.Params.description }}",
+  "url": "{{ .Site.BaseURL }}",
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{ .Site.Params.structuredData.publisherName }}",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ .Site.BaseURL }}{{ .Site.Params.structuredData.publisherLogo }}"
+    }
+  }
+  {{ if .IsPage }},
+  "headline": "{{ .Title }}",
+  "datePublished": "{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}",
+  "dateModified": "{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}",
+  "author": {
+    "@type": "Person",
+    "name": "{{ .Params.author | default .Site.Author }}"
+  }
+  {{ end }}
+}
+</script>
+{{ end }}
+
+{{/* 搜索引擎验证 */}}
+{{ if .Site.Params.verification.google }}
+<meta name="google-site-verification" content="{{ .Site.Params.verification.google }}">
+{{ end }}
+{{ if .Site.Params.verification.bing }}
+<meta name="msvalidate.01" content="{{ .Site.Params.verification.bing }}">
+{{ end }}
+{{ if .Site.Params.verification.pinterest }}
+<meta name="p:domain_verify" content="{{ .Site.Params.verification.pinterest }}">
+{{ end }}
+{{ if .Site.Params.verification.yandex }}
+<meta name="yandex-verification" content="{{ .Site.Params.verification.yandex }}">
+{{ end }}
+
+{{/* 其他元数据 */}}
+<meta name="robots" content="{{ .Site.Params.robots | default "index, follow" }}">
+<meta name="generator" content="Hugo {{ hugo.Version }}">

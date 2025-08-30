@@ -1,0 +1,24 @@
+User-agent: *
+Allow: /
+
+# 允许所有搜索引擎爬取
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: Sogou
+Allow: /
+
+# 禁止爬取管理页面和临时文件
+Disallow: /admin/
+Disallow: /tmp/
+Disallow: /draft/
+Disallow: /private/
+
+# 站点地图
+Sitemap: https://yourdomain.com/sitemap.xml

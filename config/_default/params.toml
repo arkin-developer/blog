@@ -15,8 +15,23 @@ enableImageLazyLoading = true
 enableImageWebp = true
 enableQuicklink = true
 
-# robots = ""
+# SEO优化
+robots = "index, follow"
 fingerprintAlgorithm = "sha256"
+
+# 社交媒体元数据
+[seo]
+  images = ["img/logo.jpg"]
+  twitterCard = "summary_large_image"
+  twitterCreator = "@Arkin"
+  twitterSite = "@Arkin"
+
+# 结构化数据
+[structuredData]
+  enable = true
+  type = "Blog"
+  publisherName = "Arkin的博客"
+  publisherLogo = "img/logo.jpg"
 
 [header]
   layout = "basic" # valid options: basic, hamburger, hybrid, custom
@@ -37,37 +52,40 @@ fingerprintAlgorithm = "sha256"
 
 [article]
   showDate = true
-  showDateUpdated = false
+  showDateUpdated = true
   showAuthor = true
   showBreadcrumbs = true
   showDraftLabel = true
   showEdit = true
-  editURL = "https://github.com/jpanther/congo/tree/dev/exampleSite/content/"
+  editURL = "https://github.com/Arkin/yourrepo/tree/main/content/"
   editAppendPath = true
   showHeadingAnchors = true
   showPagination = true
   invertPagination = false
   showReadingTime = true
   showTableOfContents = true
-  showTaxonomies = false
-  showWordCount = false
+  showTaxonomies = true
+  showWordCount = true
   showComments = false
   # sharingLinks = ["facebook", "x-twitter", "mastodon", "pinterest", "reddit", "linkedin", "email", "threads", "telegram", "line", "weibo", "xing", "bluesky"]
 
 [list]
   showBreadcrumbs = true
-  showSummary = false
+  showSummary = true
   showTableOfContents = true
-  showTaxonomies = false
-  groupByYear = false
+  showTaxonomies = true
+  groupByYear = true
   paginationWidth = 1
 
 [sitemap]
   excludedKinds = ["taxonomy", "term"]
+  changefreq = "weekly"
+  priority = 0.5
 
 [taxonomy]
   showTermCount = true
 
+# 分析工具配置
 [fathomAnalytics]
   # site = "ABC12345"
 
@@ -75,8 +93,16 @@ fingerprintAlgorithm = "sha256"
 #  site = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
 #  region = "eu"  # Can be either "eu" or "us"
 
+# 搜索引擎验证
 [verification]
-  # google = ""
-  # bing = ""
-  # pinterest = ""
-  # yandex = ""
+  # google = "your_google_verification_code"
+  # bing = "your_bing_verification_code"
+  # pinterest = "your_pinterest_verification_code"
+  # yandex = "your_yandex_verification_code"
+
+# 社交媒体链接
+[social]
+  # github = "https://github.com/Arkin"
+  # twitter = "https://twitter.com/Arkin"
+  # linkedin = "https://linkedin.com/in/Arkin"
+  # email = "mailto:Arkin@example.com"

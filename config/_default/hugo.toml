@@ -5,15 +5,37 @@
 theme = "congo"
 defaultContentLanguage = "zh-Hans"
 
+# SEO优化设置
+title = "Arkin的博客 - 技术分享与思考"
+description = "个人技术博客，分享AI应用、Web开发、数据科学等技术内容，记录学习心得和项目经验"
+keywords = ["技术博客", "AI应用", "Web开发", "数据科学", "机器学习", "全栈开发"]
+author = "Arkin"
+languageCode = "zh-Hans"
+defaultContentLanguageInSubdir = true
+
+# URL和链接优化
+canonifyURLs = true
+relativeURLs = false
+removePathAccents = true
+uglyURLs = false
+
+# 搜索引擎优化
 enableRobotsTXT = true
+enableGitInfo = true
 summaryLength = 0
 
+# 输出格式
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]
+  term = ["HTML", "RSS"]
+
+# 分页设置
 [pagination]
   pagerSize = 15
 
-[outputs]
-  home = ["HTML", "RSS", "JSON"]
-
+# 隐私设置
 [privacy]
   [privacy.vimeo]
     enableDNT = true
@@ -22,9 +44,23 @@ summaryLength = 0
   [privacy.youTube]
     privacyEnhanced = true
 
+# 服务设置
 [services]
   [services.x]
     disableInlineCSS = true
 
-# URL handling - this will make URLs work in both local and production
-canonifyURLs = true
+# 图片处理
+[imaging]
+  quality = 85
+  resampleFilter = "Lanczos"
+  anchor = "Smart"
+
+# 压缩设置
+[build]
+  writeStats = true
+
+# 模块设置
+[module]
+  [module.hugoVersion]
+    extended = true
+    min = "0.120.0"
