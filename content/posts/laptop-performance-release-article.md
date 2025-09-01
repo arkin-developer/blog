@@ -16,9 +16,9 @@ showWordCount: true
 showDateUpdated: true
 ---
 
-![屏幕截图 2025-09-02 010046](https://mr-lai.oss-cn-zhangjiakou.aliyuncs.com/huaweimetabook/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-09-02%20010046.jpg)
-
 # 💻 笔记本电脑的性能释放到底有什么意义？？
+
+![屏幕截图 2025-09-02 010046](https://mr-lai.oss-cn-zhangjiakou.aliyuncs.com/huaweimetabook/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-09-02%20010046.jpg)
 
 ## 🎯 引言
 
