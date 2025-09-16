@@ -15,100 +15,100 @@ basic_info:
 ### 🔧 编程语言
 *精通Python和Golang全栈开发，熟悉JavaScript/TypeScript前端技术，具备C++原生库封装和ArkTS移动端开发能力*
 
-- **Python（熟练）**
-- **Golang（熟练）**
-- **JavaScript/TypeScript（熟悉）**
-- **C++（Native 库二次封装 / Python/Golang 扩展封装）**
-- **ArkTS（学习中）**
+- **Python**（熟练）- 全栈开发、AI算法、数据处理
+- **Golang**（熟练）- 微服务架构、高并发后端开发
+- **JavaScript/TypeScript**（熟悉）- 前端框架、Node.js后端
+- **C++**（Native 库二次封装 / Python/Golang 扩展封装）
+- **ArkTS**（学习中）- HarmonyOS移动应用开发
 
 ### 🤖 AI&大模型应用开发 · [查看岗位版简历](/resume/llm-engineer/)
 *深度掌握YOLO目标检测、CNN图像分类、语义分割等计算机视觉技术，熟练运用OpenAI API、LangChain构建大模型应用，具备RAG检索增强生成、多模态智能体开发和完整的AI工程化部署能力*
 
 - **计算机视觉**
   - **任务类型**：目标检测、图像分类、语义分割
-  - **方法与框架**：YOLO 系列（YOLOv5/YOLOv8）、CNN（ResNet、EfficientNet）、U-Net、DeepLab
-  - **工具/库**：PyTorch、OpenCV、Albumentations
+  - **方法与框架**：**YOLO 系列**（YOLOv5/YOLOv8）、**CNN**（ResNet、EfficientNet）、U-Net、DeepLab
+  - **工具/库**：**PyTorch**、**OpenCV**、Albumentations
   - **工程化能力**：数据集整理、模型训练、模型部署、接口封装
 - **大模型（LLM & Multi-modal AI）**
   - **任务类型**：文本生成与摘要、问答系统、视频/音频文本处理、多模态数据处理
-  - **框架与平台**：OpenAI API、LangChain、Golang Eino
-  - **协议**：MCP（模型上下文协议）
-  - **微调能力**：LoRA、PEFT、Prompt Tuning
+  - **框架与平台**：**OpenAI API**、**LangChain**、Golang Eino
+  - **协议**：**MCP**（模型上下文协议）
+  - **微调能力**：**LoRA**、**PEFT**、Prompt Tuning
   - **工程化能力**：数据整理、上下文管理、服务化封装（API/Agent）、容器化部署
 - **智能体开发**
-  - **任务类型**：问答智能体、RAG（检索增强生成）、多模态交互、任务自动化
-    **方法与框架**：LangChain、LlamaIndex、AutoGPT、BabyAGI、Custom Toolchains
-    **能力点**：
+  - **任务类型**：问答智能体、**RAG**（检索增强生成）、多模态交互、任务自动化
+  - **方法与框架**：**LangChain**、LlamaIndex、AutoGPT、BabyAGI、Custom Toolchains
+  - **能力点**：
     - 上下文管理与多轮对话
-    - 知识检索与动态信息注入（RAG）
+    - 知识检索与动态信息注入（**RAG**）
     - 多模态数据处理（文本 + 图像 + 音频）
     - Agent 流程设计与任务调度
-    **工程化能力**：服务化封装（API/Agent）、容器化部署（Docker/K8s）、日志与监控、性能优化
+  - **工程化能力**：服务化封装（API/Agent）、容器化部署（**Docker/K8s**）、日志与监控、性能优化
 
 ### 🌐 Web全栈开发
 *精通React/Vue/Next.js前端开发，熟练Python FastAPI/Golang Gin后端架构，掌握PostgreSQL/Redis数据库技术，具备Docker容器化、Kubernetes部署和完整的DevOps工程化能力*
 
 - **前端开发（Frontend）**
-  - **基础语言**：HTML、CSS、JavaScript、TypeScript
-  - **框架与库**：React、Vue、Svelte、Next.js、Nuxt.js
-  - **UI 框架**：TailwindCSS、Bootstrap、Ant Design、ShadCN UI
-  - **地图/可视化**：OpenLayers、Leaflet、ECharts
-  - **前端工程化**：Webpack、Vite、ESBuild、模块化开发、组件化开发
+  - **基础语言**：HTML、CSS、JavaScript、**TypeScript**
+  - **框架与库**：**React**、**Vue**、Svelte、**Next.js**、Nuxt.js
+  - **UI 框架**：**TailwindCSS**、Bootstrap、Ant Design、ShadCN UI
+  - **地图/可视化**：**OpenLayers**、**Leaflet**、ECharts
+  - **前端工程化**：Webpack、**Vite**、ESBuild、模块化开发、组件化开发
 - **后端开发（Backend）**
-  - **开发语言**：Python（FastAPI、Flask、Django）、Golang（Gin、Echo、Fiber）、Node.js（Express、NestJS）、Java（Spring Boot）
-  - **API 开发**：RESTful API、GraphQL、gRPC
-  - **业务逻辑与微服务**：微服务架构设计、消息队列（RabbitMQ、Kafka）、任务调度（Celery、Go Cron）
-  - **安全与鉴权**：JWT、OAuth2、RBAC、ACL
+  - **开发语言**：**Python**（**FastAPI**、Flask、Django）、**Golang**（**Gin**、Echo、Fiber）、Node.js（Express、NestJS）、Java（Spring Boot）
+  - **API 开发**：**RESTful API**、**GraphQL**、gRPC
+  - **业务逻辑与微服务**：微服务架构设计、消息队列（**RabbitMQ**、**Kafka**）、任务调度（Celery、Go Cron）
+  - **安全与鉴权**：**JWT**、**OAuth2**、RBAC、ACL
 - **数据库与存储**
-  - **关系型数据库**：PostgreSQL（PostGIS）、MySQL、SQLServer
-  - **非关系型数据库**：MongoDB（GeoJSON 支持）、Redis、ElasticSearch
-  - **缓存与索引**：Redis、Memcached、ElasticSearch Geo/Fulltext
+  - **关系型数据库**：**PostgreSQL**（**PostGIS**）、MySQL、SQLServer
+  - **非关系型数据库**：**MongoDB**（GeoJSON 支持）、**Redis**、**ElasticSearch**
+  - **缓存与索引**：**Redis**、Memcached、**ElasticSearch** Geo/Fulltext
 - **DevOps 与工程化能力**
-  - **版本管理**：Git、GitHub/GitLab
-  - **容器与部署**：Docker、Docker Compose、Kubernetes
-  - **CI/CD 工具**：GitHub Actions、GitLab CI、Jenkins
-  - **日志监控**：Prometheus + Grafana、ELK（Elasticsearch + Logstash + Kibana）
+  - **版本管理**：**Git**、GitHub/GitLab
+  - **容器与部署**：**Docker**、Docker Compose、**Kubernetes**
+  - **CI/CD 工具**：**GitHub Actions**、GitLab CI、Jenkins
+  - **日志监控**：**Prometheus + Grafana**、**ELK**（Elasticsearch + Logstash + Kibana）
 - **前后端协作与优化**
-  - **数据接口设计**：OpenAPI、Swagger
-  - **状态管理**：Redux、Pinia、React Query
-  - **性能优化**：前端懒加载、SSR/CSR、服务端缓存、数据库索引优化
-  - **测试**：单元测试（Jest、PyTest、Go Test）、集成测试、端到端测试（Cypress、Playwright）
+  - **数据接口设计**：**OpenAPI**、**Swagger**
+  - **状态管理**：**Redux**、Pinia、**React Query**
+  - **性能优化**：前端懒加载、**SSR/CSR**、服务端缓存、数据库索引优化
+  - **测试**：单元测试（**Jest**、**PyTest**、Go Test）、集成测试、端到端测试（**Cypress**、**Playwright**）
 
 ### 🗺️ GIS开发 · [查看岗位版简历](/resume/gis-engineer/)
 *深度掌握ArcGIS/QGIS地理信息处理，熟练遥感影像分类识别、变化检测算法，精通OpenLayers/Leaflet WebGIS开发，具备PostGIS空间数据库、GeoServer地图服务和完整的GIS工程化解决方案能力*
 
 - **数据预处理** 
-  - **工具**：ArcGIS、ENVI、QGIS 软件熟练使用，Python GDAL、Rasterio 工具库熟练使用
-  - **影像预处理**：辐射校正、大气校正、几何校正、正射校正、全色锐化（Pan-Sharpening）、批量裁剪、重采样、拼接和镶嵌
+  - **工具**：**ArcGIS**、**ENVI**、**QGIS** 软件熟练使用，**Python GDAL**、**Rasterio** 工具库熟练使用
+  - **影像预处理**：辐射校正、大气校正、几何校正、正射校正、全色锐化（**Pan-Sharpening**）、批量裁剪、重采样、拼接和镶嵌
   - **矢量数据处理**：矢量数据清理、拓扑修正、投影变换、缓冲区生成、面/线/点计算、矢量与栅格融合
-  - **坐标系统**：WGS84、CGCS2000、UTM、国家2000坐标系（常用投影及转换）、坐标投影和坐标系统一
+  - **坐标系统**：**WGS84**、**CGCS2000**、**UTM**、国家2000坐标系（常用投影及转换）、坐标投影和坐标系统一
 - **遥感影像图像分类识别**
-  - **传统方法**：监督分类（SVM、RF、最大似然）、非监督分类（K-means、ISODATA）
-  - **深度学习方法**：CNN 分类（ResNet、EfficientNet）、语义分割（U-Net、DeepLab、SegFormer）、目标检测（YOLO、Mask R-CNN）
-  - **特征提取**：纹理分析（GLCM、LBP）、光谱指数（NDVI、NDWI、NDBI）
-  - **工具/框架**：ArcGIS Pro、QGIS、Scikit-learn、TensorFlow、PyTorch
+  - **传统方法**：监督分类（**SVM**、**RF**、最大似然）、非监督分类（**K-means**、**ISODATA**）
+  - **深度学习方法**：**CNN** 分类（**ResNet**、**EfficientNet**）、语义分割（**U-Net**、**DeepLab**、**SegFormer**）、目标检测（**YOLO**、**Mask R-CNN**）
+  - **特征提取**：纹理分析（**GLCM**、**LBP**）、光谱指数（**NDVI**、**NDWI**、**NDBI**）
+  - **工具/框架**：**ArcGIS Pro**、**QGIS**、**Scikit-learn**、**TensorFlow**、**PyTorch**
 - **遥感影像变化检测**
-  - **传统方法**：图像差分、比值法、PCA 差分、分类后比较
-  - **深度学习方法**：Siamese Network、FC-Siam 系列、基于 Transformer 的时序变化检测
-  - **多源融合**：光学 + SAR + LiDAR
-  - **工具/框架**：PyTorch、TensorFlow、OpenCV、ChangeDetectionNet
+  - **传统方法**：图像差分、比值法、**PCA** 差分、分类后比较
+  - **深度学习方法**：**Siamese Network**、**FC-Siam** 系列、基于 **Transformer** 的时序变化检测
+  - **多源融合**：光学 + **SAR** + **LiDAR**
+  - **工具/框架**：**PyTorch**、**TensorFlow**、**OpenCV**、**ChangeDetectionNet**
 - **WebGIS全栈开发**
-  - **前端**：OpenLayers、Leaflet、Cesium
-  - **后端**：GeoServer、MapServer、PostGIS、Tile38
-  - **接口服务**：OGC 标准（WMS、WFS、WMTS、WCS）、RESTful API、GraphQL
-  - **架构**：微服务 + 容器化（Docker、Kubernetes）、云原生 GIS 部署
-  - **开发语言**：Python（FastAPI）、Golang（Gin）、JavaScript（Node.js、TypeScript）
+  - **前端**：**OpenLayers**、**Leaflet**、**Cesium**
+  - **后端**：**GeoServer**、MapServer、**PostGIS**、Tile38
+  - **接口服务**：**OGC** 标准（**WMS**、**WFS**、**WMTS**、**WCS**）、**RESTful API**、**GraphQL**
+  - **架构**：微服务 + 容器化（**Docker**、**Kubernetes**）、云原生 GIS 部署
+  - **开发语言**：**Python**（**FastAPI**）、**Golang**（**Gin**）、**JavaScript**（Node.js、**TypeScript**）
 - **GIS空间计算**
-  - **空间数据结构**：R-Tree、QuadTree、GeoSOT
+  - **空间数据结构**：**R-Tree**、**QuadTree**、**GeoSOT**
   - **空间分析**：缓冲区、叠加分析、网络分析、空间插值
-  - **数据库**：PostGIS、MongoDB（GeoJSON）、ClickHouse-GIS、ElasticSearch Geo
-  - **工具/库**：Shapely、GEOS、GDAL/OGR、CGAL
+  - **数据库**：**PostGIS**、**MongoDB**（**GeoJSON**）、ClickHouse-GIS、**ElasticSearch** Geo
+  - **工具/库**：**Shapely**、**GEOS**、**GDAL/OGR**、**CGAL**
 
 ### 📱 鸿蒙开发
 *深入学习HarmonyOS NEXT 5开发技术，掌握ArkTS语言和鸿蒙生态应用开发，关注跨平台移动应用技术发展趋势*
 
 - **北向开发**
-  - HarmonyOS NEXT 5 开发
+  - **HarmonyOS NEXT 5** 开发
 
 ## 💼 工作经历
 
@@ -121,9 +121,9 @@ basic_info:
   - 角色：图像算法工程师
   - 背景：面向河道“四乱”治理（乱占、乱采、乱堆、乱建）的智能巡查与检测需求。
   - 任务/目标：
-    - 基于历史业务影像，构建“四乱”遥感图像检测数据集（标注+清洗+增强）。
-    - 使用 **YOLOv5/YOLOv8** 进行目标检测训练，并进行迁移学习与推理加速（TensorRT/ONNX）。
-    - 开发数据预处理与推理脚本（Python + PyTorch + GDAL），提升自动化程度。
+    - 基于历史业务影像，构建"四乱"遥感图像检测数据集（标注+清洗+增强）。
+    - 使用 **YOLOv5/YOLOv8** 进行目标检测训练，并进行迁移学习与推理加速（**TensorRT**/**ONNX**）。
+    - 开发数据预处理与推理脚本（**Python** + **PyTorch** + **GDAL**），提升自动化程度。
   - 关键贡献/成果
     - 准确率达到人工巡检的80%，并成功落地在“智慧河长”平台，实现河道巡查影像的自动化检测。
     - 将单次影像检测处理速度从 **12s 缩短到 3s**，大幅提升业务可用性。
@@ -137,8 +137,8 @@ basic_info:
     - 利用开源组件+编码算法搭建自主可控的网格编码引擎
     - 解决引擎在三维空间的编码、存储、计算和可视化的能力
   - 关键贡献/成果：
-    - 利用C/C++ 的CGAL库封装对于常见的三维数据格式的解码和编码接口
-    - 搭建引擎的可视化模块，通过OCR标准完成矢量、栅格的瓦片服务和Cesium的3dtiles数据瓦片服务
+    - 利用**C/C++** 的**CGAL**库封装对于常见的三维数据格式的解码和编码接口
+    - 搭建引擎的可视化模块，通过**OCR**标准完成矢量、栅格的瓦片服务和**Cesium**的**3dtiles**数据瓦片服务
     - 搭建基于网格的无人机飞行路径规划服务，支持
 #### 3）🚁 东莞市松山湖公安项目
 *构建百架次无人机并发AI检测系统，基于TensorRT优化模型推理，实现<280ms实时检测延迟，支持交通事故和异常人员智能识别*
@@ -150,7 +150,7 @@ basic_info:
     - 训练交通事故检测模型、夜间异常人员检测模型
     - 解决私有化部署以及实时（300ms以内）的检测方案
   - 关键贡献：
-    - 利用TensorRT完成模型量化与加速，将单帧检测延迟优化至 **<280ms**，满足公安部门实时性要求。
+    - 利用**TensorRT**完成模型量化与加速，将单帧检测延迟优化至 **<280ms**，满足公安部门实时性要求。
     - 构建百架次无人机的并发检测架构，支持事件级别的唯一性识别与存储。
 #### 4）🚀 参与纵向项目民用航天技术预研究项目
 *承担民用航天技术预研任务，探索空间信息智能处理与AI应用可行性，完成4项发明专利申请，涵盖时空信息处理、遥感智能解译等领域*
@@ -170,13 +170,13 @@ basic_info:
   - 角色：团队负责人（解决方案梳理）
   - 背景：在大模型私有化与 MCP 服务并行发展的趋势下，公司决定研发时空网格智能体，探索将核心时空产品与智能体技术结合的新模式。
   - 任务 ：
-    - 国产大模型微调，将DeepSeek模型进行指令微调，学习时空网格智能体的概念
-    - 搭建产品的MCP服务
+    - 国产大模型微调，将**DeepSeek**模型进行指令微调，学习时空网格智能体的概念
+    - 搭建产品的**MCP**服务
     - 搭建可视化验证方案
   - 关键贡献：
-    - 基于DeepSeek大模型完成时空任务场景的指令微调，首次实现时空网格任务在自然语言下的推理执行。
-    - 搭建原型级MCP服务，实现无人机调度、空间查询等典型任务的智能体化。
-    - 在公司内部展示验证系统，推动智能体技术与核心GIS产品的融合
+    - 基于**DeepSeek**大模型完成时空任务场景的指令微调，首次实现时空网格任务在自然语言下的推理执行。
+    - 搭建原型级**MCP**服务，实现无人机调度、空间查询等典型任务的智能体化。
+    - 在公司内部展示验证系统，推动智能体技术与核心**GIS**产品的融合
 
 #### 6）🏢 松山湖低空经济项目
 *开发无人机飞行模拟系统，基于北斗网格编码引擎构建无人机路径规划服务，支持空域划分和智能调度，成为低空经济示范区核心模块*
