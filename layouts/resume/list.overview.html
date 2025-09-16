@@ -71,6 +71,42 @@
       content: "💡 ";
       margin-right: 0.25rem;
     }
+    
+    /* 响应式布局 */
+    @media (min-width: 768px) {
+      .resume-header-container {
+        flex-direction: row !important;
+      }
+      
+      .resume-avatar {
+        height: 11rem !important;
+        width: 8rem !important;
+        align-self: flex-start !important;
+      }
+      
+      .resume-basic-info {
+        width: auto !important;
+        text-align: left !important;
+      }
+    }
+    
+    @media (max-width: 767px) {
+      .resume-header-container {
+        flex-direction: column !important;
+        align-items: center !important;
+      }
+      
+      .resume-avatar {
+        height: 8rem !important;
+        width: 6rem !important;
+        align-self: center !important;
+      }
+      
+      .resume-basic-info {
+        width: 100% !important;
+        text-align: center !important;
+      }
+    }
   </style>
 {{ end }}
 
@@ -80,11 +116,11 @@
       <h1 class="mb-6 mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
         {{ .Title | emojify }}
       </h1>
-      <div style="display: flex !important; align-items: flex-start !important; gap: 1.5rem !important; margin-bottom: 1.5rem !important; flex-direction: row !important;">
+      <div class="resume-header-container" style="display: flex !important; align-items: flex-start !important; gap: 1.5rem !important; margin-bottom: 1.5rem !important; flex-direction: column !important;">
         {{ with .Params.avatar }}
-          <img src="{{ . }}" alt="avatar" class="rounded-md object-cover border border-neutral-300 shadow-sm dark:border-neutral-600" style="height: 11rem !important; width: 8rem !important; max-width: 100%; flex-shrink: 0 !important; display: block !important;" />
+          <img src="{{ . }}" alt="avatar" class="rounded-md object-cover border border-neutral-300 shadow-sm dark:border-neutral-600 resume-avatar" style="height: 8rem !important; width: 6rem !important; max-width: 100%; flex-shrink: 0 !important; display: block !important; align-self: center !important;" />
         {{ end }}
-        <div style="flex: 1 !important; min-width: 0 !important; display: block !important;">
+        <div class="resume-basic-info" style="flex: 1 !important; min-width: 0 !important; display: block !important; width: 100% !important;">
           <h2 style="margin: 0 0 1rem 0 !important; font-size: 1.5rem !important; font-weight: 600 !important; color: inherit !important;">👤 基本信息</h2>
           <ul style="margin: 0 !important; padding-left: 1.5rem !important; list-style-type: disc !important;">
             {{ with .Params.basic_info }}
