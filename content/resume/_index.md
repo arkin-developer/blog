@@ -2,16 +2,14 @@
 layout: resume/list.overview
 title: "个人简历"
 avatar: "/img/author-offical.jpg"
+basic_info:
+  name: "赖为乾（Arkin）"
+  position: "Web全栈开发者 / AI应用全栈 / GIS开发"
+  email: "arkin-dev@qq.com"
+  github: "https://github.com/arkin-developer"
 ---
 
  
-
-## 👤 基本信息
-
-- **姓名**：赖为乾（Arkin）
-- **职位**：Web全栈开发者 / AI应用全栈 / GIS开发
-- **邮箱**：arkin-dev@qq.com
-- **GitHub**：https://github.com/arkin-developer
 
 ## 技术栈
 

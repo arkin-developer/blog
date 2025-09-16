@@ -82,15 +82,17 @@
       </h1>
       <div style="display: flex !important; align-items: flex-start !important; gap: 1.5rem !important; margin-bottom: 1.5rem !important; flex-direction: row !important;">
         {{ with .Params.avatar }}
-          <img src="{{ . }}" alt="avatar" class="rounded-md object-cover border border-neutral-300 shadow-sm dark:border-neutral-600" style="height: 10rem !important; width: 7.5rem !important; max-width: 100%; flex-shrink: 0 !important; display: block !important;" />
+          <img src="{{ . }}" alt="avatar" class="rounded-md object-cover border border-neutral-300 shadow-sm dark:border-neutral-600" style="height: 11rem !important; width: 8rem !important; max-width: 100%; flex-shrink: 0 !important; display: block !important;" />
         {{ end }}
         <div style="flex: 1 !important; min-width: 0 !important; display: block !important;">
           <h2 style="margin: 0 0 1rem 0 !important; font-size: 1.5rem !important; font-weight: 600 !important; color: inherit !important;">👤 基本信息</h2>
           <ul style="margin: 0 !important; padding-left: 1.5rem !important; list-style-type: disc !important;">
-            <li style="margin-bottom: 0.5rem !important; color: inherit !important;"><strong style="font-weight: 600 !important;">姓名</strong>：赖为乾（Arkin）</li>
-            <li style="margin-bottom: 0.5rem !important; color: inherit !important;"><strong style="font-weight: 600 !important;">职位</strong>：Web全栈开发者 / AI应用全栈 / GIS开发</li>
-            <li style="margin-bottom: 0.5rem !important; color: inherit !important;"><strong style="font-weight: 600 !important;">邮箱</strong>：arkin-dev@qq.com</li>
-            <li style="margin-bottom: 0.5rem !important; color: inherit !important;"><strong style="font-weight: 600 !important;">GitHub</strong>：https://github.com/arkin-developer</li>
+            {{ with .Params.basic_info }}
+              <li style="margin-bottom: 0.5rem !important; color: inherit !important;"><strong style="font-weight: 600 !important;">姓名</strong>：{{ .name }}</li>
+              <li style="margin-bottom: 0.5rem !important; color: inherit !important;"><strong style="font-weight: 600 !important;">职位</strong>：{{ .position }}</li>
+              <li style="margin-bottom: 0.5rem !important; color: inherit !important;"><strong style="font-weight: 600 !important;">邮箱</strong>：{{ .email }}</li>
+              <li style="margin-bottom: 0.5rem !important; color: inherit !important;"><strong style="font-weight: 600 !important;">GitHub</strong>：{{ .github }}</li>
+            {{ end }}
           </ul>
         </div>
       </div>
