@@ -30,3 +30,85 @@
     background: rgba(0, 0, 0, 0.7);
   }
 }
+
+/* =============================
+   Resume Page Styles
+   ============================= */
+.resume {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+}
+
+.resume__header {
+  margin-bottom: 1.25rem;
+}
+
+.resume__title {
+  font-size: 2rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.resume__subtitle {
+  color: var(--color-text-2, #666);
+  margin-top: .25rem;
+}
+
+.resume__grid {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 1.5rem;
+}
+
+.resume__toc {
+  position: sticky;
+  top: 5rem;
+  height: max-content;
+  grid-column: 2;
+}
+
+.resume__toc__inner {
+  border: 1px solid var(--color-border, #e5e7eb);
+  border-radius: .5rem;
+  padding: 1rem;
+}
+
+.resume__toc__title {
+  font-weight: 600;
+  margin-bottom: .5rem;
+  font-size: .95rem;
+}
+
+.resume__content {
+  min-width: 0;
+  grid-column: 1;
+}
+
+.resume__content h2 {
+  margin-top: 1.5rem;
+  font-size: 1.4rem;
+}
+
+.resume__content h3 {
+  margin-top: 1rem;
+  font-size: 1.15rem;
+}
+
+.resume__content ul {
+  margin: .5rem 0 1rem 1.25rem;
+}
+
+.resume__content li { 
+  margin: .25rem 0;
+}
+
+/* 响应式 */
+@media (max-width: 1024px) {
+  .resume__grid {
+    grid-template-columns: 1fr;
+  }
+  .resume__toc {
+    position: static;
+  }
+}

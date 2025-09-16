@@ -1,0 +1,41 @@
+{{ define "head" }}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "mainEntity": {
+      "@type": "Person",
+      "name": {{ .Site.Params.author.name | default .Site.Title | jsonify }},
+      "url": {{ .Permalink | jsonify }}
+    },
+    "headline": {{ .Title | jsonify }},
+    "description": {{ with .Params.description }}{{ . | jsonify }}{{ else }}{{ .Summary | plainify | jsonify }}{{ end }}
+  }
+  </script>
+{{ end }}
+
+{{ define "main" }}
+  <article>
+    <header class="max-w-prose">
+      <h1 class="mb-8 mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        {{ .Title | emojify }}
+      </h1>
+      {{ with .Params.description }}
+        <p class="mb-6 text-base text-neutral-500 dark:text-neutral-400">{{ . }}</p>
+      {{ end }}
+    </header>
+
+    <section class="prose mt-0 flex max-w-full flex-col dark:prose-invert lg:flex-row">
+      {{ if in .TableOfContents "<ul" }}
+        <div class="order-first px-0 lg:order-last lg:max-w-xs lg:ps-8">
+          <div class="toc pe-5 lg:sticky lg:top-10 print:hidden">
+            {{ partial "toc.html" . }}
+          </div>
+        </div>
+      {{ end }}
+      <div class="min-h-0 min-w-0 max-w-prose grow">
+        {{ .Content | emojify }}
+      </div>
+    </section>
+  </article>
+{{ end }}
