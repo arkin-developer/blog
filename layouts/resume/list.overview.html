@@ -74,19 +74,19 @@
     
     /* 响应式布局 - 使用显示/隐藏控制 */
     @media (min-width: 768px) {
-      .resume-header-container-pc {
+      article .resume-header-container-pc {
         display: flex !important;
       }
-      .resume-header-container-mobile {
+      article .resume-header-container-mobile {
         display: none !important;
       }
     }
     
     @media (max-width: 767px) {
-      .resume-header-container-pc {
+      article .resume-header-container-pc {
         display: none !important;
       }
-      .resume-header-container-mobile {
+      article .resume-header-container-mobile {
         display: flex !important;
       }
     }
@@ -153,6 +153,28 @@
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       console.log('Resume script loaded');
+      
+      // 响应式布局控制
+      function updateLayout() {
+        const pcContainer = document.querySelector('.resume-header-container-pc');
+        const mobileContainer = document.querySelector('.resume-header-container-mobile');
+        
+        if (window.innerWidth >= 768) {
+          // PC端：显示PC布局，隐藏移动端布局
+          if (pcContainer) pcContainer.style.display = 'flex';
+          if (mobileContainer) mobileContainer.style.display = 'none';
+        } else {
+          // 移动端：显示移动端布局，隐藏PC布局
+          if (pcContainer) pcContainer.style.display = 'none';
+          if (mobileContainer) mobileContainer.style.display = 'flex';
+        }
+      }
+      
+      // 初始设置
+      updateLayout();
+      
+      // 监听窗口大小变化
+      window.addEventListener('resize', updateLayout);
       
       // 隐藏Markdown渲染的基本信息部分（在prose容器内的）
       const proseContainer = document.querySelector('.prose');
