@@ -96,10 +96,13 @@
   
   <script>
     document.addEventListener('DOMContentLoaded', function() {
+      console.log('Resume script loaded');
       // 处理三级标题的展开/折叠
       const h3Elements = document.querySelectorAll('h3');
+      console.log('Found h3 elements:', h3Elements.length);
       
-      h3Elements.forEach(h3 => {
+      h3Elements.forEach((h3, index) => {
+        console.log(`Processing h3 ${index}:`, h3.textContent);
         // 1. 找到该标题下的所有内容（直到下一个h2或h3）
         const allContent = [];
         let currentElement = h3.nextElementSibling;
@@ -109,21 +112,26 @@
           currentElement = currentElement.nextElementSibling;
         }
         
+        console.log(`Found ${allContent.length} content elements for h3 ${index}`);
+        
         // 2. 识别第一个包含<em>的<p>标签作为描述
         let descriptionElement = null;
         let descriptionText = '';
         
         for (let i = 0; i < allContent.length; i++) {
           const element = allContent[i];
+          console.log(`Checking element ${i}:`, element.tagName, element.textContent.substring(0, 50));
           if (element.tagName === 'P' && element.querySelector('em')) {
             descriptionElement = element;
             descriptionText = element.querySelector('em').textContent;
+            console.log('Found description:', descriptionText);
             break;
           }
         }
         
         // 3. 如果找到描述，则处理展开/折叠功能
         if (descriptionElement && descriptionText) {
+          console.log('Setting up toggle for:', h3.textContent);
           // 创建可点击的标题
           h3.style.cursor = 'pointer';
           h3.style.userSelect = 'none';
