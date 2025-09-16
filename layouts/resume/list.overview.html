@@ -77,15 +77,19 @@
 {{ define "main" }}
   <article>
     <header class="max-w-prose">
-      <h1 class="mb-3 mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+      <h1 class="mb-6 mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
         {{ .Title | emojify }}
       </h1>
-      {{ with .Params.avatar }}
-        <img src="{{ . }}" alt="avatar" class="mb-6 rounded-md object-cover border border-neutral-300 shadow-sm dark:border-neutral-600" style="height: 8rem !important; width: 6rem !important; max-width: 100%;" />
-      {{ end }}
-      {{ with .Params.description }}
-        <p class="mb-6 text-base text-neutral-500 dark:text-neutral-400">{{ . }}</p>
-      {{ end }}
+      <div class="flex items-start gap-6 mb-6">
+        {{ with .Params.avatar }}
+          <img src="{{ . }}" alt="avatar" class="rounded-md object-cover border border-neutral-300 shadow-sm dark:border-neutral-600 flex-shrink-0" style="height: 8rem !important; width: 6rem !important; max-width: 100%;" />
+        {{ end }}
+        <div class="flex-1 min-w-0">
+          {{ with .Params.description }}
+            <p class="mb-4 text-base text-neutral-500 dark:text-neutral-400">{{ . }}</p>
+          {{ end }}
+        </div>
+      </div>
     </header>
 
     <section class="prose mt-0 flex max-w-full flex-col dark:prose-invert lg:flex-row">
