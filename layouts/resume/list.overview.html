@@ -100,11 +100,30 @@
       const h3Elements = document.querySelectorAll('h3');
       
       h3Elements.forEach(h3 => {
-        // 检查是否包含描述（斜体文本）
-        const nextElement = h3.nextElementSibling;
-        if (nextElement && nextElement.tagName === 'P' && nextElement.querySelector('em')) {
-          const description = nextElement.querySelector('em').textContent;
-          
+        // 1. 找到该标题下的所有内容（直到下一个h2或h3）
+        const allContent = [];
+        let currentElement = h3.nextElementSibling;
+        
+        while (currentElement && currentElement.tagName !== 'H3' && currentElement.tagName !== 'H2') {
+          allContent.push(currentElement);
+          currentElement = currentElement.nextElementSibling;
+        }
+        
+        // 2. 识别第一个包含<em>的<p>标签作为描述
+        let descriptionElement = null;
+        let descriptionText = '';
+        
+        for (let i = 0; i < allContent.length; i++) {
+          const element = allContent[i];
+          if (element.tagName === 'P' && element.querySelector('em')) {
+            descriptionElement = element;
+            descriptionText = element.querySelector('em').textContent;
+            break;
+          }
+        }
+        
+        // 3. 如果找到描述，则处理展开/折叠功能
+        if (descriptionElement && descriptionText) {
           // 创建可点击的标题
           h3.style.cursor = 'pointer';
           h3.style.userSelect = 'none';
@@ -120,28 +139,20 @@
           // 创建描述容器
           const descriptionDiv = document.createElement('div');
           descriptionDiv.className = 'resume-section-description';
-          descriptionDiv.textContent = description;
+          descriptionDiv.textContent = descriptionText;
           
           // 创建详细内容容器
           const detailContentDiv = document.createElement('div');
           detailContentDiv.className = 'resume-section-detail-content';
           
-          // 收集该标题下的所有内容（直到下一个h2或h3）
-          let currentElement = nextElement.nextElementSibling;
-          while (currentElement && currentElement.tagName !== 'H3' && currentElement.tagName !== 'H2') {
-            const nextSibling = currentElement.nextElementSibling;
-            detailContentDiv.appendChild(currentElement);
-            currentElement = nextSibling;
-          }
+          // 4. 将所有内容（包括描述段落）移动到详细内容容器
+          allContent.forEach(element => {
+            detailContentDiv.appendChild(element);
+          });
           
-          // 重新组织DOM结构
-          // 1. 移除原来的描述段落
-          h3.parentNode.removeChild(nextElement);
-          
-          // 2. 插入描述容器
+          // 5. 重新组织DOM结构
+          // 插入描述容器和详细内容容器
           h3.parentNode.insertBefore(descriptionDiv, currentElement);
-          
-          // 3. 插入详细内容容器
           h3.parentNode.insertBefore(detailContentDiv, currentElement);
           
           // 默认简略模式（只显示描述）
