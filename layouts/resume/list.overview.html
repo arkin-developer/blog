@@ -38,8 +38,10 @@
       opacity: 1;
     }
     .resume-section-content.collapsed {
-      max-height: 0;
-      opacity: 0;
+      max-height: 0 !important;
+      opacity: 0 !important;
+      margin: 0 !important;
+      padding: 0 !important;
     }
     .resume-section-description {
       font-style: italic;
@@ -139,8 +141,13 @@
           
           // 默认简略模式（只显示描述）
           let isDetailed = false;
-          contentDiv.classList.add('collapsed');
-          toggleIcon.style.transform = 'rotate(-90deg)';
+          
+          // 立即应用默认状态
+          setTimeout(() => {
+            contentDiv.classList.add('collapsed');
+            toggleIcon.style.transform = 'rotate(-90deg)';
+            descriptionDiv.style.display = 'block';
+          }, 0);
           
           // 点击事件
           h3.addEventListener('click', function() {
