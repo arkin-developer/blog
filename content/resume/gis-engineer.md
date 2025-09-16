@@ -1,4 +1,5 @@
 ---
+layout: resume/single.profile
 title: "GIS 工程师简历"
 description: "WebGIS/空间分析/遥感/三维/工程化"
 draft: false

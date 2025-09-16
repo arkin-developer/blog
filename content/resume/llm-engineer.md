@@ -1,4 +1,5 @@
 ---
+layout: resume/single.profile
 title: "大模型应用工程师简历"
 description: "LLM/多模态/Agent/微调/部署"
 draft: false
