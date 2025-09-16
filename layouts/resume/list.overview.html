@@ -106,12 +106,13 @@
           <img src="{{ . }}" alt="avatar" class="rounded-md object-cover border border-neutral-300 shadow-sm dark:border-neutral-600" style="height: 12rem !important; width: 9rem !important; max-width: 100%; flex-shrink: 0 !important; display: block !important;" />
         {{ end }}
         <div style="flex: 1 !important; min-width: 0 !important; display: block !important;">
-          <h2 style="margin: 0 0 1rem 0 !important; font-size: 1.5rem !important; font-weight: 600 !important; color: inherit !important;">👤 基本信息</h2>
+          <h2 style="margin: 0 0 1rem 0 !important; font-size: 1.5rem !important; font-weight: 600 !important; color: inherit !important;">👤 {{ if eq .Language.Lang "en" }}Basic Information{{ else }}基本信息{{ end }}</h2>
           <ul style="margin: 0 !important; padding-left: 1.5rem !important; list-style-type: disc !important;">
+            {{ $isEnglish := eq .Language.Lang "en" }}
             {{ with .Params.basic_info }}
-              <li style="margin-bottom: 0.5rem !important; color: inherit !important;"><strong style="font-weight: 600 !important;">姓名</strong>：{{ .name }}</li>
-              <li style="margin-bottom: 0.5rem !important; color: inherit !important;"><strong style="font-weight: 600 !important;">职位</strong>：{{ .position }}</li>
-              <li style="margin-bottom: 0.5rem !important; color: inherit !important;"><strong style="font-weight: 600 !important;">邮箱</strong>：{{ .email }}</li>
+              <li style="margin-bottom: 0.5rem !important; color: inherit !important;"><strong style="font-weight: 600 !important;">{{ if $isEnglish }}Name{{ else }}姓名{{ end }}</strong>：{{ .name }}</li>
+              <li style="margin-bottom: 0.5rem !important; color: inherit !important;"><strong style="font-weight: 600 !important;">{{ if $isEnglish }}Position{{ else }}职位{{ end }}</strong>：{{ .position }}</li>
+              <li style="margin-bottom: 0.5rem !important; color: inherit !important;"><strong style="font-weight: 600 !important;">{{ if $isEnglish }}Email{{ else }}邮箱{{ end }}</strong>：{{ .email }}</li>
               <li style="margin-bottom: 0.5rem !important; color: inherit !important;"><strong style="font-weight: 600 !important;">GitHub</strong>：<a href="{{ .github }}" target="_blank" rel="noopener noreferrer" style="color: #3b82f6; text-decoration: underline;">{{ .github }}</a></li>
             {{ end }}
           </ul>
@@ -124,12 +125,13 @@
           <img src="{{ . }}" alt="avatar" class="rounded-md object-cover border border-neutral-300 shadow-sm dark:border-neutral-600" style="height: 12.5rem !important; width: 9.375rem !important; max-width: 100%; flex-shrink: 0 !important; display: block !important;" />
         {{ end }}
         <div style="flex: 1 !important; min-width: 0 !important; display: block !important; width: 100% !important;">
-          <h2 style="margin: 0 0 1rem 0 !important; font-size: 1.5rem !important; font-weight: 600 !important; color: inherit !important; text-align: center !important;">👤 基本信息</h2>
+          <h2 style="margin: 0 0 1rem 0 !important; font-size: 1.5rem !important; font-weight: 600 !important; color: inherit !important; text-align: center !important;">👤 {{ if eq .Language.Lang "en" }}Basic Information{{ else }}基本信息{{ end }}</h2>
           <ul style="margin: 0 !important; padding-left: 1.5rem !important; list-style-type: disc !important; text-align: left !important;">
+            {{ $isEnglish := eq .Language.Lang "en" }}
             {{ with .Params.basic_info }}
-              <li style="margin-bottom: 0.5rem !important; color: inherit !important;"><strong style="font-weight: 600 !important;">姓名</strong>：{{ .name }}</li>
-              <li style="margin-bottom: 0.5rem !important; color: inherit !important;"><strong style="font-weight: 600 !important;">职位</strong>：{{ .position }}</li>
-              <li style="margin-bottom: 0.5rem !important; color: inherit !important;"><strong style="font-weight: 600 !important;">邮箱</strong>：{{ .email }}</li>
+              <li style="margin-bottom: 0.5rem !important; color: inherit !important;"><strong style="font-weight: 600 !important;">{{ if $isEnglish }}Name{{ else }}姓名{{ end }}</strong>：{{ .name }}</li>
+              <li style="margin-bottom: 0.5rem !important; color: inherit !important;"><strong style="font-weight: 600 !important;">{{ if $isEnglish }}Position{{ else }}职位{{ end }}</strong>：{{ .position }}</li>
+              <li style="margin-bottom: 0.5rem !important; color: inherit !important;"><strong style="font-weight: 600 !important;">{{ if $isEnglish }}Email{{ else }}邮箱{{ end }}</strong>：{{ .email }}</li>
               <li style="margin-bottom: 0.5rem !important; color: inherit !important;"><strong style="font-weight: 600 !important;">GitHub</strong>：<a href="{{ .github }}" target="_blank" rel="noopener noreferrer" style="color: #3b82f6; text-decoration: underline;">{{ .github }}</a></li>
             {{ end }}
           </ul>
@@ -243,7 +245,7 @@
       const proseContainer = document.querySelector('.prose');
       if (proseContainer) {
         const basicInfoH2 = proseContainer.querySelector('h2');
-        if (basicInfoH2 && basicInfoH2.textContent.includes('基本信息')) {
+        if (basicInfoH2 && (basicInfoH2.textContent.includes('基本信息') || basicInfoH2.textContent.includes('Basic Information'))) {
           let nextElement = basicInfoH2.nextElementSibling;
           while (nextElement && nextElement.tagName !== 'H2') {
             nextElement.style.display = 'none';
