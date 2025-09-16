@@ -79,7 +79,7 @@
       }
       
       .resume-avatar {
-        height: 15rem !important;
+        height: 12rem !important;
         width: 9rem !important;
         align-self: flex-start !important;
       }
@@ -118,7 +118,7 @@
       </h1>
       <div class="resume-header-container" style="display: flex !important; align-items: flex-start !important; gap: 1.5rem !important; margin-bottom: 1.5rem !important; flex-direction: row !important;">
         {{ with .Params.avatar }}
-          <img src="{{ . }}" alt="avatar" class="rounded-md object-cover border border-neutral-300 shadow-sm dark:border-neutral-600 resume-avatar" style="height: 15rem !important; width: 9rem !important; max-width: 100%; flex-shrink: 0 !important; display: block !important; align-self: center !important;" />
+          <img src="{{ . }}" alt="avatar" class="rounded-md object-cover border border-neutral-300 shadow-sm dark:border-neutral-600 resume-avatar" style="max-width: 100%; flex-shrink: 0 !important; display: block !important; align-self: center !important;" />
         {{ end }}
         <div class="resume-basic-info" style="flex: 1 !important; min-width: 0 !important; display: block !important; width: 100% !important;">
           <h2 style="margin: 0 0 1rem 0 !important; font-size: 1.5rem !important; font-weight: 600 !important; color: inherit !important;">👤 基本信息</h2>
