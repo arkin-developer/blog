@@ -45,10 +45,17 @@
       font-style: italic;
       color: var(--color-text-2, #666);
       margin: 0.5rem 0 1rem 0;
-      padding: 0.5rem;
+      padding: 0.75rem 1rem;
       background: var(--color-bg-2, #f8f9fa);
       border-left: 3px solid var(--color-primary, #3b82f6);
-      border-radius: 0 4px 4px 0;
+      border-radius: 0 6px 6px 0;
+      font-size: 0.95em;
+      line-height: 1.5;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    .resume-section-description:before {
+      content: "💡 ";
+      margin-right: 0.25rem;
     }
   </style>
 {{ end }}
@@ -130,21 +137,25 @@
           h3.parentNode.insertBefore(contentDiv, nextElement);
           h3.parentNode.removeChild(nextElement);
           
-          // 默认展开状态
-          let isExpanded = true;
+          // 默认简略模式（只显示描述）
+          let isDetailed = false;
+          contentDiv.classList.add('collapsed');
+          toggleIcon.style.transform = 'rotate(-90deg)';
           
           // 点击事件
           h3.addEventListener('click', function() {
-            isExpanded = !isExpanded;
+            isDetailed = !isDetailed;
             
-            if (isExpanded) {
+            if (isDetailed) {
+              // 详细模式：显示完整内容，隐藏描述
               contentDiv.classList.remove('collapsed');
               toggleIcon.style.transform = 'rotate(0deg)';
-              descriptionDiv.style.display = 'block';
+              descriptionDiv.style.display = 'none';
             } else {
+              // 简略模式：只显示描述，隐藏详细内容
               contentDiv.classList.add('collapsed');
               toggleIcon.style.transform = 'rotate(-90deg)';
-              descriptionDiv.style.display = 'none';
+              descriptionDiv.style.display = 'block';
             }
           });
           
