@@ -161,9 +161,11 @@
           const detailContentDiv = document.createElement('div');
           detailContentDiv.className = 'resume-section-detail-content';
           
-          // 4. 将所有内容（包括描述段落）移动到详细内容容器
+          // 4. 将除描述段落外的所有内容移动到详细内容容器
           allContent.forEach(element => {
-            detailContentDiv.appendChild(element);
+            if (element !== descriptionElement) {
+              detailContentDiv.appendChild(element);
+            }
           });
           
           // 5. 重新组织DOM结构
