@@ -116,7 +116,7 @@
       <h1 class="mb-6 mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
         {{ .Title | emojify }}
       </h1>
-      <div class="resume-header-container" style="display: flex !important; align-items: flex-start !important; gap: 1.5rem !important; margin-bottom: 1.5rem !important; flex-direction: column !important;">
+      <div class="resume-header-container" style="display: flex !important; align-items: flex-start !important; gap: 1.5rem !important; margin-bottom: 1.5rem !important; flex-direction: row !important;">
         {{ with .Params.avatar }}
           <img src="{{ . }}" alt="avatar" class="rounded-md object-cover border border-neutral-300 shadow-sm dark:border-neutral-600 resume-avatar" style="height: 8rem !important; width: 6rem !important; max-width: 100%; flex-shrink: 0 !important; display: block !important; align-self: center !important;" />
         {{ end }}
