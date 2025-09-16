@@ -169,6 +169,9 @@
           });
           
           // 5. 重新组织DOM结构
+          // 移除原始的描述段落
+          h3.parentNode.removeChild(descriptionElement);
+          
           // 插入描述容器和详细内容容器
           h3.parentNode.insertBefore(descriptionDiv, currentElement);
           h3.parentNode.insertBefore(detailContentDiv, currentElement);
