@@ -80,11 +80,11 @@
       <h1 class="mb-6 mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
         {{ .Title | emojify }}
       </h1>
-      <div class="flex items-start gap-6 mb-6" style="display: flex !important;">
+      <div style="display: flex !important; align-items: flex-start !important; gap: 1.5rem !important; margin-bottom: 1.5rem !important; flex-direction: row !important;">
         {{ with .Params.avatar }}
-          <img src="{{ . }}" alt="avatar" class="rounded-md object-cover border border-neutral-300 shadow-sm dark:border-neutral-600" style="height: 8rem !important; width: 6rem !important; max-width: 100%; flex-shrink: 0 !important;" />
+          <img src="{{ . }}" alt="avatar" class="rounded-md object-cover border border-neutral-300 shadow-sm dark:border-neutral-600" style="height: 8rem !important; width: 6rem !important; max-width: 100%; flex-shrink: 0 !important; display: block !important;" />
         {{ end }}
-        <div style="flex: 1 !important; min-width: 0 !important;">
+        <div style="flex: 1 !important; min-width: 0 !important; display: block !important;">
           {{ with .Params.description }}
             <p class="mb-4 text-base text-neutral-500 dark:text-neutral-400">{{ . }}</p>
           {{ end }}
