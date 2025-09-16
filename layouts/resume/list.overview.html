@@ -114,16 +114,19 @@
     document.addEventListener('DOMContentLoaded', function() {
       console.log('Resume script loaded');
       
-      // 隐藏原来的基本信息部分
-      const basicInfoH2 = document.querySelector('h2');
-      if (basicInfoH2 && basicInfoH2.textContent.includes('基本信息')) {
-        let nextElement = basicInfoH2.nextElementSibling;
-        while (nextElement && nextElement.tagName !== 'H2') {
-          nextElement.style.display = 'none';
-          nextElement = nextElement.nextElementSibling;
+      // 隐藏Markdown渲染的基本信息部分（在prose容器内的）
+      const proseContainer = document.querySelector('.prose');
+      if (proseContainer) {
+        const basicInfoH2 = proseContainer.querySelector('h2');
+        if (basicInfoH2 && basicInfoH2.textContent.includes('基本信息')) {
+          let nextElement = basicInfoH2.nextElementSibling;
+          while (nextElement && nextElement.tagName !== 'H2') {
+            nextElement.style.display = 'none';
+            nextElement = nextElement.nextElementSibling;
+          }
+          basicInfoH2.style.display = 'none';
+          console.log('Hidden original basic info section in prose container');
         }
-        basicInfoH2.style.display = 'none';
-        console.log('Hidden original basic info section');
       }
       
       // 处理三级标题的展开/折叠
