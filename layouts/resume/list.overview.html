@@ -44,6 +44,16 @@
       padding: 0 !important;
       overflow: hidden !important;
       display: none !important;
+      visibility: hidden !important;
+      height: 0 !important;
+    }
+    
+    /* 更强制性的隐藏规则 */
+    .prose .resume-section-detail-content.collapsed {
+      display: none !important;
+      max-height: 0 !important;
+      opacity: 0 !important;
+      overflow: hidden !important;
     }
     .resume-section-description {
       font-style: italic;
@@ -167,6 +177,10 @@
           // 立即应用默认状态
           setTimeout(() => {
             detailContentDiv.classList.add('collapsed');
+            detailContentDiv.style.display = 'none';
+            detailContentDiv.style.maxHeight = '0';
+            detailContentDiv.style.opacity = '0';
+            detailContentDiv.style.overflow = 'hidden';
             toggleIcon.style.transform = 'rotate(0deg)';
             descriptionDiv.style.display = 'block';
             console.log('Applied default collapsed state for:', h3.textContent);
@@ -182,6 +196,10 @@
             if (isDetailed) {
               // 详细模式：显示详细内容，隐藏描述
               detailContentDiv.classList.remove('collapsed');
+              detailContentDiv.style.display = 'block';
+              detailContentDiv.style.maxHeight = '1000px';
+              detailContentDiv.style.opacity = '1';
+              detailContentDiv.style.overflow = 'visible';
               toggleIcon.textContent = '▼';
               toggleIcon.style.transform = 'rotate(0deg)';
               descriptionDiv.style.display = 'none';
@@ -189,6 +207,10 @@
             } else {
               // 简略模式：只显示描述，隐藏详细内容
               detailContentDiv.classList.add('collapsed');
+              detailContentDiv.style.display = 'none';
+              detailContentDiv.style.maxHeight = '0';
+              detailContentDiv.style.opacity = '0';
+              detailContentDiv.style.overflow = 'hidden';
               toggleIcon.textContent = '▶';
               toggleIcon.style.transform = 'rotate(0deg)';
               descriptionDiv.style.display = 'block';
