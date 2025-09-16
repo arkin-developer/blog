@@ -72,37 +72,37 @@
       margin-right: 0.25rem;
     }
     
-    /* 响应式布局 */
+    /* 响应式布局 - 使用更高优先级的选择器 */
     @media (min-width: 768px) {
-      .resume-header-container {
+      article .resume-header-container {
         flex-direction: row !important;
       }
       
-      .resume-avatar {
+      article .resume-avatar {
         height: 12rem !important;
         width: 9rem !important;
         align-self: flex-start !important;
       }
         
-      .resume-basic-info {
+      article .resume-basic-info {
         width: auto !important;
         text-align: left !important;
       }
     }
     
     @media (max-width: 767px) {
-      .resume-header-container {
+      article .resume-header-container {
         flex-direction: column !important;
         align-items: center !important;
       }
       
-      .resume-avatar {
+      article .resume-avatar {
         height: 8rem !important;
         width: 6rem !important;
         align-self: center !important;
       }
       
-      .resume-basic-info {
+      article .resume-basic-info {
         width: 100% !important;
         text-align: center !important;
       }
