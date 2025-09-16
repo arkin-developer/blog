@@ -31,13 +31,13 @@
     .resume-section-toggle.collapsed .toggle-icon {
       transform: rotate(-90deg);
     }
-    .resume-section-content {
+    .resume-section-detail-content {
       overflow: hidden;
       transition: max-height 0.3s ease, opacity 0.3s ease;
       max-height: 1000px;
       opacity: 1;
     }
-    .resume-section-content.collapsed {
+    .resume-section-detail-content.collapsed {
       max-height: 0 !important;
       opacity: 0 !important;
       margin: 0 !important;
@@ -111,7 +111,7 @@
           
           // 添加展开/折叠图标
           const toggleIcon = document.createElement('span');
-          toggleIcon.textContent = '▼';
+          toggleIcon.textContent = '▶';
           toggleIcon.style.marginLeft = '0.5rem';
           toggleIcon.style.transition = 'transform 0.3s ease';
           toggleIcon.style.display = 'inline-block';
@@ -122,30 +122,35 @@
           descriptionDiv.className = 'resume-section-description';
           descriptionDiv.textContent = description;
           
-          // 创建内容容器
-          const contentDiv = document.createElement('div');
-          contentDiv.className = 'resume-section-content';
+          // 创建详细内容容器
+          const detailContentDiv = document.createElement('div');
+          detailContentDiv.className = 'resume-section-detail-content';
           
-          // 移动后续内容到内容容器
+          // 收集该标题下的所有内容（直到下一个h2或h3）
           let currentElement = nextElement.nextElementSibling;
           while (currentElement && currentElement.tagName !== 'H3' && currentElement.tagName !== 'H2') {
             const nextSibling = currentElement.nextElementSibling;
-            contentDiv.appendChild(currentElement);
+            detailContentDiv.appendChild(currentElement);
             currentElement = nextSibling;
           }
           
-          // 插入描述和内容
-          h3.parentNode.insertBefore(descriptionDiv, nextElement);
-          h3.parentNode.insertBefore(contentDiv, nextElement);
+          // 重新组织DOM结构
+          // 1. 移除原来的描述段落
           h3.parentNode.removeChild(nextElement);
+          
+          // 2. 插入描述容器
+          h3.parentNode.insertBefore(descriptionDiv, currentElement);
+          
+          // 3. 插入详细内容容器
+          h3.parentNode.insertBefore(detailContentDiv, currentElement);
           
           // 默认简略模式（只显示描述）
           let isDetailed = false;
           
           // 立即应用默认状态
           setTimeout(() => {
-            contentDiv.classList.add('collapsed');
-            toggleIcon.style.transform = 'rotate(-90deg)';
+            detailContentDiv.classList.add('collapsed');
+            toggleIcon.style.transform = 'rotate(0deg)';
             descriptionDiv.style.display = 'block';
           }, 0);
           
@@ -154,14 +159,16 @@
             isDetailed = !isDetailed;
             
             if (isDetailed) {
-              // 详细模式：显示完整内容，隐藏描述
-              contentDiv.classList.remove('collapsed');
+              // 详细模式：显示详细内容，隐藏描述
+              detailContentDiv.classList.remove('collapsed');
+              toggleIcon.textContent = '▼';
               toggleIcon.style.transform = 'rotate(0deg)';
               descriptionDiv.style.display = 'none';
             } else {
               // 简略模式：只显示描述，隐藏详细内容
-              contentDiv.classList.add('collapsed');
-              toggleIcon.style.transform = 'rotate(-90deg)';
+              detailContentDiv.classList.add('collapsed');
+              toggleIcon.textContent = '▶';
+              toggleIcon.style.transform = 'rotate(0deg)';
               descriptionDiv.style.display = 'block';
             }
           });
