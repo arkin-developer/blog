@@ -72,39 +72,22 @@
       margin-right: 0.25rem;
     }
     
-    /* 响应式布局 - 使用更高优先级的选择器 */
+    /* 响应式布局 - 使用显示/隐藏控制 */
     @media (min-width: 768px) {
-      article .resume-header-container {
-        flex-direction: row !important;
+      .resume-header-container-pc {
+        display: flex !important;
       }
-      
-      article .resume-avatar {
-        height: 12rem !important;
-        width: 9rem !important;
-        align-self: flex-start !important;
-      }
-        
-      article .resume-basic-info {
-        width: auto !important;
-        text-align: left !important;
+      .resume-header-container-mobile {
+        display: none !important;
       }
     }
     
     @media (max-width: 767px) {
-      article .resume-header-container {
-        flex-direction: column !important;
-        align-items: center !important;
+      .resume-header-container-pc {
+        display: none !important;
       }
-      
-      article .resume-avatar {
-        height: 8rem !important;
-        width: 6rem !important;
-        align-self: center !important;
-      }
-      
-      article .resume-basic-info {
-        width: 100% !important;
-        text-align: center !important;
+      .resume-header-container-mobile {
+        display: flex !important;
       }
     }
   </style>
@@ -116,11 +99,30 @@
       <h1 class="mb-6 mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
         {{ .Title | emojify }}
       </h1>
-      <div class="resume-header-container" style="display: flex !important; align-items: flex-start !important; gap: 1.5rem !important; margin-bottom: 1.5rem !important; flex-direction: row !important;">
+      <!-- PC端布局 -->
+      <div class="resume-header-container-pc" style="display: flex !important; align-items: flex-start !important; gap: 1.5rem !important; margin-bottom: 1.5rem !important; flex-direction: row !important;">
         {{ with .Params.avatar }}
-          <img src="{{ . }}" alt="avatar" class="rounded-md object-cover border border-neutral-300 shadow-sm dark:border-neutral-600 resume-avatar" style="max-width: 100%; flex-shrink: 0 !important; display: block !important;" />
+          <img src="{{ . }}" alt="avatar" class="rounded-md object-cover border border-neutral-300 shadow-sm dark:border-neutral-600" style="height: 12rem !important; width: 9rem !important; max-width: 100%; flex-shrink: 0 !important; display: block !important;" />
         {{ end }}
-        <div class="resume-basic-info" style="flex: 1 !important; min-width: 0 !important; display: block !important; width: 100% !important;">
+        <div style="flex: 1 !important; min-width: 0 !important; display: block !important;">
+          <h2 style="margin: 0 0 1rem 0 !important; font-size: 1.5rem !important; font-weight: 600 !important; color: inherit !important;">👤 基本信息</h2>
+          <ul style="margin: 0 !important; padding-left: 1.5rem !important; list-style-type: disc !important;">
+            {{ with .Params.basic_info }}
+              <li style="margin-bottom: 0.5rem !important; color: inherit !important;"><strong style="font-weight: 600 !important;">姓名</strong>：{{ .name }}</li>
+              <li style="margin-bottom: 0.5rem !important; color: inherit !important;"><strong style="font-weight: 600 !important;">职位</strong>：{{ .position }}</li>
+              <li style="margin-bottom: 0.5rem !important; color: inherit !important;"><strong style="font-weight: 600 !important;">邮箱</strong>：{{ .email }}</li>
+              <li style="margin-bottom: 0.5rem !important; color: inherit !important;"><strong style="font-weight: 600 !important;">GitHub</strong>：{{ .github }}</li>
+            {{ end }}
+          </ul>
+        </div>
+      </div>
+      
+      <!-- 移动端布局 -->
+      <div class="resume-header-container-mobile" style="display: flex !important; align-items: center !important; gap: 1.5rem !important; margin-bottom: 1.5rem !important; flex-direction: column !important;">
+        {{ with .Params.avatar }}
+          <img src="{{ . }}" alt="avatar" class="rounded-md object-cover border border-neutral-300 shadow-sm dark:border-neutral-600" style="height: 8rem !important; width: 6rem !important; max-width: 100%; flex-shrink: 0 !important; display: block !important;" />
+        {{ end }}
+        <div style="flex: 1 !important; min-width: 0 !important; display: block !important; width: 100% !important; text-align: center !important;">
           <h2 style="margin: 0 0 1rem 0 !important; font-size: 1.5rem !important; font-weight: 600 !important; color: inherit !important;">👤 基本信息</h2>
           <ul style="margin: 0 !important; padding-left: 1.5rem !important; list-style-type: disc !important;">
             {{ with .Params.basic_info }}
