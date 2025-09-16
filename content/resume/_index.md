@@ -13,7 +13,7 @@ basic_info:
 ## 技术栈
 
 ### 编程语言
-*掌握多种编程语言，具备跨平台开发能力*
+*精通Python和Golang全栈开发，熟悉JavaScript/TypeScript前端技术，具备C++原生库封装和ArkTS移动端开发能力*
 
 - **Python（熟练）**
 - **Golang（熟练）**
@@ -22,7 +22,7 @@ basic_info:
 - **ArkTS（学习中）**
 
 ### AI&大模型应用开发 · [查看岗位版简历](/resume/llm-engineer/)
-*专注于计算机视觉、大模型应用与智能体开发，具备完整的AI工程化能力*
+*深度掌握YOLO目标检测、CNN图像分类、语义分割等计算机视觉技术，熟练运用OpenAI API、LangChain构建大模型应用，具备RAG检索增强生成、多模态智能体开发和完整的AI工程化部署能力*
 
 - **计算机视觉**
   - **任务类型**：目标检测、图像分类、语义分割
@@ -46,7 +46,7 @@ basic_info:
     **工程化能力**：服务化封装（API/Agent）、容器化部署（Docker/K8s）、日志与监控、性能优化
 
 ### Web全栈开发
-*具备完整的前后端开发能力，从UI设计到服务部署的全栈技术栈*
+*精通React/Vue/Next.js前端开发，熟练Python FastAPI/Golang Gin后端架构，掌握PostgreSQL/Redis数据库技术，具备Docker容器化、Kubernetes部署和完整的DevOps工程化能力*
 
 - **前端开发（Frontend）**
   - **基础语言**：HTML、CSS、JavaScript、TypeScript
@@ -75,7 +75,7 @@ basic_info:
   - **测试**：单元测试（Jest、PyTest、Go Test）、集成测试、端到端测试（Cypress、Playwright）
 
 ### GIS开发 · [查看岗位版简历](/resume/gis-engineer/)
-*专业的地理信息处理与WebGIS开发，涵盖遥感、空间分析与三维可视化*
+*深度掌握ArcGIS/QGIS地理信息处理，熟练遥感影像分类识别、变化检测算法，精通OpenLayers/Leaflet WebGIS开发，具备PostGIS空间数据库、GeoServer地图服务和完整的GIS工程化解决方案能力*
 
 - **数据预处理** 
   - **工具**：ArcGIS、ENVI、QGIS 软件熟练使用，Python GDAL、Rasterio 工具库熟练使用
@@ -105,7 +105,7 @@ basic_info:
   - **工具/库**：Shapely、GEOS、GDAL/OGR、CGAL
 
 ### 鸿蒙开发
-*探索HarmonyOS生态开发，关注跨平台移动应用技术*
+*深入学习HarmonyOS NEXT 5开发技术，掌握ArkTS语言和鸿蒙生态应用开发，关注跨平台移动应用技术发展趋势*
 
 - **北向开发**
   - HarmonyOS NEXT 5 开发
