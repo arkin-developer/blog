@@ -12,6 +12,45 @@
     "description": {{ with .Params.description }}{{ . | jsonify }}{{ else }}{{ .Summary | plainify | jsonify }}{{ end }}
   }
   </script>
+  <style>
+    .resume-section-toggle {
+      cursor: pointer;
+      user-select: none;
+      position: relative;
+      transition: color 0.2s ease;
+    }
+    .resume-section-toggle:hover {
+      color: var(--color-primary, #3b82f6);
+    }
+    .toggle-icon {
+      font-size: 0.8em;
+      margin-left: 0.5rem;
+      transition: transform 0.3s ease;
+      display: inline-block;
+    }
+    .resume-section-toggle.collapsed .toggle-icon {
+      transform: rotate(-90deg);
+    }
+    .resume-section-content {
+      overflow: hidden;
+      transition: max-height 0.3s ease, opacity 0.3s ease;
+      max-height: 1000px;
+      opacity: 1;
+    }
+    .resume-section-content.collapsed {
+      max-height: 0;
+      opacity: 0;
+    }
+    .resume-section-description {
+      font-style: italic;
+      color: var(--color-text-2, #666);
+      margin: 0.5rem 0 1rem 0;
+      padding: 0.5rem;
+      background: var(--color-bg-2, #f8f9fa);
+      border-left: 3px solid var(--color-primary, #3b82f6);
+      border-radius: 0 4px 4px 0;
+    }
+  </style>
 {{ end }}
 
 {{ define "main" }}
@@ -37,8 +76,88 @@
         </div>
       {{ end }}
       <div class="min-h-0 min-w-0 max-w-prose grow">
-        {{ .Content | emojify }}
+        {{ $content := .Content | emojify }}
+        {{ $content = replace $content "<h3>" "<h3 class=\"resume-section-toggle\" data-toggle=\"section\">" }}
+        {{ $content = replace $content "</h3>" "<span class=\"toggle-icon\">▼</span></h3>" }}
+        {{ $content = replace $content "<h3 class=\"resume-section-toggle\" data-toggle=\"section\">" "<h3 class=\"resume-section-toggle\" data-toggle=\"section\">" }}
+        {{ $content | safeHTML }}
       </div>
     </section>
   </article>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // 处理三级标题的展开/折叠
+      const h3Elements = document.querySelectorAll('h3');
+      
+      h3Elements.forEach(h3 => {
+        // 检查是否包含描述（斜体文本）
+        const nextElement = h3.nextElementSibling;
+        if (nextElement && nextElement.tagName === 'P' && nextElement.querySelector('em')) {
+          const description = nextElement.querySelector('em').textContent;
+          
+          // 创建可点击的标题
+          h3.style.cursor = 'pointer';
+          h3.style.userSelect = 'none';
+          
+          // 添加展开/折叠图标
+          const toggleIcon = document.createElement('span');
+          toggleIcon.textContent = '▼';
+          toggleIcon.style.marginLeft = '0.5rem';
+          toggleIcon.style.transition = 'transform 0.3s ease';
+          toggleIcon.style.display = 'inline-block';
+          h3.appendChild(toggleIcon);
+          
+          // 创建描述容器
+          const descriptionDiv = document.createElement('div');
+          descriptionDiv.className = 'resume-section-description';
+          descriptionDiv.textContent = description;
+          
+          // 创建内容容器
+          const contentDiv = document.createElement('div');
+          contentDiv.className = 'resume-section-content';
+          
+          // 移动后续内容到内容容器
+          let currentElement = nextElement.nextElementSibling;
+          while (currentElement && currentElement.tagName !== 'H3' && currentElement.tagName !== 'H2') {
+            const nextSibling = currentElement.nextElementSibling;
+            contentDiv.appendChild(currentElement);
+            currentElement = nextSibling;
+          }
+          
+          // 插入描述和内容
+          h3.parentNode.insertBefore(descriptionDiv, nextElement);
+          h3.parentNode.insertBefore(contentDiv, nextElement);
+          h3.parentNode.removeChild(nextElement);
+          
+          // 默认展开状态
+          let isExpanded = true;
+          
+          // 点击事件
+          h3.addEventListener('click', function() {
+            isExpanded = !isExpanded;
+            
+            if (isExpanded) {
+              contentDiv.classList.remove('collapsed');
+              toggleIcon.style.transform = 'rotate(0deg)';
+              descriptionDiv.style.display = 'block';
+            } else {
+              contentDiv.classList.add('collapsed');
+              toggleIcon.style.transform = 'rotate(-90deg)';
+              descriptionDiv.style.display = 'none';
+            }
+          });
+          
+          // 悬停效果
+          h3.addEventListener('mouseenter', function() {
+            h3.style.color = 'var(--color-primary, #3b82f6)';
+          });
+          
+          h3.addEventListener('mouseleave', function() {
+            h3.style.color = '';
+          });
+        }
+      });
+    });
+  </script>
 {{ end }}
