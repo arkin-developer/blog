@@ -1,0 +1,41 @@
+{{ define "head" }}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "mainEntity": {
+      "@type": "Person",
+      "name": {{ .Site.Params.author.name | default .Site.Title | jsonify }},
+      "url": {{ .Permalink | jsonify }}
+    },
+    "headline": {{ .Title | jsonify }},
+    "description": {{ with .Params.description }}{{ . | jsonify }}{{ else }}{{ .Summary | plainify | jsonify }}{{ end }}
+  }
+  </script>
+{{ end }}
+
+{{ define "main" }}
+  <article class="resume">
+    <header class="resume__header">
+      <h1 class="resume__title">{{ .Title | emojify }}</h1>
+      {{ with .Params.description }}
+        <p class="resume__subtitle">{{ . }}</p>
+      {{ end }}
+    </header>
+
+    <div class="resume__grid">
+      {{ if in .TableOfContents "<ul" }}
+        <aside class="resume__toc">
+          <div class="resume__toc__inner">
+            <div class="resume__toc__title">目录</div>
+            {{ .TableOfContents | emojify }}
+          </div>
+        </aside>
+      {{ end }}
+
+      <div class="resume__content">
+        {{ .Content | emojify }}
+      </div>
+    </div>
+  </article>
+{{ end }}
