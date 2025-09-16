@@ -153,7 +153,6 @@
   
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      console.log('Resume script loaded');
       
       // 响应式布局控制
       function updateLayout() {
@@ -186,7 +185,6 @@
         // 点击事件
         resumeTitle.addEventListener('click', function() {
           isAllExpanded = !isAllExpanded;
-          console.log('Global toggle clicked, isAllExpanded:', isAllExpanded);
           
           // 获取所有可展开的元素
           const allDetailContents = document.querySelectorAll('.resume-section-detail-content');
@@ -238,7 +236,6 @@
           globalToggleIcon.textContent = isAllExpanded ? '▼' : '▶';
           globalToggleIcon.style.transform = isAllExpanded ? 'rotate(0deg)' : 'rotate(0deg)';
           
-          console.log('Global toggle completed, isAllExpanded:', isAllExpanded);
         });
       }
       
@@ -253,21 +250,17 @@
             nextElement = nextElement.nextElementSibling;
           }
           basicInfoH2.style.display = 'none';
-          console.log('Hidden original basic info section in prose container');
         }
       }
       
       // 处理三级标题的展开/折叠（技术栈部分）
       const h3Elements = document.querySelectorAll('h3');
-      console.log('Found h3 elements:', h3Elements.length);
       
       h3Elements.forEach((h3, index) => {
-        console.log(`Processing h3 ${index}:`, h3.textContent);
         
         // 检查是否是工作经历部分的三级标题，如果是则跳过（工作经历用四级标题）
         const isWorkExperience = h3.textContent.includes('工程师') || h3.textContent.includes('工作经历');
         if (isWorkExperience) {
-          console.log('Skipping work experience h3:', h3.textContent);
           return;
         }
         
@@ -280,7 +273,6 @@
           currentElement = currentElement.nextElementSibling;
         }
         
-        console.log(`Found ${allContent.length} content elements for h3 ${index}`);
         
         // 2. 识别第一个包含<em>的<p>标签作为描述
         let descriptionElement = null;
@@ -288,18 +280,15 @@
         
         for (let i = 0; i < allContent.length; i++) {
           const element = allContent[i];
-          console.log(`Checking element ${i}:`, element.tagName, element.textContent.substring(0, 50));
           if (element.tagName === 'P' && element.querySelector('em')) {
             descriptionElement = element;
             descriptionText = element.querySelector('em').textContent;
-            console.log('Found description:', descriptionText);
             break;
           }
         }
         
         // 3. 如果找到描述，则处理展开/折叠功能
         if (descriptionElement && descriptionText) {
-          console.log('Setting up toggle for:', h3.textContent);
           // 创建可点击的标题
           h3.style.cursor = 'pointer';
           h3.style.userSelect = 'none';
@@ -349,15 +338,11 @@
             detailContentDiv.style.overflow = 'hidden';
             toggleIcon.style.transform = 'rotate(0deg)';
             descriptionDiv.style.display = 'block';
-            console.log('Applied default collapsed state for:', h3.textContent);
-            console.log('Detail content div classes:', detailContentDiv.className);
-            console.log('Detail content div style:', detailContentDiv.style.cssText);
           }, 0);
           
           // 点击事件
           h3.addEventListener('click', function() {
             isDetailed = !isDetailed;
-            console.log('Toggle clicked for:', h3.textContent, 'isDetailed:', isDetailed);
             
             if (isDetailed) {
               // 详细模式：显示详细内容，隐藏描述
@@ -370,7 +355,6 @@
               toggleIcon.textContent = '▼';
               toggleIcon.style.transform = 'rotate(0deg)';
               descriptionDiv.style.display = 'none';
-              console.log('Switched to detailed mode');
             } else {
               // 简略模式：只显示描述，隐藏详细内容
               detailContentDiv.classList.add('collapsed');
@@ -382,7 +366,6 @@
               toggleIcon.textContent = '▶';
               toggleIcon.style.transform = 'rotate(0deg)';
               descriptionDiv.style.display = 'block';
-              console.log('Switched to simple mode');
             }
           });
           
@@ -399,15 +382,12 @@
       
       // 处理四级标题的展开/折叠（工作经历项目部分）
       const h4Elements = document.querySelectorAll('h4');
-      console.log('Found h4 elements:', h4Elements.length);
       
       h4Elements.forEach((h4, index) => {
-        console.log(`Processing h4 ${index}:`, h4.textContent);
         
         // 检查是否是工作经历项目的四级标题
         const isProjectTitle = h4.textContent.includes('）') && (h4.textContent.includes('项目') || h4.textContent.includes('服务'));
         if (!isProjectTitle) {
-          console.log('Skipping non-project h4:', h4.textContent);
           return;
         }
         
@@ -420,7 +400,6 @@
           currentElement = currentElement.nextElementSibling;
         }
         
-        console.log(`Found ${allContent.length} content elements for h4 ${index}`);
         
         // 2. 识别第一个包含<em>的<p>标签作为描述
         let descriptionElement = null;
@@ -428,18 +407,15 @@
         
         for (let i = 0; i < allContent.length; i++) {
           const element = allContent[i];
-          console.log(`Checking h4 element ${i}:`, element.tagName, element.textContent.substring(0, 50));
           if (element.tagName === 'P' && element.querySelector('em')) {
             descriptionElement = element;
             descriptionText = element.querySelector('em').textContent;
-            console.log('Found h4 description:', descriptionText);
             break;
           }
         }
         
         // 3. 如果找到描述，则处理展开/折叠功能
         if (descriptionElement && descriptionText) {
-          console.log('Setting up toggle for h4:', h4.textContent);
           // 创建可点击的标题
           h4.style.cursor = 'pointer';
           h4.style.userSelect = 'none';
@@ -489,13 +465,11 @@
             detailContentDiv.style.overflow = 'hidden';
             toggleIcon.style.transform = 'rotate(0deg)';
             descriptionDiv.style.display = 'block';
-            console.log('Applied default collapsed state for h4:', h4.textContent);
           }, 0);
           
           // 点击事件
           h4.addEventListener('click', function() {
             isDetailed = !isDetailed;
-            console.log('Toggle clicked for h4:', h4.textContent, 'isDetailed:', isDetailed);
             
             if (isDetailed) {
               // 详细模式：显示详细内容，隐藏描述
@@ -508,7 +482,6 @@
               toggleIcon.textContent = '▼';
               toggleIcon.style.transform = 'rotate(0deg)';
               descriptionDiv.style.display = 'none';
-              console.log('Switched to detailed mode for h4');
             } else {
               // 简略模式：只显示描述，隐藏详细内容
               detailContentDiv.classList.add('collapsed');
@@ -520,7 +493,6 @@
               toggleIcon.textContent = '▶';
               toggleIcon.style.transform = 'rotate(0deg)';
               descriptionDiv.style.display = 'block';
-              console.log('Switched to simple mode for h4');
             }
           });
           
