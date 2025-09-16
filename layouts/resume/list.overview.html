@@ -85,9 +85,13 @@
           <img src="{{ . }}" alt="avatar" class="rounded-md object-cover border border-neutral-300 shadow-sm dark:border-neutral-600" style="height: 8rem !important; width: 6rem !important; max-width: 100%; flex-shrink: 0 !important; display: block !important;" />
         {{ end }}
         <div style="flex: 1 !important; min-width: 0 !important; display: block !important;">
-          {{ with .Params.description }}
-            <p class="mb-4 text-base text-neutral-500 dark:text-neutral-400">{{ . }}</p>
-          {{ end }}
+          <h2 style="margin: 0 0 1rem 0 !important; font-size: 1.5rem !important; font-weight: 600 !important;">👤 基本信息</h2>
+          <ul style="margin: 0 !important; padding: 0 !important; list-style: none !important;">
+            <li style="margin-bottom: 0.5rem !important;"><strong>姓名</strong>：赖为乾（Arkin）</li>
+            <li style="margin-bottom: 0.5rem !important;"><strong>职位</strong>：Web全栈开发者 / AI应用全栈 / GIS开发</li>
+            <li style="margin-bottom: 0.5rem !important;"><strong>邮箱</strong>：arkin-dev@qq.com</li>
+            <li style="margin-bottom: 0.5rem !important;"><strong>GitHub</strong>：https://github.com/arkin-developer</li>
+          </ul>
         </div>
       </div>
     </header>
@@ -109,6 +113,19 @@
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       console.log('Resume script loaded');
+      
+      // 隐藏原来的基本信息部分
+      const basicInfoH2 = document.querySelector('h2');
+      if (basicInfoH2 && basicInfoH2.textContent.includes('基本信息')) {
+        let nextElement = basicInfoH2.nextElementSibling;
+        while (nextElement && nextElement.tagName !== 'H2') {
+          nextElement.style.display = 'none';
+          nextElement = nextElement.nextElementSibling;
+        }
+        basicInfoH2.style.display = 'none';
+        console.log('Hidden original basic info section');
+      }
+      
       // 处理三级标题的展开/折叠
       const h3Elements = document.querySelectorAll('h3');
       console.log('Found h3 elements:', h3Elements.length);
