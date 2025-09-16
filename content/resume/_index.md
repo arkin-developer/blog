@@ -1,7 +1,6 @@
 ---
 layout: resume/list.overview
 title: "个人简历"
-description: "我的技能和工作经历"
 avatar: "/img/author-offical.jpg"
 ---
 
