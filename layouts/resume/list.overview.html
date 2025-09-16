@@ -98,14 +98,14 @@
     <header>
       <h1 class="mb-6 mt-0 text-4xl font-extrabold hover:text-primary-600 dark:hover:text-primary-400" id="resume-title" style="cursor: pointer; user-select: none; display: flex; align-items: center; gap: 0.5rem; transition: color 0.2s ease;">
         {{ .Title | emojify }}
-        <span id="global-toggle-icon" style="font-size: 0.6em; transition: transform 0.3s ease;">▶</span>
+        <span id="global-toggle-icon" style="font-size: 0.6em; transition: transform 0.3s ease; font-family: monospace;">▶</span>
       </h1>
       <!-- PC端布局 -->
-      <div class="resume-header-container-pc" style="display: flex !important; align-items: flex-start !important; margin-bottom: 1.5rem !important; flex-direction: row !important;">
+      <div class="resume-header-container-pc" style="display: flex !important; align-items: flex-start !important; gap: 1.5rem !important; margin-bottom: 1.5rem !important; flex-direction: row !important;">
         {{ with .Params.avatar }}
           <img src="{{ . }}" alt="avatar" class="rounded-md object-cover border border-neutral-300 shadow-sm dark:border-neutral-600" style="height: 12rem !important; width: 9rem !important; max-width: 100%; flex-shrink: 0 !important; display: block !important;" />
         {{ end }}
-        <div style="flex: 0 0 auto !important; min-width: 0 !important; display: block !important; margin-left: 3rem !important; max-width: 400px !important;">
+        <div style="flex: 1 !important; min-width: 0 !important; display: block !important;">
           <h2 style="margin: 0 0 1rem 0 !important; font-size: 1.5rem !important; font-weight: 600 !important; color: inherit !important;">👤 基本信息</h2>
           <ul style="margin: 0 !important; padding-left: 1.5rem !important; list-style-type: disc !important;">
             {{ with .Params.basic_info }}
@@ -310,6 +310,7 @@
           toggleIcon.style.marginLeft = '0.5rem';
           toggleIcon.style.transition = 'transform 0.3s ease';
           toggleIcon.style.display = 'inline-block';
+          toggleIcon.style.fontFamily = 'monospace';
           h3.appendChild(toggleIcon);
           
           // 创建描述容器
@@ -449,6 +450,7 @@
           toggleIcon.style.marginLeft = '0.5rem';
           toggleIcon.style.transition = 'transform 0.3s ease';
           toggleIcon.style.display = 'inline-block';
+          toggleIcon.style.fontFamily = 'monospace';
           h4.appendChild(toggleIcon);
           
           // 创建描述容器

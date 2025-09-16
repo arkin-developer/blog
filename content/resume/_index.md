@@ -1,7 +1,7 @@
 ---
 layout: resume/list.overview
 title: "个人简历"
-avatar: "/img/author-offical.jpg"
+avatar: "https://github.com/arkin-developer/blog/raw/main/assets/img/author-offical.jpg"
 basic_info:
   name: "赖为乾（Arkin）"
   position: "Web全栈开发者 / AI应用全栈 / GIS开发"
