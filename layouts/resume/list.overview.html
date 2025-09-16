@@ -96,7 +96,7 @@
 {{ define "main" }}
   <article>
     <header>
-      <h1 class="mb-6 mt-0 text-4xl font-extrabold" id="resume-title" style="cursor: pointer; user-select: none; display: flex; align-items: center; gap: 0.5rem; color: var(--color-neutral-900); transition: color 0.2s ease;">
+      <h1 class="mb-6 mt-0 text-4xl font-extrabold hover:text-primary-600 dark:hover:text-primary-400" id="resume-title" style="cursor: pointer; user-select: none; display: flex; align-items: center; gap: 0.5rem; transition: color 0.2s ease;">
         {{ .Title | emojify }}
         <span id="global-toggle-icon" style="font-size: 0.6em; transition: transform 0.3s ease;">▶</span>
       </h1>
@@ -183,15 +183,6 @@
       const globalToggleIcon = document.getElementById('global-toggle-icon');
       
       if (resumeTitle && globalToggleIcon) {
-        // 添加悬停效果
-        resumeTitle.addEventListener('mouseenter', function() {
-          resumeTitle.style.color = 'var(--color-primary) !important';
-        });
-        
-        resumeTitle.addEventListener('mouseleave', function() {
-          resumeTitle.style.color = 'var(--color-neutral-900) !important';
-        });
-        
         // 点击事件
         resumeTitle.addEventListener('click', function() {
           isAllExpanded = !isAllExpanded;
