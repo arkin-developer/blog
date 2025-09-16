@@ -2,12 +2,10 @@
 layout: resume/list.overview
 title: "个人简历"
 description: "我的技能和工作经历"
+avatar: "/img/author-offical.jpg"
 ---
-layout: resume/list.overview
 
-<div class="my-4">
-  <img src="/img/author-offical.jpg" alt="赖为乾(Arkin)的头像" class="w-[3rem] h-[3.5rem] object-cover border border-gray-300 dark:border-gray-600 shadow-sm">
-</div>
+ 
 
 ## 👤 基本信息
 
