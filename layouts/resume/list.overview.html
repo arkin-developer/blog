@@ -191,12 +191,20 @@
         }
       }
       
-      // 处理三级标题的展开/折叠
+      // 处理三级标题的展开/折叠（技术栈部分）
       const h3Elements = document.querySelectorAll('h3');
       console.log('Found h3 elements:', h3Elements.length);
       
       h3Elements.forEach((h3, index) => {
         console.log(`Processing h3 ${index}:`, h3.textContent);
+        
+        // 检查是否是工作经历部分的三级标题，如果是则跳过（工作经历用四级标题）
+        const isWorkExperience = h3.textContent.includes('工程师') || h3.textContent.includes('工作经历');
+        if (isWorkExperience) {
+          console.log('Skipping work experience h3:', h3.textContent);
+          return;
+        }
+        
         // 1. 找到该标题下的所有内容（直到下一个h2或h3）
         const allContent = [];
         let currentElement = h3.nextElementSibling;
@@ -318,6 +326,143 @@
           
           h3.addEventListener('mouseleave', function() {
             h3.style.color = '';
+          });
+        }
+      });
+      
+      // 处理四级标题的展开/折叠（工作经历项目部分）
+      const h4Elements = document.querySelectorAll('h4');
+      console.log('Found h4 elements:', h4Elements.length);
+      
+      h4Elements.forEach((h4, index) => {
+        console.log(`Processing h4 ${index}:`, h4.textContent);
+        
+        // 检查是否是工作经历项目的四级标题
+        const isProjectTitle = h4.textContent.includes('）') && (h4.textContent.includes('项目') || h4.textContent.includes('服务'));
+        if (!isProjectTitle) {
+          console.log('Skipping non-project h4:', h4.textContent);
+          return;
+        }
+        
+        // 1. 找到该标题下的所有内容（直到下一个h2、h3或h4）
+        const allContent = [];
+        let currentElement = h4.nextElementSibling;
+        
+        while (currentElement && currentElement.tagName !== 'H4' && currentElement.tagName !== 'H3' && currentElement.tagName !== 'H2') {
+          allContent.push(currentElement);
+          currentElement = currentElement.nextElementSibling;
+        }
+        
+        console.log(`Found ${allContent.length} content elements for h4 ${index}`);
+        
+        // 2. 识别第一个包含<em>的<p>标签作为描述
+        let descriptionElement = null;
+        let descriptionText = '';
+        
+        for (let i = 0; i < allContent.length; i++) {
+          const element = allContent[i];
+          console.log(`Checking h4 element ${i}:`, element.tagName, element.textContent.substring(0, 50));
+          if (element.tagName === 'P' && element.querySelector('em')) {
+            descriptionElement = element;
+            descriptionText = element.querySelector('em').textContent;
+            console.log('Found h4 description:', descriptionText);
+            break;
+          }
+        }
+        
+        // 3. 如果找到描述，则处理展开/折叠功能
+        if (descriptionElement && descriptionText) {
+          console.log('Setting up toggle for h4:', h4.textContent);
+          // 创建可点击的标题
+          h4.style.cursor = 'pointer';
+          h4.style.userSelect = 'none';
+          
+          // 添加展开/折叠图标
+          const toggleIcon = document.createElement('span');
+          toggleIcon.textContent = '▶';
+          toggleIcon.style.marginLeft = '0.5rem';
+          toggleIcon.style.transition = 'transform 0.3s ease';
+          toggleIcon.style.display = 'inline-block';
+          h4.appendChild(toggleIcon);
+          
+          // 创建描述容器
+          const descriptionDiv = document.createElement('div');
+          descriptionDiv.className = 'resume-section-description';
+          descriptionDiv.textContent = descriptionText;
+          
+          // 创建详细内容容器
+          const detailContentDiv = document.createElement('div');
+          detailContentDiv.className = 'resume-section-detail-content';
+          
+          // 4. 将除描述段落外的所有内容移动到详细内容容器
+          allContent.forEach(element => {
+            if (element !== descriptionElement) {
+              detailContentDiv.appendChild(element);
+            }
+          });
+          
+          // 5. 重新组织DOM结构
+          // 移除原始的描述段落
+          h4.parentNode.removeChild(descriptionElement);
+          
+          // 插入描述容器和详细内容容器
+          h4.parentNode.insertBefore(descriptionDiv, currentElement);
+          h4.parentNode.insertBefore(detailContentDiv, currentElement);
+          
+          // 默认简略模式（只显示描述）
+          let isDetailed = false;
+          
+          // 立即应用默认状态
+          setTimeout(() => {
+            detailContentDiv.classList.add('collapsed');
+            detailContentDiv.style.display = 'none';
+            detailContentDiv.style.maxHeight = '0';
+            detailContentDiv.style.opacity = '0';
+            detailContentDiv.style.overflow = 'hidden';
+            toggleIcon.style.transform = 'rotate(0deg)';
+            descriptionDiv.style.display = 'block';
+            console.log('Applied default collapsed state for h4:', h4.textContent);
+          }, 0);
+          
+          // 点击事件
+          h4.addEventListener('click', function() {
+            isDetailed = !isDetailed;
+            console.log('Toggle clicked for h4:', h4.textContent, 'isDetailed:', isDetailed);
+            
+            if (isDetailed) {
+              // 详细模式：显示详细内容，隐藏描述
+              detailContentDiv.classList.remove('collapsed');
+              detailContentDiv.style.display = 'block';
+              detailContentDiv.style.maxHeight = 'none';
+              detailContentDiv.style.opacity = '1';
+              detailContentDiv.style.overflow = 'visible';
+              detailContentDiv.style.visibility = 'visible';
+              toggleIcon.textContent = '▼';
+              toggleIcon.style.transform = 'rotate(0deg)';
+              descriptionDiv.style.display = 'none';
+              console.log('Switched to detailed mode for h4');
+            } else {
+              // 简略模式：只显示描述，隐藏详细内容
+              detailContentDiv.classList.add('collapsed');
+              detailContentDiv.style.display = 'none';
+              detailContentDiv.style.maxHeight = '0';
+              detailContentDiv.style.opacity = '0';
+              detailContentDiv.style.overflow = 'hidden';
+              detailContentDiv.style.visibility = 'hidden';
+              toggleIcon.textContent = '▶';
+              toggleIcon.style.transform = 'rotate(0deg)';
+              descriptionDiv.style.display = 'block';
+              console.log('Switched to simple mode for h4');
+            }
+          });
+          
+          // 悬停效果
+          h4.addEventListener('mouseenter', function() {
+            h4.style.color = 'var(--color-primary, #3b82f6)';
+          });
+          
+          h4.addEventListener('mouseleave', function() {
+            h4.style.color = '';
           });
         }
       });
