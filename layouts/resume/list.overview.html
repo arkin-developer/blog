@@ -288,9 +288,10 @@
               // 详细模式：显示详细内容，隐藏描述
               detailContentDiv.classList.remove('collapsed');
               detailContentDiv.style.display = 'block';
-              detailContentDiv.style.maxHeight = '1000px';
+              detailContentDiv.style.maxHeight = 'none';
               detailContentDiv.style.opacity = '1';
               detailContentDiv.style.overflow = 'visible';
+              detailContentDiv.style.visibility = 'visible';
               toggleIcon.textContent = '▼';
               toggleIcon.style.transform = 'rotate(0deg)';
               descriptionDiv.style.display = 'none';
@@ -302,6 +303,7 @@
               detailContentDiv.style.maxHeight = '0';
               detailContentDiv.style.opacity = '0';
               detailContentDiv.style.overflow = 'hidden';
+              detailContentDiv.style.visibility = 'hidden';
               toggleIcon.textContent = '▶';
               toggleIcon.style.transform = 'rotate(0deg)';
               descriptionDiv.style.display = 'block';
