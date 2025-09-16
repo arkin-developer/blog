@@ -96,8 +96,9 @@
 {{ define "main" }}
   <article>
     <header>
-      <h1 class="mb-6 mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+      <h1 class="mb-6 mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral" id="resume-title" style="cursor: pointer; user-select: none; display: flex; align-items: center; gap: 0.5rem;">
         {{ .Title | emojify }}
+        <span id="global-toggle-icon" style="font-size: 0.6em; transition: transform 0.3s ease;">▶</span>
       </h1>
       <!-- PC端布局 -->
       <div class="resume-header-container-pc" style="display: flex !important; align-items: flex-start !important; gap: 1.5rem !important; margin-bottom: 1.5rem !important; flex-direction: row !important;">
@@ -175,6 +176,80 @@
       
       // 监听窗口大小变化
       window.addEventListener('resize', updateLayout);
+      
+      // 全局展开/收缩功能
+      let isAllExpanded = false;
+      const resumeTitle = document.getElementById('resume-title');
+      const globalToggleIcon = document.getElementById('global-toggle-icon');
+      
+      if (resumeTitle && globalToggleIcon) {
+        // 添加悬停效果
+        resumeTitle.addEventListener('mouseenter', function() {
+          resumeTitle.style.color = 'var(--color-primary, #3b82f6)';
+        });
+        
+        resumeTitle.addEventListener('mouseleave', function() {
+          resumeTitle.style.color = '';
+        });
+        
+        // 点击事件
+        resumeTitle.addEventListener('click', function() {
+          isAllExpanded = !isAllExpanded;
+          console.log('Global toggle clicked, isAllExpanded:', isAllExpanded);
+          
+          // 获取所有可展开的元素
+          const allDetailContents = document.querySelectorAll('.resume-section-detail-content');
+          const allToggleIcons = document.querySelectorAll('.toggle-icon');
+          const allDescriptionDivs = document.querySelectorAll('.resume-section-description');
+          
+          allDetailContents.forEach((detailContent, index) => {
+            const toggleIcon = allToggleIcons[index];
+            const descriptionDiv = allDescriptionDivs[index];
+            
+            if (isAllExpanded) {
+              // 全部展开
+              detailContent.classList.remove('collapsed');
+              detailContent.style.display = 'block';
+              detailContent.style.maxHeight = 'none';
+              detailContent.style.opacity = '1';
+              detailContent.style.overflow = 'visible';
+              detailContent.style.visibility = 'visible';
+              
+              if (toggleIcon) {
+                toggleIcon.textContent = '▼';
+                toggleIcon.style.transform = 'rotate(0deg)';
+              }
+              
+              if (descriptionDiv) {
+                descriptionDiv.style.display = 'none';
+              }
+            } else {
+              // 全部收缩
+              detailContent.classList.add('collapsed');
+              detailContent.style.display = 'none';
+              detailContent.style.maxHeight = '0';
+              detailContent.style.opacity = '0';
+              detailContent.style.overflow = 'hidden';
+              detailContent.style.visibility = 'hidden';
+              
+              if (toggleIcon) {
+                toggleIcon.textContent = '▶';
+                toggleIcon.style.transform = 'rotate(0deg)';
+              }
+              
+              if (descriptionDiv) {
+                descriptionDiv.style.display = 'block';
+              }
+            }
+          });
+          
+          // 更新全局图标
+          globalToggleIcon.textContent = isAllExpanded ? '▼' : '▶';
+          globalToggleIcon.style.transform = isAllExpanded ? 'rotate(0deg)' : 'rotate(0deg)';
+          
+          console.log('Global toggle completed, isAllExpanded:', isAllExpanded);
+        });
+      }
       
       // 隐藏Markdown渲染的基本信息部分（在prose容器内的）
       const proseContainer = document.querySelector('.prose');
