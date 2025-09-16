@@ -85,11 +85,7 @@
         </div>
       {{ end }}
       <div class="min-h-0 min-w-0 max-w-prose grow">
-        {{ $content := .Content | emojify }}
-        {{ $content = replace $content "<h3>" "<h3 class=\"resume-section-toggle\" data-toggle=\"section\">" }}
-        {{ $content = replace $content "</h3>" "<span class=\"toggle-icon\">▼</span></h3>" }}
-        {{ $content = replace $content "<h3 class=\"resume-section-toggle\" data-toggle=\"section\">" "<h3 class=\"resume-section-toggle\" data-toggle=\"section\">" }}
-        {{ $content | safeHTML }}
+        {{ .Content | emojify }}
       </div>
     </section>
   </article>
