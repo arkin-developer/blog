@@ -167,11 +167,13 @@
             detailContentDiv.classList.add('collapsed');
             toggleIcon.style.transform = 'rotate(0deg)';
             descriptionDiv.style.display = 'block';
+            console.log('Applied default collapsed state for:', h3.textContent);
           }, 0);
           
           // 点击事件
           h3.addEventListener('click', function() {
             isDetailed = !isDetailed;
+            console.log('Toggle clicked for:', h3.textContent, 'isDetailed:', isDetailed);
             
             if (isDetailed) {
               // 详细模式：显示详细内容，隐藏描述
@@ -179,12 +181,14 @@
               toggleIcon.textContent = '▼';
               toggleIcon.style.transform = 'rotate(0deg)';
               descriptionDiv.style.display = 'none';
+              console.log('Switched to detailed mode');
             } else {
               // 简略模式：只显示描述，隐藏详细内容
               detailContentDiv.classList.add('collapsed');
               toggleIcon.textContent = '▶';
               toggleIcon.style.transform = 'rotate(0deg)';
               descriptionDiv.style.display = 'block';
+              console.log('Switched to simple mode');
             }
           });
           
