@@ -15,27 +15,27 @@
 {{ end }}
 
 {{ define "main" }}
-  <article class="resume">
-    <header class="resume__header">
-      <h1 class="resume__title">{{ .Title | emojify }}</h1>
+  <article>
+    <header class="max-w-prose">
+      <h1 class="mb-8 mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        {{ .Title | emojify }}
+      </h1>
       {{ with .Params.description }}
-        <p class="resume__subtitle">{{ . }}</p>
+        <p class="mb-6 text-base text-neutral-500 dark:text-neutral-400">{{ . }}</p>
       {{ end }}
     </header>
 
-    <div class="resume__grid">
+    <section class="prose mt-0 flex max-w-full flex-col dark:prose-invert lg:flex-row">
       {{ if in .TableOfContents "<ul" }}
-        <aside class="resume__toc">
-          <div class="resume__toc__inner">
-            <div class="resume__toc__title">目录</div>
-            {{ .TableOfContents | emojify }}
+        <div class="order-first px-0 lg:order-last lg:max-w-xs lg:ps-8">
+          <div class="toc pe-5 lg:sticky lg:top-10 print:hidden">
+            {{ partial "toc.html" . }}
           </div>
-        </aside>
+        </div>
       {{ end }}
-
-      <div class="resume__content">
+      <div class="min-h-0 min-w-0 max-w-prose grow">
         {{ .Content | emojify }}
       </div>
-    </div>
+    </section>
   </article>
 {{ end }}
