@@ -101,11 +101,11 @@
         <span id="global-toggle-icon" style="font-size: 0.6em; transition: transform 0.3s ease;">▶</span>
       </h1>
       <!-- PC端布局 -->
-      <div class="resume-header-container-pc" style="display: flex !important; align-items: flex-start !important; gap: 1.5rem !important; margin-bottom: 1.5rem !important; flex-direction: row !important;">
+      <div class="resume-header-container-pc" style="display: flex !important; align-items: flex-start !important; margin-bottom: 1.5rem !important; flex-direction: row !important;">
         {{ with .Params.avatar }}
           <img src="{{ . }}" alt="avatar" class="rounded-md object-cover border border-neutral-300 shadow-sm dark:border-neutral-600" style="height: 12rem !important; width: 9rem !important; max-width: 100%; flex-shrink: 0 !important; display: block !important;" />
         {{ end }}
-        <div style="flex: 1 !important; min-width: 0 !important; display: block !important;">
+        <div style="flex: 0 0 auto !important; min-width: 0 !important; display: block !important; margin-left: 3rem !important; max-width: 400px !important;">
           <h2 style="margin: 0 0 1rem 0 !important; font-size: 1.5rem !important; font-weight: 600 !important; color: inherit !important;">👤 基本信息</h2>
           <ul style="margin: 0 !important; padding-left: 1.5rem !important; list-style-type: disc !important;">
             {{ with .Params.basic_info }}
