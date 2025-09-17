@@ -31,7 +31,7 @@
   weight = 22
 
 [[main]]
-  name = "Notebooks"
+  name = "笔记"
   pageRef = "notebooks"
   weight = 23
 
