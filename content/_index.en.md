@@ -1,28 +1,25 @@
 ---
-title: "Welcome to My Blog"
-description: "A personal blog built with Hugo and Congo theme"
+title: "Arkin's Blog - Technology Sharing & Insights"
+description: "Personal technology blog sharing AI applications, web development, data science and other technical content, recording learning insights and project experiences"
+keywords: ["tech blog", "AI applications", "web development", "data science", "machine learning", "full-stack development"]
+author: "Arkin"
+date: 2024-01-01
+lastmod: 2024-01-01
+draft: false
 ---
 
 {{< lead >}}
 Welcome to my personal blog
 {{< /lead >}}
 
-This is a personal blog built with Hugo and Congo theme. Here I will share my thoughts, experiences, and learning insights.
+> Programming is no longer just a craft for building functionality, but a way of thinking about the future.
 
-<!-- <div class="flex px-4 py-2 mb-8 text-base rounded-md bg-primary-100 dark:bg-primary-900">
-  <span class="flex items-center pe-3 text-primary-400">
-    {{< icon "triangle-exclamation" >}}
-  </span>
-  <span class="flex items-center justify-between grow dark:text-neutral-300">
-    <span class="prose dark:prose-invert">This is a demo of the <code id="layout">profile</code> layout.</span>
-    <button
-      id="switch-layout-button"
-      class="px-4 !text-neutral !no-underline rounded-md bg-primary-600 hover:!bg-primary-500 dark:bg-primary-800 dark:hover:!bg-primary-700"
-    >
-      Switch layout &orarr;
-    </button>
-  </span>
-</div> -->
+I often feel that the waves of the times don't wait for anyone, but there are always people who happen to stand at their forefront.  
+The rise of AI, for me, is like a tailwind that has allowed me to traverse the full-stack path in a limited time that would have taken years to reach in the past.
+
+Those details that have been polished countless times by predecessors are no longer a maze that traps me; they have become building blocks that can be used at will.  
+Thus, I can devote more energy to what truly deserves deep thought:  
+**The meaning of products, application scenarios, and the relationship between people and technology**.
 
 ## Latest Posts
 
