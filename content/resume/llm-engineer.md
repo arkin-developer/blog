@@ -1,15 +1,14 @@
 ---
 layout: resume/single.profile
 title: "大模型应用工程师简历"
-description: "LLM/多模态/Agent/微调/部署"
+avatar: "https://github.com/arkin-developer/blog/raw/main/assets/img/author-offical.jpg"
 draft: false
+basic_info:
+  name: "赖为乾"
+  target_position: "大模型应用开发工程师"
+  email: "arkin-dev@qq.com"
+  phone: "13430147593"
 ---
-
-## 个人信息
-- **姓名**：赖为乾（Arkin）
-- **职位意向**：大模型应用工程师 / AI应用全栈
-- **邮箱**：arkin-dev@qq.com
-- **GitHub**：https://github.com/arkin-developer
 
 ## 技术栈
 ### 大模型与多模态

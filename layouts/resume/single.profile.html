@@ -12,17 +12,81 @@
     "description": {{ with .Params.description }}{{ . | jsonify }}{{ else }}{{ .Summary | plainify | jsonify }}{{ end }}
   }
   </script>
+  <style>
+    /* 响应式布局 - 使用显示/隐藏控制 */
+    @media (min-width: 768px) {
+      article .resume-header-container-pc {
+        display: flex !important;
+      }
+      article .resume-header-container-mobile {
+        display: none !important;
+      }
+    }
+    
+    @media (max-width: 767px) {
+      article .resume-header-container-pc {
+        display: none !important;
+      }
+      article .resume-header-container-mobile {
+        display: flex !important;
+      }
+    }
+  </style>
 {{ end }}
 
 {{ define "main" }}
   <article>
-    <header class="max-w-prose">
-      <h1 class="mb-8 mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+    <header>
+      <h1 class="mb-6 mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
         {{ .Title | emojify }}
       </h1>
       {{ with .Params.description }}
         <p class="mb-6 text-base text-neutral-500 dark:text-neutral-400">{{ . }}</p>
       {{ end }}
+      
+      <!-- PC端布局 -->
+      <div class="resume-header-container-pc" style="display: flex !important; align-items: flex-start !important; gap: 1.5rem !important; margin-bottom: 1.5rem !important; flex-direction: row !important;">
+        {{ with .Params.avatar }}
+          <img src="{{ . }}" alt="avatar" class="rounded-md object-cover border border-neutral-300 shadow-sm dark:border-neutral-600" style="height: 12rem !important; width: 9rem !important; max-width: 100%; flex-shrink: 0 !important; display: block !important;" />
+        {{ end }}
+        <div style="flex: 1 !important; min-width: 0 !important; display: block !important;">
+          <h2 style="margin: 0 0 1rem 0 !important; font-size: 1.5rem !important; font-weight: 600 !important; color: inherit !important;">👤 {{ if eq .Language.Lang "en" }}Basic Information{{ else }}基本信息{{ end }}</h2>
+          <ul style="margin: 0 !important; padding-left: 1.5rem !important; list-style-type: disc !important;">
+            {{ $isEnglish := eq .Language.Lang "en" }}
+            {{ with .Params.basic_info }}
+              <li style="margin-bottom: 0.5rem !important; color: inherit !important;"><strong style="font-weight: 600 !important;">{{ if $isEnglish }}Name{{ else }}姓名{{ end }}</strong>：{{ .name }}</li>
+              {{ if .position }}<li style="margin-bottom: 0.5rem !important; color: inherit !important;"><strong style="font-weight: 600 !important;">{{ if $isEnglish }}Target Position{{ else }}意向岗位{{ end }}</strong>：{{ .position }}</li>{{ end }}
+              {{ if .target_position }}<li style="margin-bottom: 0.5rem !important; color: inherit !important;"><strong style="font-weight: 600 !important;">{{ if $isEnglish }}Target Position{{ else }}意向岗位{{ end }}</strong>：{{ .target_position }}</li>{{ end }}
+              <li style="margin-bottom: 0.5rem !important; color: inherit !important;"><strong style="font-weight: 600 !important;">{{ if $isEnglish }}Email{{ else }}邮箱{{ end }}</strong>：{{ .email }}</li>
+              {{ if .github }}<li style="margin-bottom: 0.5rem !important; color: inherit !important;"><strong style="font-weight: 600 !important;">GitHub</strong>：<a href="{{ .github }}" target="_blank" rel="noopener noreferrer" style="color: #3b82f6; text-decoration: underline;">{{ .github }}</a></li>{{ end }}
+              {{ if .wechat }}<li style="margin-bottom: 0.5rem !important; color: inherit !important;"><strong style="font-weight: 600 !important;">微信</strong>：{{ .wechat }}</li>{{ end }}
+              {{ if .phone }}<li style="margin-bottom: 0.5rem !important; color: inherit !important;"><strong style="font-weight: 600 !important;">{{ if $isEnglish }}Phone{{ else }}电话{{ end }}</strong>：{{ .phone }}</li>{{ end }}
+            {{ end }}
+          </ul>
+        </div>
+      </div>
+      
+      <!-- 移动端布局 -->
+      <div class="resume-header-container-mobile" style="display: flex !important; align-items: center !important; gap: 1.5rem !important; margin-bottom: 1.5rem !important; flex-direction: column !important;">
+        {{ with .Params.avatar }}
+          <img src="{{ . }}" alt="avatar" class="rounded-md object-cover border border-neutral-300 shadow-sm dark:border-neutral-600" style="height: 12.5rem !important; width: 9.375rem !important; max-width: 100%; flex-shrink: 0 !important; display: block !important;" />
+        {{ end }}
+        <div style="flex: 1 !important; min-width: 0 !important; display: block !important; width: 100% !important;">
+          <h2 style="margin: 0 0 1rem 0 !important; font-size: 1.5rem !important; font-weight: 600 !important; color: inherit !important; text-align: center !important;">👤 {{ if eq .Language.Lang "en" }}Basic Information{{ else }}基本信息{{ end }}</h2>
+          <ul style="margin: 0 !important; padding-left: 1.5rem !important; list-style-type: disc !important; text-align: left !important;">
+            {{ $isEnglish := eq .Language.Lang "en" }}
+            {{ with .Params.basic_info }}
+              <li style="margin-bottom: 0.5rem !important; color: inherit !important;"><strong style="font-weight: 600 !important;">{{ if $isEnglish }}Name{{ else }}姓名{{ end }}</strong>：{{ .name }}</li>
+              {{ if .position }}<li style="margin-bottom: 0.5rem !important; color: inherit !important;"><strong style="font-weight: 600 !important;">{{ if $isEnglish }}Target Position{{ else }}意向岗位{{ end }}</strong>：{{ .position }}</li>{{ end }}
+              {{ if .target_position }}<li style="margin-bottom: 0.5rem !important; color: inherit !important;"><strong style="font-weight: 600 !important;">{{ if $isEnglish }}Target Position{{ else }}意向岗位{{ end }}</strong>：{{ .target_position }}</li>{{ end }}
+              <li style="margin-bottom: 0.5rem !important; color: inherit !important;"><strong style="font-weight: 600 !important;">{{ if $isEnglish }}Email{{ else }}邮箱{{ end }}</strong>：{{ .email }}</li>
+              {{ if .github }}<li style="margin-bottom: 0.5rem !important; color: inherit !important;"><strong style="font-weight: 600 !important;">GitHub</strong>：<a href="{{ .github }}" target="_blank" rel="noopener noreferrer" style="color: #3b82f6; text-decoration: underline;">{{ .github }}</a></li>{{ end }}
+              {{ if .wechat }}<li style="margin-bottom: 0.5rem !important; color: inherit !important;"><strong style="font-weight: 600 !important;">微信</strong>：{{ .wechat }}</li>{{ end }}
+              {{ if .phone }}<li style="margin-bottom: 0.5rem !important; color: inherit !important;"><strong style="font-weight: 600 !important;">{{ if $isEnglish }}Phone{{ else }}电话{{ end }}</strong>：{{ .phone }}</li>{{ end }}
+            {{ end }}
+          </ul>
+        </div>
+      </div>
     </header>
 
     <section class="prose mt-0 flex max-w-full flex-col dark:prose-invert lg:flex-row">
@@ -38,4 +102,44 @@
       </div>
     </section>
   </article>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // 响应式布局控制
+      function updateLayout() {
+        const pcContainer = document.querySelector('.resume-header-container-pc');
+        const mobileContainer = document.querySelector('.resume-header-container-mobile');
+        
+        if (window.innerWidth >= 768) {
+          // PC端：显示PC布局，隐藏移动端布局
+          if (pcContainer) pcContainer.style.display = 'flex';
+          if (mobileContainer) mobileContainer.style.display = 'none';
+        } else {
+          // 移动端：显示移动端布局，隐藏PC布局
+          if (pcContainer) pcContainer.style.display = 'none';
+          if (mobileContainer) mobileContainer.style.display = 'flex';
+        }
+      }
+      
+      // 初始设置
+      updateLayout();
+      
+      // 监听窗口大小变化
+      window.addEventListener('resize', updateLayout);
+      
+      // 隐藏Markdown渲染的基本信息部分（在prose容器内的）
+      const proseContainer = document.querySelector('.prose');
+      if (proseContainer) {
+        const basicInfoH2 = proseContainer.querySelector('h2');
+        if (basicInfoH2 && (basicInfoH2.textContent.includes('基本信息') || basicInfoH2.textContent.includes('Basic Information'))) {
+          let nextElement = basicInfoH2.nextElementSibling;
+          while (nextElement && nextElement.tagName !== 'H2') {
+            nextElement.style.display = 'none';
+            nextElement = nextElement.nextElementSibling;
+          }
+          basicInfoH2.style.display = 'none';
+        }
+      }
+    });
+  </script>
 {{ end }}

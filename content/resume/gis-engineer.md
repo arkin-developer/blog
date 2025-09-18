@@ -1,8 +1,14 @@
 ---
 layout: resume/single.profile
+avatar: "https://github.com/arkin-developer/blog/raw/main/assets/img/author-offical.jpg"
 title: "GIS 工程师简历"
 description: "WebGIS/空间分析/遥感/三维/工程化"
 draft: false
+basic_info:
+  name: "赖为乾（Arkin）"
+  position: "GIS 开发工程师 / WebGIS 全栈"
+  email: "arkin-dev@qq.com"
+  github: "https://github.com/arkin-developer"
 ---
 
 ## 个人信息
