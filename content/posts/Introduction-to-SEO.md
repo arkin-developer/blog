@@ -16,8 +16,6 @@ showWordCount: true
 showDateUpdated: true
 ---
 
-# 网站SEO优化完全指南：从零开始提升搜索排名
-
 > SEO（Search Engine Optimization）搜索引擎优化，是让您的网站在搜索引擎中获得更好排名的技术。无论您是个人博主还是企业网站，掌握SEO都能显著提升您的在线影响力。
 
 ## 什么是SEO？为什么它如此重要？

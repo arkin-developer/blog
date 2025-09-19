@@ -11,8 +11,6 @@ draft: false
 aliases: ["/posts/hugo-blog-setup-guide", "/blog/hugo-tutorial"]
 ---
 
-# 我的第一篇博客文章
-
 欢迎来到我的第一篇博客文章！这篇文章将详细介绍如何使用Hugo和Congo主题搭建个人技术博客，并测试各种功能。
 
 ## 为什么选择Hugo？

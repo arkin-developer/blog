@@ -7,8 +7,6 @@ categories: ["Technology"]
 draft: false
 ---
 
-# My First Blog Post
-
 Welcome to my first blog post! This article will test various features of Hugo and Congo theme.
 
 ## Code Highlighting Test
