@@ -1,13 +1,13 @@
 ---
-title: "{{ replace .Name "-" " " | title }}"
-description: "{{ .Name | title }}的详细描述，包含关键词和核心内容概述"
-keywords: ["关键词1", "关键词2", "关键词3"]
+title: "大模型面试题-基础篇"
+description: "大模型面试题-基础篇"
+keywords: ["LLM", "面试"]
 author: "Arkin"
-date: {{ .Date }}
-lastmod: {{ .Date }}
+date: 2025-09-19T17:45:10+08:00
+lastmod: 2025-09-19T17:45:10+08:00
 draft: false
-tags: ["标签1", "标签2"]
-categories: ["分类1", "分类2"]
+tags: ["LLM", "大模型基础"]
+categories: ["面试题", "大模型"]
 aliases: []
 image: "img/featured-image.jpg"
 toc: true
@@ -41,4 +41,4 @@ showDateUpdated: true
 
 ---
 
-*最后更新时间：{{ .Date }}*
+*最后更新时间：2025-09-19T17:45:10+08:00*

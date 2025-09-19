@@ -16,13 +16,13 @@ basic_info:
 *精通 Python 与 Golang，专注 AI 应用与数据分析（PyTorch、LangChain、Pandas/NumPy），具备全栈开发、微服务架构（Gin、gRPC、Go Micro）及前端（React/Next.js）能力，同时掌握 C++ 库封装与 Python/Golang 扩展开发。*
 
 - **Python**（掌握，5年经验）- 全栈开发（后端+前端经验）、数据分析（Pandas/NumPy）、AI（Pytorch/LangChain/openai/huggingface）
-- **Golang**（熟悉，3年经验）- Web框架（Gin）、数据库访问（GORM）、中间件（NATS、Redis）、微服务框架（Go Micro）
+- **Golang**（掌握，3年经验）- Web框架（Gin）、数据库访问（GORM）、中间件（NATS、Redis）、微服务框架（Go Micro）
 - **JavaScript/TypeScript**（熟悉，1年经验）- 前端框架（React/Next.js）、Node.js后端
-- **C++**（了解）- Native 库二次封装、Python/Golang 扩展封装
+- **C++**（熟悉）- Native 库二次封装、Python/Golang 扩展封装
 - **ArkTS**（学习中）- HarmonyOS移动应用开发
 
 ### 🤖 AI&大模型应用开发 · [查看岗位版简历](/resume/llm-engineer/)
-*深度掌握YOLO目标检测、CNN图像分类、语义分割等计算机视觉技术，熟练运用OpenAI API、LangChain构建大模型应用，具备RAG检索增强生成、多模态智能体开发和完整的AI工程化部署能力*
+*深度掌握 YOLO 目标检测、CNN 图像分类、语义分割等计算机视觉技术，熟练运用OpenAI API、LangChain构建大模型应用，具备RAG检索增强生成、多模态智能体开发和完整的AI工程化部署能力*
 
 - **计算机视觉**
   - **任务类型**：目标检测、图像分类、语义分割
@@ -45,7 +45,7 @@ basic_info:
     - Agent 流程设计与任务调度
   - **工程化能力**：服务化封装（API/Agent）、容器化部署（**Docker/K8s**）、日志与监控、性能优化
 
-### 🌐 Web全栈开发
+### 🌐 Web全栈开发 · [查看岗位版简历](/resume/web-fullstack-engineer/)
 *精通React/Vue/Next.js前端开发，熟练Python FastAPI/Golang Gin后端架构，掌握PostgreSQL/Redis数据库技术，具备Docker容器化、Kubernetes部署和完整的DevOps工程化能力*
 
 - **前端开发（Frontend）**
@@ -243,20 +243,44 @@ basic_info:
 ### 📺 bilibili视频总结网站
 *基于大模型API开发的视频内容智能总结平台，支持多格式视频解析与摘要生成*
 
+- 背景
+- 职责：
+- 技术栈
+- 贡献
+- 成果
+
 ### 🗺️ 数字平台导游项目
 *结合GIS技术与移动端开发的智能导游应用，提供个性化旅游路线推荐*
+
+- 背景
+- 职责：
+- 技术栈
+- 贡献
+- 成果
+
+
+
+## 📄 科研成果与知识产权
+
+- 发明专利 《[基于剖分网格的遥感影像变化检测方法、装置、终端](https://patents.qizhidao.com/search/detail/WZIP_a149903ac0ab143dc30fc0c9d8a30f91?orderColumn=undefined&searchType=simple_search&orderType=undefined&filter=AND%20PATY%3A%28%E5%8F%91%E6%98%8E%29&tab=0&from=simple&businessSource=%E6%9F%A5%E4%B8%93%E5%88%A9-%E6%90%9C%E7%B4%A2%E7%BB%93%E6%9E%9C%E5%88%97%E8%A1%A8-%E6%90%9C%E7%B4%A2%E6%9B%B4%E5%A4%9A&statement=%E8%B5%96%E4%B8%BA%E4%B9%BE&semanticId=&patentName=%E5%9F%BA%E4%BA%8E%E5%89%96%E5%88%86%E7%BD%91%E6%A0%BC%E7%9A%84%E9%81%A5%E6%84%9F%E5%BD%B1%E5%83%8F%E5%8F%98%E5%8C%96%E6%A3%80%E6%B5%8B%E6%96%B9%E6%B3%95%E3%80%81%E8%A3%85%E7%BD%AE%E3%80%81%E7%BB%88%E7%AB%AF&rightSidebar=false&imageSessionKey=&simpleMode=1&proVersion=&sortType=0&current=1&pageSize=20&viewMode=1&leftTabVal=0&rightTabVal=3&norefetch=true)》- 实质审查
+- 发明专利 《[基于重叠块的遥感影像对象融合与过滤的优化方法和装置](https://patents.qizhidao.com/search/detail/WZIP_151baa341db724ac203550fdc197c585?orderColumn=undefined&searchType=simple_search&orderType=undefined&filter=AND%20PATY%3A%28%E5%8F%91%E6%98%8E%29&tab=0&from=simple&businessSource=%E6%9F%A5%E4%B8%93%E5%88%A9-%E6%90%9C%E7%B4%A2%E7%BB%93%E6%9E%9C%E5%88%97%E8%A1%A8-%E6%90%9C%E7%B4%A2%E6%9B%B4%E5%A4%9A&statement=%E8%B5%96%E4%B8%BA%E4%B9%BE&semanticId=&patentName=%E5%9F%BA%E4%BA%8E%E9%87%8D%E5%8F%A0%E5%9D%97%E7%9A%84%E9%81%A5%E6%84%9F%E5%BD%B1%E5%83%8F%E5%AF%B9%E8%B1%A1%E8%9E%8D%E5%90%88%E4%B8%8E%E8%BF%87%E6%BB%A4%E7%9A%84%E4%BC%98%E5%8C%96%E6%96%B9%E6%B3%95%E5%92%8C%E8%A3%85%E7%BD%AE&rightSidebar=false&imageSessionKey=&simpleMode=1&proVersion=&sortType=0&current=1&pageSize=20&viewMode=1&leftTabVal=0&rightTabVal=3&norefetch=true)》- 授权
+- 发明专利 《[水库周围山体迎水面的提取方法和装置](https://patents.qizhidao.com/search/detail/WZIP_a9726c85c911107c1ba5b87deb3ec634?orderColumn=undefined&searchType=simple_search&orderType=undefined&filter=AND%20PATY%3A%28%E5%8F%91%E6%98%8E%29&tab=0&from=simple&businessSource=%E6%9F%A5%E4%B8%93%E5%88%A9-%E6%90%9C%E7%B4%A2%E7%BB%93%E6%9E%9C%E5%88%97%E8%A1%A8-%E6%90%9C%E7%B4%A2%E6%9B%B4%E5%A4%9A&statement=%E8%B5%96%E4%B8%BA%E4%B9%BE&semanticId=&patentName=%E6%B0%B4%E5%BA%93%E5%91%A8%E5%9B%B4%E5%B1%B1%E4%BD%93%E8%BF%8E%E6%B0%B4%E9%9D%A2%E7%9A%84%E6%8F%90%E5%8F%96%E6%96%B9%E6%B3%95%E5%92%8C%E8%A3%85%E7%BD%AE&rightSidebar=false&imageSessionKey=&simpleMode=1&proVersion=&sortType=0&current=1&pageSize=20&viewMode=1&leftTabVal=0&rightTabVal=3&norefetch=true)》- 授权
+- 发明专利 《[遥感影像中坑塘水面的提取方法和装置](https://patents.qizhidao.com/search/detail/WZIP_d9c64c6a0d86ddc3efbf7564e9daebcc?orderColumn=undefined&searchType=simple_search&orderType=undefined&filter=AND%20PATY%3A%28%E5%8F%91%E6%98%8E%29&tab=0&from=simple&businessSource=%E6%9F%A5%E4%B8%93%E5%88%A9-%E6%90%9C%E7%B4%A2%E7%BB%93%E6%9E%9C%E5%88%97%E8%A1%A8-%E6%90%9C%E7%B4%A2%E6%9B%B4%E5%A4%9A&statement=%E8%B5%96%E4%B8%BA%E4%B9%BE&semanticId=&patentName=%E9%81%A5%E6%84%9F%E5%BD%B1%E5%83%8F%E4%B8%AD%E5%9D%91%E5%A1%98%E6%B0%B4%E9%9D%A2%E7%9A%84%E6%8F%90%E5%8F%96%E6%96%B9%E6%B3%95%E5%92%8C%E8%A3%85%E7%BD%AE&rightSidebar=false&imageSessionKey=&simpleMode=1&proVersion=&sortType=0&current=1&pageSize=20&viewMode=1&leftTabVal=0&rightTabVal=3&norefetch=true)》- 授权
 
 
 
 ## 🎓 教育背景
 
-### 🎓 理学学士 (2017-2021)
+### 理学学士 (2017-2021)
 *计算机科学与技术专业，专注于AI与遥感技术结合的创新应用*
 
 **嘉应学院** - 梅州, 广东
 
-- 毕业论文《无人机柚树AI统计》
+- 毕业论文《[基于 Faster R-CNN 和无人机多光谱影像的梅州柚树单株识别方法研究](https://mr-lai.oss-cn-zhangjiakou.aliyuncs.com/%E5%9F%BA%E4%BA%8EFaster%20R-CNN%E5%92%8C%E6%97%A0%E4%BA%BA%E6%9C%BA%E5%A4%9A%E5%85%89%E8%B0%B1%E5%BD%B1%E5%83%8F%E7%9A%84%E6%A2%85%E5%B7%9E%E6%9F%9A%E6%A0%91%E5%8D%95%E6%A0%AA%E8%AF%86%E5%88%AB%E6%96%B9%E6%B3%95%E7%A0%94%E7%A9%B6_%E7%BB%88%E7%A8%BF.pdf)》
+- IEEE 期刊 《[Detecting and Mapping Individual Fruit Trees in Complex Natural Environments via UAV Remote Sensing and Optimized YOLOv5](https://doi.org/10.1109/JSTARS.2024.3379522)》
+- 普通期刊 《[城市景观格局变化对生态系统服务价值的影响](https://www.zhangqiaokeyan.com/academic-journal-cn_popular-science-technology_thesis/0201279726706.html)》
+- 发明专利 《[基于无人机图像深度学习的植株识别制图方法和系统](https://patents.qizhidao.com/search/detail/WZIP_8aa30efc33b17eb6ca4e401ed2d6e97e?orderColumn=undefined&searchType=simple_search&orderType=undefined&filter=&tab=0&from=simple&businessSource=%E6%9F%A5%E4%B8%93%E5%88%A9-%E6%90%9C%E7%B4%A2%E7%BB%93%E6%9E%9C%E5%88%97%E8%A1%A8-%E6%90%9C%E7%B4%A2%E6%9B%B4%E5%A4%9A&statement=%E8%B5%96%E4%B8%BA%E4%B9%BE&semanticId=&patentName=%E5%9F%BA%E4%BA%8E%E6%97%A0%E4%BA%BA%E6%9C%BA%E5%9B%BE%E5%83%8F%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%9A%84%E6%A4%8D%E6%A0%AA%E8%AF%86%E5%88%AB%E5%88%B6%E5%9B%BE%E6%96%B9%E6%B3%95%E5%92%8C%E7%B3%BB%E7%BB%9F&rightSidebar=false&imageSessionKey=&simpleMode=1&proVersion=&sortType=0&current=1&pageSize=20&viewMode=1&leftTabVal=0&rightTabVal=3&norefetch=true)》- 实质审查
 
 ---
 
-*最后更新：2024年1月*
+*最后更新：2025年1月*
