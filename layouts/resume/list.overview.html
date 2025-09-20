@@ -266,6 +266,12 @@
           return;
         }
         
+        // 检查是否是教育背景部分的三级标题，如果是则跳过（不需要展开/折叠功能）
+        const isEducation = h3.textContent.includes('教育背景') || h3.textContent.includes('理学学士') || h3.textContent.includes('Education') || h3.textContent.includes('Bachelor');
+        if (isEducation) {
+          return;
+        }
+        
         // 1. 找到该标题下的所有内容（直到下一个h2或h3）
         const allContent = [];
         let currentElement = h3.nextElementSibling;
