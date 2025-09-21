@@ -25,6 +25,7 @@ colab: "https://colab.research.google.com/drive/1Gm6qFfewcYPnKB3QODzIADQuhnJI7cD
   allowfullscreen>
 </iframe>
 
+[*新标签页打开notebooks*](https://modelscope.cn/notebook/share/ipynb/b0611913/spatiotemporal-forecasting.ipynb)
 
 
 ## 项目概述
@@ -83,7 +84,7 @@ colab: "https://colab.research.google.com/drive/1Gm6qFfewcYPnKB3QODzIADQuhnJI7cD
 <div style="text-align: center; margin: 2rem 0;">
   <!-- <img src="/img/reward.jpg" alt="打赏二维码" style="width: 100%; max-width: 400px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
   <p style="margin-top: 1rem; color: #666; font-size: 0.9rem;">扫码支持作者</p> -->
-  
+
   <!-- 移动端友好的支付链接 -->
   <div style="display: flex; justify-content: center; gap: 2rem; margin-top: 1.5rem; flex-wrap: wrap;">
     <a href="https://arkin-developer.github.io/blog/img/zhifubao-reward.jpg" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; background: #1677ff; color: white; text-decoration: none; border-radius: 8px; font-size: 0.9rem; transition: all 0.3s ease; box-shadow: 0 2px 4px rgba(22,119,255,0.3);">
@@ -95,7 +96,7 @@ colab: "https://colab.research.google.com/drive/1Gm6qFfewcYPnKB3QODzIADQuhnJI7cD
       <span>微信打赏¥9.9</span>
     </a>
   </div>
-  
+
   <p style="margin-top: 1rem; color: #999; font-size: 0.8rem;">点击按钮可查看二维码，方便手机扫码</p>
 </div>
 

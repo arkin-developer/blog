@@ -25,7 +25,7 @@ colab: "https://colab.research.google.com/drive/1ncpNySba_USsDaKDmeJfG_WLBHBxIx9
   allowfullscreen>
 </iframe>
 
-
+[*新标签页打开notebooks*](https://modelscope.cn/notebook/share/ipynb/cfc09818/qwen2.5-fine-tuning.ipynb)
 
 ## 项目概述
 

@@ -4,8 +4,8 @@ description: "On a single A10 (24GB) card, using a *small parameter* model as an
 date: 2025-08-20
 tags: ["LLM Model Fine-tuning", "ModelScope", "Notebook", "LoRA/QLoRA"]
 categories: ["notebooks"]
-nbviewer: "https://nbviewer.org/github/arkin-developer/notebooks/blob/main/qwen2.5-fine-tuning/qwen2.5-fine-tuning.ipynb"
 github: "https://github.com/arkin-developer/notebooks/blob/main/qwen2.5-fine-tuning/qwen2.5-fine-tuning.ipynb"
+nbviewer: "https://nbviewer.org/github/arkin-developer/notebooks/blob/main/qwen2.5-fine-tuning/qwen2.5-fine-tuning.ipynb"
 modelscope: "https://modelscope.cn/notebook/share/ipynb/cfc09818/qwen2.5-fine-tuning.ipynb"
 colab: "https://colab.research.google.com/drive/1ncpNySba_USsDaKDmeJfG_WLBHBxIx9R?usp=sharing"
 ---
@@ -17,7 +17,7 @@ colab: "https://colab.research.google.com/drive/1ncpNySba_USsDaKDmeJfG_WLBHBxIx9
 
 ## Jupyter Notebook Preview
 <iframe 
-  src="https://nbviewer.org/github/arkin-developer/notebooks/blob/main/qwen2.5-fine-tuning/qwen2.5-fine-tuning.ipynb"
+  src="https://modelscope.cn/notebook/share/ipynb/cfc09818/qwen2.5-fine-tuning.ipynb"
   width="100%"
   height="600px"
   frameborder="0"
@@ -25,7 +25,7 @@ colab: "https://colab.research.google.com/drive/1ncpNySba_USsDaKDmeJfG_WLBHBxIx9
   allowfullscreen>
 </iframe>
 
-
+[*Open notebooks in new tab*](https://modelscope.cn/notebook/share/ipynb/cfc09818/qwen2.5-fine-tuning.ipynb)
 
 ## Project Overview
 
@@ -34,8 +34,6 @@ colab: "https://colab.research.google.com/drive/1ncpNySba_USsDaKDmeJfG_WLBHBxIx9
 **Objective**: On a single A10 (24GB) card, using a *small parameter* model as an example (this case uses ModelScope to replace HuggingFace), use **LoRA/QLoRA** to run through a complete *instruction fine-tuning* (Instruction Tuning) process.
 **Hardware Recommendation**: A10 24GB;
 **Software Recommendation**: Python 3.10+, CUDA 12.x, PyTorch 2.3+.
-
-------
 
 ### ✅ This Tutorial Includes
 
@@ -48,7 +46,7 @@ colab: "https://colab.research.google.com/drive/1ncpNySba_USsDaKDmeJfG_WLBHBxIx9
 
 ## 🙏 Support the Author
 
-If you find this project helpful, you can buy the author a cup of Luckin Coffee ☕️
+If you find this project helpful, you can buy the author a Luckin Coffee ☕️
 
 <div style="text-align: center; margin: 2rem 0;">
   <!-- <img src="/img/reward.jpg" alt="Reward QR Code" style="width: 100%; max-width: 400px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
@@ -58,17 +56,18 @@ If you find this project helpful, you can buy the author a cup of Luckin Coffee 
   <div style="display: flex; justify-content: center; gap: 2rem; margin-top: 1.5rem; flex-wrap: wrap;">
     <a href="https://arkin-developer.github.io/blog/img/zhifubao-reward.jpg" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; background: #1677ff; color: white; text-decoration: none; border-radius: 8px; font-size: 0.9rem; transition: all 0.3s ease; box-shadow: 0 2px 4px rgba(22,119,255,0.3);">
       <span style="font-size: 1.2rem;">🩵</span>
-      <span>Alipay Reward ¥9.9</span>
+      <span>Alipay Tip ¥9.9</span>
     </a>
     <a href="https://arkin-developer.github.io/blog/img/wechat-reward.png" target="_blank" rel="noopener" style="display: flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; background: #07c160; color: white; text-decoration: none; border-radius: 8px; font-size: 0.9rem; transition: all 0.3s ease; box-shadow: 0 2px 4px rgba(7,193,96,0.3);">
       <span style="font-size: 1.2rem;">💚</span>
-      <span>WeChat Reward ¥9.9</span>
+      <span>WeChat Tip ¥9.9</span>
     </a>
   </div>
   
-  <p style="margin-top: 1rem; color: #999; font-size: 0.8rem;">Click buttons to view QR codes</p>
+  <p style="margin-top: 1rem; color: #999; font-size: 0.8rem;">Click buttons to view QR codes for mobile scanning</p>
 </div>
+
 
 ---
 
-*You can navigate to the corresponding Jupyter Notebook cloud platform from the navigation bar to try it out, or download the Notebook file to run locally.*
+*You can navigate from the menu bar to the corresponding Jupyter Notebook cloud service platforms to try it out, or download the Notebook file to run locally.*

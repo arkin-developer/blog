@@ -25,6 +25,7 @@ colab: "https://colab.research.google.com/drive/1Gm6qFfewcYPnKB3QODzIADQuhnJI7cD
   allowfullscreen>
 </iframe>
 
+[*Open notebooks in new tab*](https://modelscope.cn/notebook/share/ipynb/b0611913/spatiotemporal-forecasting.ipynb)
 
 
 ## Project Overview
