@@ -1,0 +1,134 @@
+<!-- Cases 网格 -->
+<div class="mt-8 space-y-8 w-full" id="cases-grid">
+  {{ range where .Site.RegularPages "Section" "cases" }}
+    {{ if ne .File.TranslationBaseName "_index" }}
+      <div class="case-card group">
+        <article class="relative overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-[1.02] dark:border-neutral-700 dark:bg-neutral-600 w-full">
+          <div class="flex flex-col">
+            <!-- 上方：文字信息 - 点击正常跳转 -->
+            <div class="flex-1 p-6 lg:p-8 flex flex-col justify-center cursor-pointer" onclick="window.location.href='{{ .Permalink }}'">
+              <header class="mb-4">
+                <h3 class="text-2xl lg:text-3xl font-bold text-neutral-900 dark:text-neutral mb-3 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors leading-tight">
+                  {{ .Title }}
+                </h3>
+                <p class="text-base lg:text-lg text-neutral-600 dark:text-neutral-400 leading-relaxed">
+                  {{ .Description }}
+                </p>
+              </header>
+              
+              <!-- 技术栈标签 -->
+              {{ if .Params.project.tech_stack }}
+                <div class="flex flex-wrap gap-2 mt-4">
+                  {{ range .Params.project.tech_stack }}
+                    <span class="px-3 py-1 bg-primary-100 dark:bg-primary-900 text-primary-700 dark:text-primary-300 rounded-full text-sm font-medium">
+                      {{ . }}
+                    </span>
+                  {{ end }}
+                </div>
+              {{ end }}
+            </div>
+
+            <!-- 下方：项目预览 - 点击新标签页打开 -->
+            <div class="w-full bg-white dark:bg-neutral-800 overflow-hidden p-6 lg:p-8 cursor-pointer case-preview-area" onclick="handleCaseClick(event, '{{ .Params.project.demo }}', '{{ .Params.project.github }}', '{{ .Permalink }}')" data-demo="{{ .Params.project.demo }}" data-github="{{ .Params.project.github }}" data-permalink="{{ .Permalink }}">
+              {{ if .Params.project.image }}
+                <img 
+                  src="{{ .Params.project.image }}"
+                  alt="{{ .Title }} 预览"
+                  class="w-full h-full object-cover rounded-lg"
+                  style="border-radius: 8px;"
+                />
+              {{ else if .Params.project.demo }}
+                <div class="h-full bg-gradient-to-br from-green-50 to-blue-50 dark:from-green-900/20 dark:to-blue-900/20 flex items-center justify-center rounded-lg">
+                  <div class="text-center">
+                    <div class="text-5xl mb-4">🚀</div>
+                    <div class="text-xl font-semibold text-neutral-700 dark:text-neutral-300 mb-3">{{ .Title }}</div>
+                    <div class="text-base text-neutral-500 dark:text-neutral-400">点击查看在线演示</div>
+                  </div>
+                </div>
+              {{ else if .Params.project.github }}
+                <div class="h-full bg-gradient-to-br from-gray-50 to-slate-50 dark:from-gray-900/20 dark:to-slate-900/20 flex items-center justify-center rounded-lg">
+                  <div class="text-center">
+                    <div class="text-5xl mb-4">💻</div>
+                    <div class="text-xl font-semibold text-neutral-700 dark:text-neutral-300 mb-3">{{ .Title }}</div>
+                    <div class="text-base text-neutral-500 dark:text-neutral-400">点击查看源代码</div>
+                  </div>
+                </div>
+              {{ else }}
+                <div class="h-full bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 flex items-center justify-center rounded-lg">
+                  <div class="text-center">
+                    <div class="text-5xl mb-4">📋</div>
+                    <div class="text-xl font-semibold text-neutral-700 dark:text-neutral-300 mb-3">{{ .Title }}</div>
+                    <div class="text-base text-neutral-500 dark:text-neutral-400">点击查看项目详情</div>
+                  </div>
+                </div>
+              {{ end }}
+            </div>
+          </div>
+        </article>
+      </div>
+    {{ end }}
+  {{ end }}
+</div>
+
+<style>
+/* 卡片悬停效果 */
+.case-card article {
+  transform: translateY(0);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.case-card article:hover {
+  transform: translateY(-4px);
+}
+
+/* 响应式调整 */
+@media (max-width: 1024px) {
+  .case-card article {
+    height: 600px !important;
+    min-height: 600px;
+  }
+  
+  .case-card article .flex.flex-col {
+    height: 600px !important;
+  }
+  
+  .case-card article .flex.flex-col > div:last-child {
+    height: 350px !important;
+  }
+}
+</style>
+
+<script>
+function handleCaseClick(event, demoUrl, githubUrl, permalink) {
+  // 阻止事件冒泡
+  event.stopPropagation();
+  
+  // 优先级：演示链接 > GitHub链接 > 文章页面
+  if (demoUrl && demoUrl.trim() !== '') {
+    window.open(demoUrl, '_blank');
+  } else if (githubUrl && githubUrl.trim() !== '') {
+    window.open(githubUrl, '_blank');
+  } else {
+    window.open(permalink, '_blank');
+  }
+}
+
+// 为预览区域添加样式
+document.addEventListener('DOMContentLoaded', function() {
+  const previewAreas = document.querySelectorAll('.case-preview-area img');
+  previewAreas.forEach(function(img) {
+    // 禁用图片的指针事件，让父容器处理点击
+    img.style.pointerEvents = 'none';
+    
+    // 鼠标进入预览区域时，临时启用指针事件
+    img.parentElement.addEventListener('mouseenter', function() {
+      img.style.pointerEvents = 'auto';
+    });
+    
+    // 鼠标离开预览区域时，重新禁用指针事件
+    img.parentElement.addEventListener('mouseleave', function() {
+      img.style.pointerEvents = 'none';
+    });
+  });
+});
+</script>
