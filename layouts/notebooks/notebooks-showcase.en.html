@@ -15,16 +15,45 @@
 
   <!-- 自定义样式 -->
   <style>
-  /* 卡片总高度设置 */
+  /* 卡片总高度设置和间距 */
   .notebook-card {
     height: 450px !important;
     min-height: 450px !important;
+    margin-bottom: 3rem !important; /* 增加卡片间距 */
   }
   
-  /* 文章容器高度 */
+  /* 最后一个卡片不需要下边距 */
+  .notebook-card:last-child {
+    margin-bottom: 0 !important;
+  }
+  
+  /* 文章容器高度和视觉效果 */
   .notebook-card article {
     height: 450px !important;
     min-height: 450px !important;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1), 0 10px 25px -5px rgb(0 0 0 / 0.1) !important;
+    border: 2px solid rgb(229 229 229) !important; /* neutral-200 */
+    border-radius: 1.5rem !important; /* 24px 圆角 */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  }
+  
+  /* 悬停时的增强效果 */
+  .notebook-card article:hover {
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1), 0 25px 50px -12px rgb(0 0 0 / 0.25) !important;
+    border-color: rgb(156 163 175) !important; /* neutral-400 */
+    transform: translateY(-8px) scale(1.02) !important;
+  }
+  
+  /* 暗色模式下的边框和背景 */
+  .dark .notebook-card article {
+    border-color: rgb(82 82 91) !important; /* neutral-600 */
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.3), 0 2px 4px -2px rgb(0 0 0 / 0.2), 0 10px 25px -5px rgb(0 0 0 / 0.4) !important;
+    background-color: rgb(39 39 42) !important; /* neutral-800 - 更深的卡片背景 */
+  }
+  
+  .dark .notebook-card article:hover {
+    border-color: rgb(115 115 115) !important; /* neutral-500 */
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.4), 0 8px 10px -6px rgb(0 0 0 / 0.3), 0 25px 50px -12px rgb(0 0 0 / 0.6) !important;
   }
   
   /* 内容容器总高度 */
@@ -32,32 +61,91 @@
     height: 450px !important;
   }
   
-  /* iframe预览区域 - 300px */
+  /* 文字信息区域 - 100px */
   .notebook-card article .flex.flex-col > div:first-child {
-    height: 300px !important;
+    height: 100px !important;
+    padding: 14px 24px 10px 24px !important; /* 稍微减少上下边距以适配更小高度 */
+    position: relative !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important; /* 改为顶部对齐 */
   }
   
-  /* 文字信息区域 - 150px (50px标题 + 100px内容) */
+  /* 带边距的分割线 */
+  .notebook-card article .flex.flex-col > div:first-child::after {
+    content: '' !important;
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 24px !important;
+    right: 24px !important;
+    height: 2px !important;
+    background-color: rgb(229 229 229) !important; /* neutral-200 */
+  }
+  
+  /* 暗色模式下的分割线 */
+  .dark .notebook-card article .flex.flex-col > div:first-child::after {
+    background-color: rgb(82 82 91) !important; /* neutral-600 */
+  }
+  
+  /* iframe预览区域 - 350px */
   .notebook-card article .flex.flex-col > div:last-child {
-    height: 150px !important;
+    height: 350px !important;
     padding: 12px 24px !important;
   }
   
-  /* 标题区域 - 50px */
-  .notebook-card article .flex.flex-col > div:last-child h3 {
-    margin: 0 0 8px 0 !important;
-    font-size: 1.25rem !important;
-    line-height: 1.5 !important;
+  /* iframe内容区域调整 */
+  .notebook-card article .flex.flex-col > div:last-child iframe,
+  .notebook-card article .flex.flex-col > div:last-child > div {
+    height: calc(100% - 0px) !important;
+    border-radius: 12px !important; /* 增加内部内容圆角 */
   }
   
-  /* 内容区域 - 100px */
-  .notebook-card article .flex.flex-col > div:last-child p {
+  /* 点击区域的鼠标样式 */
+  .notebook-card article .flex.flex-col > div:first-child {
+    cursor: pointer !important;
+  }
+  
+  .notebook-card article .flex.flex-col > div:last-child.iframe-click-area {
+    cursor: pointer !important;
+  }
+  
+  /* 悬停时的视觉反馈 */
+  .notebook-card article .flex.flex-col > div:first-child:hover {
+    background-color: rgb(249 250 251) !important; /* neutral-50 */
+  }
+  
+  .dark .notebook-card article .flex.flex-col > div:first-child:hover {
+    background-color: rgb(38 38 38) !important; /* neutral-800 */
+  }
+  
+  .notebook-card article .flex.flex-col > div:last-child.iframe-click-area:hover {
+    background-color: rgb(249 250 251) !important; /* neutral-50 */
+  }
+  
+  .dark .notebook-card article .flex.flex-col > div:last-child.iframe-click-area:hover {
+    background-color: rgb(38 38 38) !important; /* neutral-800 */
+  }
+  
+  /* 标题区域 - 更紧凑布局 */
+  .notebook-card article .flex.flex-col > div:first-child h3 {
+    margin: 0 0 4px 0 !important; /* 进一步减少标题下边距 */
+    font-size: 1.25rem !important;
+    line-height: 1.3 !important; /* 更紧凑的行高以适配100px高度 */
+  }
+  
+  /* 标题容器的header元素 */
+  .notebook-card article .flex.flex-col > div:first-child header {
+    margin-bottom: 0 !important; /* 移除header的下边距 */
+  }
+  
+  /* 内容区域 - 适配100px高度 */
+  .notebook-card article .flex.flex-col > div:first-child p {
     margin: 0 !important;
     font-size: 0.875rem !important;
     line-height: 1.4 !important;
     overflow: hidden !important;
     display: -webkit-box !important;
-    -webkit-line-clamp: 4 !important;
+    -webkit-line-clamp: 3 !important; /* 减少到3行以适配更小的高度 */
     -webkit-box-orient: vertical !important;
   }
   </style>

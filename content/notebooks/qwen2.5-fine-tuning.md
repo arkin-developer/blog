@@ -17,7 +17,7 @@ colab: "https://colab.research.google.com/drive/1ncpNySba_USsDaKDmeJfG_WLBHBxIx9
 
 ## Jupyter Notebook 预览
 <iframe 
-  src="https://nbviewer.org/github/arkin-developer/notebooks/blob/main/qwen2.5-fine-tuning/qwen2.5-fine-tuning.ipynb"
+  src="https://modelscope.cn/notebook/share/ipynb/cfc09818/qwen2.5-fine-tuning.ipynb"
   width="100%"
   height="600px"
   frameborder="0"

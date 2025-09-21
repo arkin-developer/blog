@@ -15,7 +15,7 @@ colab: "https://colab.research.google.com/drive/1Gm6qFfewcYPnKB3QODzIADQuhnJI7cD
 {{< /lead >}}
 
 
-## Jupyter Notebook预览
+## Jupyter Notebook 预览
 <iframe 
   src="https://modelscope.cn/notebook/share/ipynb/b0611913/spatiotemporal-forecasting.ipynb"
   width="100%"

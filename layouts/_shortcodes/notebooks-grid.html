@@ -3,32 +3,10 @@
   {{ range where .Site.RegularPages "Section" "notebooks" }}
     {{ if ne .File.TranslationBaseName "_index" }}
       <div class="notebook-card group">
-        <article class="relative overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-[1.02] dark:border-neutral-700 dark:bg-neutral-600 cursor-pointer w-full" onclick="window.location.href='{{ .Permalink }}'">
+        <article class="relative overflow-hidden rounded-2xl border border-neutral-200 bg-white shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-[1.02] dark:border-neutral-700 dark:bg-neutral-600 w-full">
           <div class="flex flex-col">
-            <!-- 上方：Jupyter Notebook 预览 -->
-            <div class="w-full bg-white dark:bg-neutral-800 overflow-hidden border-b border-neutral-100 dark:border-neutral-700">
-              {{ if .Params.nbviewer }}
-                <iframe 
-                  src="{{ .Params.nbviewer }}"
-                  width="100%"
-                  height="100%"
-                  frameborder="0"
-                  style="border: none;"
-                  allowfullscreen>
-                </iframe>
-              {{ else }}
-                <div class="h-full bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 flex items-center justify-center">
-                  <div class="text-center p-8">
-                    <div class="text-5xl mb-4">📊</div>
-                    <div class="text-xl font-semibold text-neutral-700 dark:text-neutral-300 mb-3">{{ .Title }}</div>
-                    <div class="text-base text-neutral-500 dark:text-neutral-400">请在 front matter 中设置 nbviewer 参数</div>
-                  </div>
-                </div>
-              {{ end }}
-            </div>
-
-            <!-- 下方：文字信息 -->
-            <div class="flex-1 p-6 lg:p-8 flex flex-col justify-center">
+            <!-- 上方：文字信息 - 点击正常跳转 -->
+            <div class="flex-1 p-6 lg:p-8 flex flex-col justify-center cursor-pointer" onclick="window.location.href='{{ .Permalink }}'">
               <header class="mb-4">
                 <h3 class="text-2xl lg:text-3xl font-bold text-neutral-900 dark:text-neutral mb-3 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors leading-tight">
                   {{ .Title }}
@@ -37,6 +15,28 @@
                   {{ .Description }}
                 </p>
               </header>
+            </div>
+
+            <!-- 下方：Jupyter Notebook 预览 - 点击新标签页打开 -->
+            <div class="w-full bg-white dark:bg-neutral-800 overflow-hidden p-6 lg:p-8 cursor-pointer iframe-click-area" onclick="handleIframeClick(event, '{{ .Params.modelscope }}', '{{ .Permalink }}')" data-modelscope="{{ .Params.modelscope }}" data-permalink="{{ .Permalink }}">
+              {{ if .Params.modelscope }}
+                <iframe 
+                  src="{{ .Params.modelscope }}"
+                  width="100%"
+                  height="100%"
+                  frameborder="0"
+                  style="border: none; border-radius: 8px;"
+                  allowfullscreen>
+                </iframe>
+              {{ else }}
+                <div class="h-full bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 flex items-center justify-center rounded-lg">
+                  <div class="text-center">
+                    <div class="text-5xl mb-4">📊</div>
+                    <div class="text-xl font-semibold text-neutral-700 dark:text-neutral-300 mb-3">{{ .Title }}</div>
+                    <div class="text-base text-neutral-500 dark:text-neutral-400">请在 front matter 中设置 modelscope 参数</div>
+                  </div>
+                </div>
+              {{ end }}
             </div>
           </div>
         </article>
@@ -67,8 +67,42 @@
     height: 600px !important;
   }
   
-  .notebook-card article .flex.flex-col > div:first-child {
+  .notebook-card article .flex.flex-col > div:last-child {
     height: 450px !important;
   }
 }
 </style>
+
+<script>
+function handleIframeClick(event, modelscope, permalink) {
+  // 阻止事件冒泡
+  event.stopPropagation();
+  
+  // 如果有modelscope链接，在新标签页打开
+  if (modelscope && modelscope.trim() !== '') {
+    window.open(modelscope, '_blank');
+  } else {
+    // 如果没有modelscope链接，在新标签页打开文章页面
+    window.open(permalink, '_blank');
+  }
+}
+
+// 为iframe添加样式，确保鼠标滚动时不会触发点击
+document.addEventListener('DOMContentLoaded', function() {
+  const iframes = document.querySelectorAll('.iframe-click-area iframe');
+  iframes.forEach(function(iframe) {
+    // 禁用iframe的指针事件，让父容器处理点击
+    iframe.style.pointerEvents = 'none';
+    
+    // 鼠标进入iframe区域时，临时启用指针事件以支持滚动
+    iframe.parentElement.addEventListener('mouseenter', function() {
+      iframe.style.pointerEvents = 'auto';
+    });
+    
+    // 鼠标离开iframe区域时，重新禁用指针事件
+    iframe.parentElement.addEventListener('mouseleave', function() {
+      iframe.style.pointerEvents = 'none';
+    });
+  });
+});
+</script>
