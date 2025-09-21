@@ -4,8 +4,6 @@ description: "Data analysis and machine learning projects"
 layout: "notebooks-showcase"
 ---
 
-## Project List
-
 {{< notebooks-grid >}}
 
 ---
