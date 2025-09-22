@@ -38,7 +38,7 @@ docker exec -it geoserver /bin/bash
 - Username: `admin`
 - Password: `geoserver`
 
-> Password location in container
+**Password location in container**
 
 ![Password Path](https://mr-lai.oss-cn-zhangjiakou.aliyuncs.com/imgs/image-20220311112611616.png)
 
@@ -56,7 +56,7 @@ docker run -d -p 8888:8080 \
   --name geoserver kartoza/geoserver:latest
 ```
 
-> Example: Server `10.1.36.245:8890` stores image data at `/data/media3/duzicong/docker/geoserver/data`
+**Example:** Server `10.1.36.245:8890` stores image data at `/data/media3/duzicong/docker/geoserver/data`
 
 ![Data Storage Path](https://mr-lai.oss-cn-zhangjiakou.aliyuncs.com/imgs/image-20230608150105202.png)
 
@@ -170,7 +170,7 @@ Data source selection depends on your specific situation. Common ones include Ge
 - Support both raster and vector data
 - Easy data distribution and sharing
 
-> There are many parameters with unknown purposes, which can be queried through ChatGPT (may contain errors)
+**There are many parameters with unknown purposes, which can be queried through ChatGPT (may contain errors)**
 
 ![Publish GeoPackage](https://mr-lai.oss-cn-zhangjiakou.aliyuncs.com/imgs/image-20230610162956615.png)
 
@@ -184,7 +184,7 @@ Data source selection depends on your specific situation. Common ones include Ge
 - Support multiple output formats
 - Suitable for small data volumes or real-time data
 
-> When we publish data stores, we can see corresponding layers in both layers and tile layers, proving that we can read our published data stores through programs that support WMS and WMTS. For WMS and WMTS standard specifications, please refer to the referenced OGC standard documents.
+**When we publish data stores, we can see corresponding layers in both layers and tile layers, proving that we can read our published data stores through programs that support WMS and WMTS. For WMS and WMTS standard specifications, please refer to the referenced OGC standard documents.**
 
 In general, both WMS and WMTS aim to return image stream data in specified formats and locations. However, WMS generates dynamically, which can lead to slower access when data volumes are large, while WMTS pre-caches data, allowing users to skip dynamic computation time when accessing.
 
@@ -212,7 +212,7 @@ styles=&
 format=image/png
 ```
 
-> `WMS` service generates corresponding data dynamically
+**`WMS` service generates corresponding data dynamically**
 
 **Parameter Description:**
 
@@ -257,7 +257,7 @@ TileCol={col}&
 TileRow={row}
 ```
 
-> `WMTS` service pre-caches corresponding tile information to speed up data access
+**`WMTS` service pre-caches corresponding tile information to speed up data access**
 
 **Parameter Description:**
 
