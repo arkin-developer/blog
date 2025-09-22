@@ -3,7 +3,7 @@ title: "GeoServer 发布 WMS 影像服务 (Docker)"
 description: "基于 Docker 部署 GeoServer，发布 WMS/WMTS 影像服务的完整教程，包含数据准备、服务配置、RESTful API 使用和 QGIS 测试"
 keywords: ["GeoServer", "WMS", "WMTS", "Docker", "GIS", "影像服务", "RESTful API"]
 author: "Arkin"
-date: 2023-06-08T15:00:00+08:00
+date: 2022-06-08T15:00:00+08:00
 lastmod: 2025-09-23T01:58:12+08:00
 draft: false
 tags: ["GeoServer", "Docker", "GIS", "WMS", "WMTS"]
@@ -18,7 +18,7 @@ showDateUpdated: true
 
 > 本文将详细介绍如何使用 Docker 部署 GeoServer，并发布 WMS/WMTS 影像服务。涵盖从环境搭建到服务发布的完整流程，包括 Web 界面操作和 RESTful API 自动化发布。
 
-## 1. GeoServer 环境搭建
+## ⭐️ 1. GeoServer 环境搭建
 
 ### 1.1 下载并运行 GeoServer 镜像
 
@@ -38,7 +38,13 @@ docker exec -it geoserver /bin/bash
 - 账号：`admin`
 - 密码：`geoserver`
 
+> 密码在容器内这个路径
+
+![密码路径](https://mr-lai.oss-cn-zhangjiakou.aliyuncs.com/imgs/image-20220311112611616.png)
+
 ### 1.2 数据准备与挂载
+
+GeoServer 有一个物理地址用来存储发布的影像数据
 
 ```bash
 # 将影像数据复制到容器内
@@ -50,9 +56,13 @@ docker run -d -p 8888:8080 \
   --name geoserver kartoza/geoserver:latest
 ```
 
-## 2. GeoServer 核心概念
+> 示例：`10.1.36.245:8890` 的服务器的影像存储数据放在了 `/data/media3/duzicong/docker/geoserver/data`
 
-### 2.1 Workspaces（工作区）
+![数据存储路径](https://mr-lai.oss-cn-zhangjiakou.aliyuncs.com/imgs/image-20230608150105202.png)
+
+## 🌟 2. GeoServer 核心概念
+
+### 🌸 2.1 Workspaces（工作区）
 
 **工作区的作用：**
 
@@ -69,7 +79,11 @@ docker run -d -p 8888:8080 \
 3. 填写工作区名称和命名空间 URI
 4. 保存配置
 
-### 2.2 DataStore（数据存储）
+![创建工作区1](https://mr-lai.oss-cn-zhangjiakou.aliyuncs.com/imgs/image-20230608160200728.png)
+
+![创建工作区2](https://mr-lai.oss-cn-zhangjiakou.aliyuncs.com/imgs/image-20230608160859483.png)
+
+### 🌷 2.2 DataStore（数据存储）
 
 **数据存储的作用：**
 
@@ -85,7 +99,13 @@ docker run -d -p 8888:8080 \
 - **矢量数据**：Shapefile、GeoPackage、PostGIS、MySQL 等
 - **其他格式**：ArcGrid、NetCDF 等
 
-### 2.3 Layers（图层）
+**新建数据源：**
+
+数据源的选择需要根据自己情况而定，常用的一些为 GeoPackage、Shapefile、GeoTIFF、ImagePyramid 等。
+
+![新建数据源](https://mr-lai.oss-cn-zhangjiakou.aliyuncs.com/imgs/image-20230608180938261.png)
+
+### 🍀 2.3 Layers（图层）
 
 **图层的作用：**
 
@@ -95,9 +115,21 @@ docker run -d -p 8888:8080 \
 - **样式定义**：控制数据的显示效果和样式
 - **服务发布**：作为地理服务发布的核心对象
 
-## 3. 发布影像服务
+**新建图层：**
 
-### 3.1 发布 GeoTIFF 影像
+![新建图层](https://mr-lai.oss-cn-zhangjiakou.aliyuncs.com/imgs/image-20230608182613870.png)
+
+**发布图层：**
+
+![发布图层1](https://mr-lai.oss-cn-zhangjiakou.aliyuncs.com/imgs/image-20230629140750129.png)
+
+![发布图层2](https://mr-lai.oss-cn-zhangjiakou.aliyuncs.com/imgs/image-20230629140823420.png)
+
+![发布图层3](https://mr-lai.oss-cn-zhangjiakou.aliyuncs.com/imgs/image-20230629140908684.png)
+
+## 💫 3. 发布影像服务
+
+### 💐 3.1 发布 GeoTIFF 影像
 
 **步骤：**
 
@@ -112,7 +144,9 @@ docker run -d -p 8888:8080 \
    - 定义边界框范围
    - 配置样式参数
 
-### 3.2 发布 ImagePyramid
+![发布GeoTIFF影像](https://mr-lai.oss-cn-zhangjiakou.aliyuncs.com/imgs/image-20230608181801619.png)
+
+### 🌸 3.2 发布 ImagePyramid
 
 **ImagePyramid 的优势：**
 
@@ -126,7 +160,9 @@ docker run -d -p 8888:8080 \
 - 正确设置空间参考系统
 - 配置合适的缓存参数
 
-### 3.3 发布 GeoPackage
+![发布ImagePyramid](https://mr-lai.oss-cn-zhangjiakou.aliyuncs.com/imgs/image-20230629131918208.png)
+
+### 🌷 3.3 发布 GeoPackage
 
 **GeoPackage 特点：**
 
@@ -134,7 +170,11 @@ docker run -d -p 8888:8080 \
 - 支持栅格和矢量数据
 - 便于数据分发和共享
 
-## 4. WMS 和 WMTS 服务
+> 有比较多的参数不知道用途，通过 ChatGPT 进行查询（可能会有错误）
+
+![发布GeoPackage](https://mr-lai.oss-cn-zhangjiakou.aliyuncs.com/imgs/image-20230610162956615.png)
+
+## 🌾 4. WMS 和 WMTS 服务
 
 ### 4.1 WMS（Web Map Service）
 
@@ -144,7 +184,19 @@ docker run -d -p 8888:8080 \
 - 支持多种输出格式
 - 适合小数据量或实时数据
 
+> 当我们对数据存储进行发布后，在图层和切片图层已经可以看到有相应的图层存在，证明我们已经可以通过支持 WMS 和 WMTS 的程序进行读取我们发布的数据存储。关于 WMS 和 WMTS 的标准规范可以查看引用的 OGC 标准文档。
+
+总的来说，WMS 和 WMTS 目的都是返回指定格式指定位置的图像流式数据，只不过 WMS 是动态生成，但数据量较大时会导致访问较慢，WMTS 则会预先将数据缓存下来，当用户访问时可以省略动态计算的时间。
+
 **WMS 请求示例：**
+
+分析一条 WMS 请求的地址信息：
+
+```text
+http://localhost:8080/geoserver/siluan/wms?service=WMS&version=1.1.0&request=GetMap&layers=siluan%3A404673055579701248-202106&bbox=110.6211111111111%2C21.533331777777775%2C110.89222777777778%2C22.0&width=446&height=768&srs=EPSG%3A4490&styles=&format=image%2Fpng
+```
+
+![WMS请求示例](https://mr-lai.oss-cn-zhangjiakou.aliyuncs.com/imgs/image-20230629153602858.png)
 
 ```http
 http://localhost:8080/geoserver/{workspace}/wms?
@@ -159,6 +211,8 @@ srs={EPSG:4490}&
 styles=&
 format=image/png
 ```
+
+> `WMS` 服务通过动态生成相应的数据
 
 **参数说明：**
 
@@ -181,6 +235,14 @@ format=image/png
 
 **WMTS 请求示例：**
 
+分析一条 WMTS 请求的地址信息：
+
+```text
+http://localhost:8080/geoserver/siluan/gwc/service/wmts?layer=siluan%3A418430145066434560-202106&style=&tilematrixset=EPSG%3A4326&Service=WMTS&Request=GetTile&Version=1.0.0&Format=image%2Fpng&TileMatrix=EPSG%3A4326%3A11&TileCol=3376&TileRow=757
+```
+
+![WMTS请求示例](https://mr-lai.oss-cn-zhangjiakou.aliyuncs.com/imgs/image-20230629155100864.png)
+
 ```http
 http://localhost:8080/geoserver/{workspace}/gwc/service/wmts?
 service=WMTS&
@@ -195,6 +257,8 @@ TileCol={col}&
 TileRow={row}
 ```
 
+> `WMTS` 服务通过预先缓存相应的瓦片信息，加快数据的获取速度
+
 **参数说明：**
 
 - `Request=GetTile`：请求瓦片
@@ -202,9 +266,11 @@ TileRow={row}
 - `TileMatrix`：缩放级别
 - `TileCol/TileRow`：瓦片行列号
 
-## 5. QGIS 测试
+## 💥 5. QGIS 测试
 
-### 5.1 加载 WMS 服务
+### 🍂 5.1 加载 WMS 服务
+
+利用 QGIS 可以快捷对 GeoServer 已发布的 WMS、WMTS、WFS 等一些服务进行加载。
 
 1. 打开 QGIS
 2. 右键图层面板 → `Add Layer` → `Add WMS/WMTS Layer`
@@ -212,23 +278,37 @@ TileRow={row}
 4. 输入服务 URL 和连接名称
 5. 选择图层并添加到地图
 
-### 5.2 加载 WMTS 服务
+![QGIS加载WMS服务](https://mr-lai.oss-cn-zhangjiakou.aliyuncs.com/imgs/image-20230612120013847.png)
+
+### 🌿 5.2 加载 WMTS 服务
 
 1. 在 `Add WMS/WMTS Layer` 对话框中选择 `WMTS` 标签
 2. 输入 WMTS 服务 URL
 3. 选择图层和样式
 4. 添加到地图
 
-### 5.3 加载 WFS 服务
+![QGIS加载WMTS服务](https://mr-lai.oss-cn-zhangjiakou.aliyuncs.com/imgs/image-20230612120137335.png)
+
+### 🍄 5.3 加载 WFS 服务
 
 1. 选择 `Add WFS Layer`
 2. 输入 WFS 服务 URL
 3. 选择要素类型
 4. 添加到地图
 
-## 6. RESTful API 自动化发布
+![QGIS加载WFS服务](https://mr-lai.oss-cn-zhangjiakou.aliyuncs.com/imgs/image-20230612120400248.png)
 
-### 6.1 发布影像服务流程
+## 🎃🎃 6. RESTful API 自动化发布
+
+### 👻 6.1 发布影像服务流程
+
+GeoServer 的 REST API 接口使用方式与直接在 Web 端可视化界面的操作不太一样，Web 端淡化了不同数据源的区别，而当使用 REST API 进行发布任务时，更加强调不同数据源的区别，以下通过讲解用 REST 发布影像的 WMS 和 WMTS 服务来举例。
+
+![REST API概览1](https://mr-lai.oss-cn-zhangjiakou.aliyuncs.com/imgs/image-20230629160829216.png)
+
+![REST API概览2](https://mr-lai.oss-cn-zhangjiakou.aliyuncs.com/imgs/image-20230629161002387.png)
+
+以上是一些常用的 REST API 路由，主要与 Web 端的对应为三个源，矢量数据源、栅格数据源和其他数据源，当我们需要发布栅格数据影像时，需要用到的接口为 `/coveragestores` 和 `/coverages` 两个。
 
 #### 创建栅格数据存储
 
@@ -249,6 +329,8 @@ Content-Type: application/json
     }
 }
 ```
+
+![创建栅格数据存储](https://mr-lai.oss-cn-zhangjiakou.aliyuncs.com/imgs/image-20230629161655053.png)
 
 #### 发布栅格数据
 
@@ -279,6 +361,10 @@ Content-Type: application/json
 }
 ```
 
+![发布栅格数据](https://mr-lai.oss-cn-zhangjiakou.aliyuncs.com/imgs/image-20230630165512842.png)
+
+这一步做完，已经成功发布了 WMS 和 WMTS 服务，只不过现在的 WMTS 服务还是默认参数，因此，为了节省渲染时间，可以通过相关接口来创建切片服务。
+
 #### 创建切片服务
 
 ```bash
@@ -297,6 +383,10 @@ Content-Type: application/json
     }
 }
 ```
+
+![创建切片服务](https://mr-lai.oss-cn-zhangjiakou.aliyuncs.com/imgs/image-20230630172806531.png)
+
+自此已经完成了利用 REST API 进行发布遥感影像的操作，可以通过 workspace、datastores、layer 进行构造 WMS 和 WMTS 服务的 URL 进行访问。
 
 ### 6.2 发布矢量要素服务
 
