@@ -26,7 +26,7 @@ Golang（Go语言）以其简洁的语法、高效的性能和强大的并发能
 
 ### GVM多版本管理器
 
-> [moovweb/gvm: Go Version Manager (github.com)](https://github.com/moovweb/gvm)
+*[moovweb/gvm: Go Version Manager (github.com)](https://github.com/moovweb/gvm)*
 
 GVM是Golang的版本管理工具，类似于Node.js的nvm，可以方便地管理多个Go版本。
 

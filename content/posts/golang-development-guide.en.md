@@ -26,7 +26,7 @@ Golang (Go language), with its concise syntax, high performance, and powerful co
 
 ### GVM Multi-Version Manager
 
-> [moovweb/gvm: Go Version Manager (github.com)](https://github.com/moovweb/gvm)
+*[moovweb/gvm: Go Version Manager (github.com)](https://github.com/moovweb/gvm)*
 
 GVM is Golang's version management tool, similar to Node.js's nvm, which can conveniently manage multiple Go versions.
 
