@@ -6,8 +6,8 @@ author: "Arkin"
 date: 2025-08-07T17:45:10+08:00
 lastmod: 2025-09-19T17:45:10+08:00
 draft: false
-tags: ["", "什么是大语言模型？"]
-categories: ["面试题", "大模型"]
+tags: ["LLM", "面试", "大模型", "人工智能"]
+categories: ["人工智能"]
 aliases: []
 image: "img/featured-image.jpg"
 toc: true

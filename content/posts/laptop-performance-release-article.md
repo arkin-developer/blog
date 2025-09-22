@@ -7,7 +7,7 @@ date: 2025-09-02T00:35:28+08:00
 lastmod: 2025-09-02T00:35:28+08:00
 draft: false
 tags: ["笔记本电脑", "硬件", "性能", "散热", "科普"]
-categories: ["科普文"]
+categories: ["技术"]
 aliases: []
 image: "posts/屏幕截图 2025-09-02 010046.jpg"
 toc: true

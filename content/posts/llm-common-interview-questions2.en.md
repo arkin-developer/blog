@@ -6,8 +6,8 @@ author: "Arkin"
 date: 2025-08-07T17:45:10+08:00
 lastmod: 2025-09-19T17:45:10+08:00
 draft: false
-tags: ["", "What is a Large Language Model?"]
-categories: ["Interview Questions", "Large Language Models"]
+tags: ["LLM", "Interview", "Large Language Model", "Artificial Intelligence"]
+categories: ["Artificial Intelligence"]
 aliases: []
 image: "img/featured-image.jpg"
 toc: true

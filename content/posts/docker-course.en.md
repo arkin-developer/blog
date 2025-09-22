@@ -5,8 +5,8 @@ keywords: ["keyword1", "keyword2", "keyword3"]
 date: 2021-10-23T01:31:03+08:00
 lastmod: 2025-09-23T01:31:03+08:00
 draft: false
-tags: ["tag1", "tag2"]
-categories: ["category1", "category2"]
+tags: ["Docker", "Container Technology", "Tutorial", "DevOps"]
+categories: ["Technology"]
 aliases: []
 image: "img/featured-image.jpg"
 toc: true

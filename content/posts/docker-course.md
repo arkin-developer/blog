@@ -5,8 +5,8 @@ keywords: ["关键词1", "关键词2", "关键词3"]
 date: 2021-10-23T01:31:03+08:00
 lastmod: 2025-09-23T01:31:03+08:00
 draft: false
-tags: ["标签1", "标签2"]
-categories: ["分类1", "分类2"]
+tags: ["Docker", "容器技术", "教程", "运维"]
+categories: ["技术"]
 aliases: []
 image: "img/featured-image.jpg"
 toc: true

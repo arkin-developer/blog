@@ -6,8 +6,8 @@ author: "Arkin"
 date: 2024-01-15
 lastmod: 2025-08-30
 draft: false
-tags: ["SEO", "网站优化", "搜索引擎", "技术教程", "数字营销"]
-categories: ["技术教程", "SEO优化"]
+tags: ["SEO", "网站优化", "搜索引擎", "教程", "数字营销"]
+categories: ["Web开发"]
 aliases: ["/posts/seo-guide", "/blog/seo-optimization"]
 image: "img/seo-optimization.jpg"
 toc: true

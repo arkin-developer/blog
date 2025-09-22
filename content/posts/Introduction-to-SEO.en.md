@@ -5,8 +5,8 @@ keywords: ["SEO optimization", "search engine optimization", "website ranking", 
 author: "Arkin"
 date: 2024-01-15
 draft: false
-tags: ["SEO", "website optimization", "search engine", "technical tutorial", "digital marketing"]
-categories: ["Technical Tutorial", "SEO Optimization"]
+tags: ["SEO", "website optimization", "search engine", "tutorial", "digital marketing"]
+categories: ["Web Development"]
 aliases: ["/posts/seo-guide", "/blog/seo-optimization"]
 image: "img/seo-optimization.jpg"
 toc: true

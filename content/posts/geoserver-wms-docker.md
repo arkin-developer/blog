@@ -7,7 +7,7 @@ date: 2022-06-08T15:00:00+08:00
 lastmod: 2025-09-23T01:58:12+08:00
 draft: false
 tags: ["GeoServer", "Docker", "GIS", "WMS", "WMTS"]
-categories: ["GIS", "Docker", "Web服务"]
+categories: ["GIS地理信息"]
 aliases: []
 image: "img/featured-image.jpg"
 toc: true

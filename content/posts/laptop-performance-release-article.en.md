@@ -7,7 +7,7 @@ date: 2025-09-02T00:35:28+08:00
 lastmod: 2025-09-02T00:35:28+08:00
 draft: false
 tags: ["laptop", "hardware", "performance", "thermal management", "education"]
-categories: ["Educational"]
+categories: ["Technology"]
 aliases: []
 image: "img/featured-image.jpg"
 toc: true
