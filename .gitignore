@@ -40,3 +40,4 @@ yarn-error.log*
 # 其他
 *.bak
 *.orig
+hugo_stats.json
