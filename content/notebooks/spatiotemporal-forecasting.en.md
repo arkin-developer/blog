@@ -68,14 +68,40 @@ colab: "https://colab.research.google.com/drive/1Gm6qFfewcYPnKB3QODzIADQuhnJI7cD
 - **Prediction Head**: Multi-layer perceptron + Output projection layer
 - **Feature Dimensions**: d_model=64, n_heads=4, n_layers=2 (lightweight configuration)
 
-## 🎯 Application Scenarios
+## 🎓 What You Will Learn
 
-- 🚗 Taxi driver navigation optimization
-- 📊 Urban traffic scheduling systems
-- 💰 Dynamic pricing strategy development
-- 🏙️ Urban traffic planning
-- 📈 Demand forecasting and capacity allocation
-- 🚦 Intelligent traffic management systems
+### **1. Spatiotemporal Data Processing Techniques**
+- **🗺️ Spatial Gridding**: Convert GPS trajectory data to regular grid format
+- **⏰ Time Series Construction**: Aggregate spatial data by time intervals to build spatiotemporal sequences
+- **📊 Data Preprocessing**: Standardization, normalization, and data cleaning techniques
+- **🔄 Data Augmentation**: Augmentation and expansion methods for spatiotemporal data
+
+### **2. PatchTST Neural Network Architecture (2023 SOTA)**
+- **🧩 Patch Technology**: Split time series into patches for parallel processing
+- **🎯 Channel-Independent Modeling**: Each spatial location is processed independently to avoid information interference
+- **🔗 Transformer Encoder**: Application of self-attention mechanisms in time series forecasting
+- **📍 Position Encoding**: Encoding methods for temporal and spatial position information
+- **⚡ Lightweight Design**: How to design efficient spatiotemporal prediction models
+
+### **3. Deep Learning Engineering Practices**
+- **🍎 Apple Silicon Optimization**: Application of MPS acceleration in deep learning
+- **📱 Device Management**: Intelligent selection of CPU/GPU/MPS computing devices
+- **🔄 Training Pipeline**: Complete model training, validation, and testing pipeline
+- **📈 Performance Monitoring**: Loss functions, early stopping mechanisms, learning rate scheduling
+- **💾 Model Saving**: Best model saving and loading strategies
+
+### **4. Spatiotemporal Prediction Business Applications**
+- **🚕 Traffic Flow Prediction**: Spatiotemporal distribution prediction of urban traffic demand
+- **📊 Business Metrics Design**: How to design prediction metrics that meet business needs
+- **🎯 Model Evaluation**: Practical significance of evaluation metrics like MSE, MAE
+- **💼 Business Value**: Application of prediction models in scheduling optimization and dynamic pricing
+- **🔮 Future Extensions**: How to extend models to other spatiotemporal prediction scenarios
+
+### **5. Visualization and Analysis Techniques**
+- **📊 Spatiotemporal Data Visualization**: Heat maps, time series plots, error analysis charts
+- **🔍 Model Interpretability**: Understanding model prediction results and decision processes
+- **📈 Training Process Monitoring**: Analysis of training curves and validation curves
+- **🎨 Result Presentation**: How to clearly present prediction results and business value
 
 ## 🙏 Support the Author
 
