@@ -1,7 +1,8 @@
 ---
 title: "My First Blog Post"
 description: "This is the first test article created with Hugo and Congo theme"
-date: 2024-01-15
+date: 2021-06-30
+lastmod: 2021-08-30
 tags: ["Hugo", "Blog Setup", "Congo Theme", "Tutorial", "Static Website"]
 categories: ["Web Development"]
 draft: false

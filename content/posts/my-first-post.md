@@ -3,8 +3,8 @@ title: "我的第一篇博客文章 - Hugo博客搭建指南"
 description: "详细介绍如何使用Hugo和Congo主题创建个人技术博客，包括配置、主题设置、功能测试等完整教程"
 keywords: ["Hugo", "博客搭建", "Congo主题", "静态网站", "技术博客", "Markdown", "代码高亮"]
 author: "Arkin"
-date: 2024-01-15
-lastmod: 2025-08-30
+date: 2021-06-30
+lastmod: 2021-08-30
 tags: ["Hugo", "博客搭建", "Congo主题", "教程", "静态网站"]
 categories: ["Web开发"]
 draft: false
