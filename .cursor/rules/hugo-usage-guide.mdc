@@ -1,0 +1,312 @@
+---
+description: Hugo静态网站生成器使用指南和最佳实践
+globs: ["**/*.md", "**/*.toml", "**/*.yaml", "**/*.yml", "**/layouts/**", "**/static/**", "**/assets/**"]
+alwaysApply: true
+---
+
+# Hugo 使用指南
+
+当用户询问Hugo相关操作或需要Hugo帮助时，AI助手应该提供以下指导：
+
+## 1. Hugo 基础命令
+
+### 开发服务器
+```bash
+# 启动开发服务器
+hugo server
+hugo server -D  # 包含草稿内容
+hugo server --bind 0.0.0.0  # 绑定所有网络接口
+hugo server --port 1314  # 指定端口
+
+# 常用组合
+hugo server -D --bind 0.0.0.0 --port 1314
+```
+
+### 内容创建
+```bash
+# 创建新文章
+hugo new posts/my-article.md
+hugo new notebooks/my-notebook.md
+hugo new cases/my-case.md
+
+# 创建新页面
+hugo new about.md
+hugo new contact.md
+```
+
+### 构建和部署
+```bash
+# 构建静态网站
+hugo  # 构建到 public/ 目录
+hugo -D  # 包含草稿内容构建
+
+# 清理构建缓存
+hugo --gc  # 垃圾回收
+
+# 构建时显示详细输出
+hugo --verbose
+```
+
+## 2. 内容管理最佳实践
+
+### Front Matter 规范
+```yaml
+---
+title: "文章标题"
+description: "文章描述"
+date: 2024-01-01T00:00:00+08:00
+lastmod: 2024-01-01T00:00:00+08:00
+draft: false
+tags: ["标签1", "标签2"]
+categories: ["分类"]
+aliases: ["/old-url"]
+image: "img/featured-image.jpg"
+toc: true
+readingTime: true
+showWordCount: true
+showDateUpdated: true
+---
+```
+
+### 目录结构规范
+```
+content/
+├── posts/          # 博客文章
+├── notebooks/      # 技术笔记
+├── cases/          # 项目案例
+├── resume/         # 简历
+└── _index.md       # 首页内容
+```
+
+### 文件命名规范
+- 使用小写字母和连字符：`my-article.md`
+- 英文版文件添加 `.en` 后缀：`my-article.en.md`
+- 避免使用空格和特殊字符
+
+## 3. 主题和配置
+
+### 主题管理
+```bash
+# 初始化主题为Git子模块
+git submodule add https://github.com/jpanther/congo themes/congo
+
+# 更新主题
+git submodule update --remote themes/congo
+
+# 删除主题子模块
+git submodule deinit themes/congo
+git rm themes/congo
+```
+
+### 配置文件优先级
+1. `hugo.toml` / `hugo.yaml` / `hugo.json`
+2. `config/_default/` 目录下的配置文件
+3. `config/production/` 生产环境配置
+4. `config/development/` 开发环境配置
+
+### 常用配置项
+```toml
+# hugo.toml
+baseURL = "https://example.com"
+languageCode = "zh-cn"
+title = "网站标题"
+
+[params]
+author = "作者名称"
+description = "网站描述"
+keywords = ["关键词1", "关键词2"]
+
+[menu]
+  [[menu.main]]
+  name = "首页"
+  url = "/"
+  
+  [[menu.main]]
+  name = "博客"
+  url = "/posts/"
+```
+
+## 4. 多语言支持
+
+### 语言配置
+```toml
+# config/_default/languages.zh-Hans.toml
+[languages.zh-Hans]
+languageName = "中文"
+contentDir = "content"
+title = "中文网站标题"
+
+# config/_default/languages.en.toml
+[languages.en]
+languageName = "English"
+contentDir = "content"
+title = "English Website Title"
+```
+
+### 内容翻译
+- 中文文件：`content/posts/article.md`
+- 英文文件：`content/posts/article.en.md`
+- 使用相同的文件名结构，英文版添加 `.en` 后缀
+
+## 5. 资源管理
+
+### 静态资源
+```
+static/
+├── img/           # 图片文件
+├── css/           # 自定义样式
+├── js/            # JavaScript文件
+└── favicon.ico    # 网站图标
+```
+
+### 资源引用
+```markdown
+<!-- 图片引用 -->
+![描述](img/image.jpg)
+
+<!-- 链接引用 -->
+[链接文本](/posts/article/)
+
+<!-- 代码块 -->
+```bash
+echo "Hello Hugo"
+```
+```
+
+## 6. 布局和模板
+
+### 自定义布局
+```
+layouts/
+├── _default/
+│   ├── single.html
+│   └── list.html
+├── partials/
+│   └── header.html
+└── shortcodes/
+    └── custom.html
+```
+
+### 短代码使用
+```markdown
+<!-- 自定义短代码 -->
+{{< custom-param "value" >}}
+
+<!-- 内置短代码 -->
+{{< figure src="img/image.jpg" title="图片标题" >}}
+{{< highlight python >}}
+print("Hello World")
+{{< /highlight >}}
+```
+
+## 7. 部署和发布
+
+### GitHub Pages 部署
+```bash
+# 构建并推送到gh-pages分支
+hugo --minify
+cd public
+git add .
+git commit -m "Update site"
+git push origin gh-pages
+```
+
+### Netlify 部署
+```toml
+# netlify.toml
+[build]
+  command = "hugo --gc --minify"
+  publish = "public"
+
+[build.environment]
+  HUGO_VERSION = "0.120.0"
+  HUGO_ENV = "production"
+```
+
+### 自动化脚本
+```bash
+#!/bin/bash
+# deploy.sh
+hugo --minify
+cd public
+git add .
+git commit -m "Update site $(date)"
+git push origin gh-pages
+cd ..
+```
+
+## 8. 性能优化
+
+### 构建优化
+```bash
+# 启用压缩
+hugo --minify
+
+# 启用资源管道
+hugo --enableGitInfo
+
+# 生产环境构建
+HUGO_ENV=production hugo
+```
+
+### 图片优化
+```tomk
+# config/_default/markup.toml
+[markup.goldmark.renderer]
+unsafe = true
+
+[markup.mediaTypes]
+[markup.mediaTypes."image/webp"]
+suffixes = ["webp"]
+```
+
+## 9. 常见问题解决
+
+### 构建错误
+- 检查Front Matter语法
+- 验证Markdown语法
+- 确认文件路径正确
+
+### 主题问题
+- 检查主题版本兼容性
+- 查看主题文档和示例
+- 验证配置文件格式
+
+### 多语言问题
+- 确认语言配置正确
+- 检查内容文件命名
+- 验证菜单配置
+
+## 10. 开发工作流
+
+### 本地开发
+1. `hugo server -D` 启动开发服务器
+2. 编辑内容文件
+3. 实时预览更改
+4. 测试多语言切换
+
+### 内容发布
+1. 设置 `draft: false`
+2. 更新 `lastmod` 时间
+3. 检查标签和分类
+4. 构建并部署
+
+### 版本控制
+```bash
+# 提交内容更改
+git add content/
+git commit -m "docs: 添加新文章"
+
+# 提交配置更改
+git add config/
+git commit -m "config: 更新网站配置"
+```
+
+## 注意事项
+
+- **文件编码**: 使用UTF-8编码
+- **路径分隔符**: 使用正斜杠 `/`
+- **图片优化**: 压缩图片文件大小
+- **SEO优化**: 填写完整的meta信息
+- **响应式设计**: 确保移动端适配
+- **性能监控**: 定期检查网站加载速度
