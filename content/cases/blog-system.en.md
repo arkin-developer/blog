@@ -3,8 +3,8 @@ title: "Personal Blog System"
 description: "Multi-language personal blog built with Hugo and Congo theme"
 date: 2024-08-21
 type: "cases"
-tags: ["Hugo", "Static Site", "Multi-language", "Responsive Design"]
-categories: ["Web Application"]
+tags: ["Hugo", "Static Site", "Multi-language", "Responsive Design", "Project Case"]
+categories: ["Project Cases"]
 project:
   image: "/img/projects/blog-system.png"
   github: "https://github.com/arkin-developer/blog"

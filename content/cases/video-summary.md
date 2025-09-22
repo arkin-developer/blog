@@ -8,9 +8,9 @@ tags:
   - "LLM"
   - "Whisper"
   - "视频处理"
+  - "项目案例"
 categories:
-  - "AI 应用"
-  - "全栈项目"
+  - "项目案例"
 project:
   image: "/img/projects/video-summary.jpg"
   github: "https://github.com/arkin-developer/video-summary-tool"
