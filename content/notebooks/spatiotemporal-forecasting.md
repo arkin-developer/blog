@@ -1,5 +1,5 @@
 ---
-title: "NYC出租车时空流量预测模型"
+title: "NYC出租车乘客上下车流量时空预测模型案例"
 description: "基于空间PatchTST的城市交通需求时空预测"
 date: 2025-01-27
 tags: ["时序预测", "PatchTST", "交通预测", "时空数据", "深度学习"]
