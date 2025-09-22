@@ -38,7 +38,7 @@ docker exec -it geoserver /bin/bash
 - 账号：`admin`
 - 密码：`geoserver`
 
-**密码在容器内这个路径**
+*密码在容器内这个路径*
 
 ![密码路径](https://mr-lai.oss-cn-zhangjiakou.aliyuncs.com/imgs/image-20220311112611616.png)
 
@@ -56,7 +56,7 @@ docker run -d -p 8888:8080 \
   --name geoserver kartoza/geoserver:latest
 ```
 
-**示例：**`10.1.36.245:8890` 的服务器的影像存储数据放在了 `/data/media3/duzicong/docker/geoserver/data`
+*示例：*`10.1.36.245:8890` 的服务器的影像存储数据放在了 `/data/media3/duzicong/docker/geoserver/data`
 
 ![数据存储路径](https://mr-lai.oss-cn-zhangjiakou.aliyuncs.com/imgs/image-20230608150105202.png)
 
@@ -170,7 +170,7 @@ docker run -d -p 8888:8080 \
 - 支持栅格和矢量数据
 - 便于数据分发和共享
 
-**有比较多的参数不知道用途，通过 ChatGPT 进行查询（可能会有错误）**
+*有比较多的参数不知道用途，通过 ChatGPT 进行查询（可能会有错误）*
 
 ![发布GeoPackage](https://mr-lai.oss-cn-zhangjiakou.aliyuncs.com/imgs/image-20230610162956615.png)
 
@@ -184,7 +184,7 @@ docker run -d -p 8888:8080 \
 - 支持多种输出格式
 - 适合小数据量或实时数据
 
-**当我们对数据存储进行发布后，在图层和切片图层已经可以看到有相应的图层存在，证明我们已经可以通过支持 WMS 和 WMTS 的程序进行读取我们发布的数据存储。关于 WMS 和 WMTS 的标准规范可以查看引用的 OGC 标准文档。**
+*当我们对数据存储进行发布后，在图层和切片图层已经可以看到有相应的图层存在，证明我们已经可以通过支持 WMS 和 WMTS 的程序进行读取我们发布的数据存储。关于 WMS 和 WMTS 的标准规范可以查看引用的 OGC 标准文档。*
 
 总的来说，WMS 和 WMTS 目的都是返回指定格式指定位置的图像流式数据，只不过 WMS 是动态生成，但数据量较大时会导致访问较慢，WMTS 则会预先将数据缓存下来，当用户访问时可以省略动态计算的时间。
 
@@ -212,7 +212,7 @@ styles=&
 format=image/png
 ```
 
-**`WMS` 服务通过动态生成相应的数据**
+*`WMS` 服务通过动态生成相应的数据*
 
 **参数说明：**
 
@@ -257,7 +257,7 @@ TileCol={col}&
 TileRow={row}
 ```
 
-**`WMTS` 服务通过预先缓存相应的瓦片信息，加快数据的获取速度**
+*`WMTS` 服务通过预先缓存相应的瓦片信息，加快数据的获取速度*
 
 **参数说明：**
 
