@@ -6,18 +6,18 @@ tags: ["LLM模型微调", "ModelScope", "Notebook", "LoRA/QLoRA"]
 categories: ["notebooks"]
 github: "https://github.com/arkin-developer/notebooks/blob/main/qwen2.5-fine-tuning/qwen2.5-fine-tuning.ipynb"
 nbviewer: "https://nbviewer.org/github/arkin-developer/notebooks/blob/main/qwen2.5-fine-tuning/qwen2.5-fine-tuning.ipynb"
-modelscope: "https://modelscope.cn/notebook/share/ipynb/cfc09818/qwen2.5-fine-tuning.ipynb"
-colab: "https://colab.research.google.com/drive/1ncpNySba_USsDaKDmeJfG_WLBHBxIx9R?usp=sharing"
+modelscope: "https://modelscope.cn/notebook/share/ipynb/f98b76de/qwen2.5-fine-tuning.ipynb"
+colab: "https://drive.google.com/file/d/13lMw_lEE5uTNId8AuvvCtT7tmzAbeLWO/view?usp=drive_link"
 ---
 
 {{< lead >}}
-🚀[ModelScope](https://modelscope.cn/notebook/share/ipynb/cfc09818/qwen2.5-fine-tuning.ipynb) 🚀[Colab](https://colab.research.google.com/drive/1ncpNySba_USsDaKDmeJfG_WLBHBxIx9R?usp=sharing) 🚀[Github](https://github.com/arkin-developer/notebooks/blob/main/qwen2.5-fine-tuning/qwen2.5-fine-tuning.ipynb)
+🚀[ModelScope](https://modelscope.cn/notebook/share/ipynb/cfc09818/qwen2.5-fine-tuning.ipynb) 🚀[Colab](https://drive.google.com/file/d/13lMw_lEE5uTNId8AuvvCtT7tmzAbeLWO/view?usp=drive_link) 🚀[Github](https://github.com/arkin-developer/notebooks/blob/main/qwen2.5-fine-tuning/qwen2.5-fine-tuning.ipynb)
 {{< /lead >}}
 
 
 ## Jupyter Notebook 预览
 <iframe 
-  src="https://modelscope.cn/notebook/share/ipynb/cfc09818/qwen2.5-fine-tuning.ipynb"
+  src="https://modelscope.cn/notebook/share/ipynb/f98b76de/qwen2.5-fine-tuning.ipynb"
   width="100%"
   height="600px"
   frameborder="0"
@@ -25,7 +25,7 @@ colab: "https://colab.research.google.com/drive/1ncpNySba_USsDaKDmeJfG_WLBHBxIx9
   allowfullscreen>
 </iframe>
 
-[*新标签页打开notebooks*](https://modelscope.cn/notebook/share/ipynb/cfc09818/qwen2.5-fine-tuning.ipynb)
+[*新标签页打开notebooks*](https://modelscope.cn/notebook/share/ipynb/f98b76de/qwen2.5-fine-tuning.ipynb)
 
 ## 项目概述
 

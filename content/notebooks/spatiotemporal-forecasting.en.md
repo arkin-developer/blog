@@ -6,18 +6,18 @@ tags: ["time series forecasting", "PatchTST", "traffic prediction", "spatiotempo
 categories: ["notebooks"]
 github: "https://github.com/arkin-developer/notebooks/blob/main/spatiotemporal-forecasting/spatiotemporal-forecasting.ipynb"
 nbviewer: "https://nbviewer.org/github/arkin-developer/notebooks/blob/main/spatiotemporal-forecasting/spatiotemporal-forecasting.ipynb"
-modelscope: "https://modelscope.cn/notebook/share/ipynb/b0611913/spatiotemporal-forecasting.ipynb"
-colab: "https://colab.research.google.com/drive/1Gm6qFfewcYPnKB3QODzIADQuhnJI7cDX?usp=sharing"
+modelscope: "https://modelscope.cn/notebook/share/ipynb/394bec82/spatiotemporal-forecasting.ipynb"
+colab: "https://drive.google.com/file/d/1XSU_cRrz3Afg-fv1N-BJHx1Rk59pqnQ-/view?usp=drive_link"
 ---
 
 {{< lead >}}
-🚀[ModelScope](https://modelscope.cn/notebook/share/ipynb/b0611913/spatiotemporal-forecasting.ipynb) 🚀[Colab](https://colab.research.google.com/drive/1Gm6qFfewcYPnKB3QODzIADQuhnJI7cDX?usp=sharing) 🚀[Github](https://github.com/arkin-developer/notebooks/blob/main/spatiotemporal-forecasting/spatiotemporal-forecasting.ipynb)
+🚀[ModelScope](https://modelscope.cn/notebook/share/ipynb/394bec82/spatiotemporal-forecasting.ipynb) 🚀[Colab](https://drive.google.com/file/d/1XSU_cRrz3Afg-fv1N-BJHx1Rk59pqnQ-/view?usp=drive_link) 🚀[Github](https://github.com/arkin-developer/notebooks/blob/main/spatiotemporal-forecasting/spatiotemporal-forecasting.ipynb)
 {{< /lead >}}
 
 
 ## Jupyter Notebook Preview
 <iframe 
-  src="https://modelscope.cn/notebook/share/ipynb/b0611913/spatiotemporal-forecasting.ipynb"
+  src="https://modelscope.cn/notebook/share/ipynb/394bec82/spatiotemporal-forecasting.ipynb"
   width="100%"
   height="600px"
   frameborder="0"
@@ -25,7 +25,7 @@ colab: "https://colab.research.google.com/drive/1Gm6qFfewcYPnKB3QODzIADQuhnJI7cD
   allowfullscreen>
 </iframe>
 
-[*Open notebooks in new tab*](https://modelscope.cn/notebook/share/ipynb/b0611913/spatiotemporal-forecasting.ipynb)
+[*Open notebooks in new tab*](https://modelscope.cn/notebook/share/ipynb/394bec82/spatiotemporal-forecasting.ipynb)
 
 
 ## Project Overview
