@@ -24,6 +24,10 @@ enableRobotsTXT = true
 enableGitInfo = true
 summaryLength = 0
 
+# 明确 front matter 的优先级，避免 Git 提交时间覆盖 lastmod
+[frontmatter]
+  lastmod = ["lastmod", "date", "publishDate", "expiryDate"]
+
 # 输出格式
 [outputs]
   home = ["HTML", "RSS", "JSON"]
