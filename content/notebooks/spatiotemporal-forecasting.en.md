@@ -2,6 +2,7 @@
 title: "NYC Taxi Pick-up and Drop-off Spatiotemporal Flow Forecasting Case Study"
 description: "Urban traffic demand spatiotemporal prediction based on spatial PatchTST"
 date: 2025-01-27
+lastmod: 2025-09-19T17:45:10+08:00
 tags: ["time series forecasting", "PatchTST", "traffic prediction", "spatiotemporal data", "deep learning", "machine learning"]
 categories: ["Data Science"]
 github: "https://github.com/arkin-developer/notebooks/blob/main/spatiotemporal-forecasting/spatiotemporal-forecasting.ipynb"

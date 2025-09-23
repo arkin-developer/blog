@@ -2,6 +2,7 @@
 title: "NYC出租车乘客上下车流量时空预测模型案例"
 description: "基于空间PatchTST的城市交通需求时空预测"
 date: 2025-01-27
+lastmod: 2025-09-19T17:45:10+08:00
 tags: ["时序预测", "PatchTST", "交通预测", "时空数据", "深度学习", "机器学习"]
 categories: ["数据科学"]
 github: "https://github.com/arkin-developer/notebooks/blob/main/spatiotemporal-forecasting/spatiotemporal-forecasting.ipynb"

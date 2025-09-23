@@ -2,6 +2,7 @@
 title: "Qwen2.5 Model Fine-tuning Case"
 description: "On a single A10 (24GB) card, using a *small parameter* model as an example (this case uses ModelScope to replace HuggingFace), use **LoRA/QLoRA** to run through a complete *instruction fine-tuning* (Instruction Tuning) process."
 date: 2025-08-20
+lastmod: 2025-09-19T17:45:10+08:00
 tags: ["LLM", "Fine-tuning", "ModelScope", "LoRA", "QLoRA", "Artificial Intelligence"]
 categories: ["Artificial Intelligence"]
 github: "https://github.com/arkin-developer/notebooks/blob/main/qwen2.5-fine-tuning/qwen2.5-fine-tuning.ipynb"

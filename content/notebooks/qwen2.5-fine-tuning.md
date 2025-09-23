@@ -2,6 +2,7 @@
 title: "Qwen2.5模型微调案例"
 description: "在单卡 A10（24GB）上，以 *小参数量* 的模型为例（本案例采用ModelScope来替换HuggingFace），用 **LoRA/QLoRA** 跑通一次完整的 *指令微调*（Instruction Tuning）流程。"
 date: 2025-08-20
+lastmod: 2025-09-19T17:45:10+08:00
 tags: ["LLM", "微调", "ModelScope", "LoRA", "QLoRA", "人工智能"]
 categories: ["人工智能"]
 github: "https://github.com/arkin-developer/notebooks/blob/main/qwen2.5-fine-tuning/qwen2.5-fine-tuning.ipynb"
