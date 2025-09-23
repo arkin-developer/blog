@@ -300,4 +300,4 @@ basic_info:
 
 ---
 
-*Last updated: January 2025*
+*Last updated: September 2025*

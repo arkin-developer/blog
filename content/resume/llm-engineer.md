@@ -89,4 +89,5 @@ basic_info:
 
 ---
 
-*个人博客：https://arkin-developer.github.io/blog*
+*个人博客：https://arkin-developer.github.io/blog*  
+*最后更新：2025年9月*

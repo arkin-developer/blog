@@ -102,4 +102,5 @@ basic_info:
 
 ---
 
-*Personal Blog: https://arkin-developer.github.io/blog*
+*Personal Blog: https://arkin-developer.github.io/blog*  
+*Last updated: September 2025*

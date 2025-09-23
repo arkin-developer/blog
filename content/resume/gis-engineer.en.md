@@ -37,4 +37,5 @@ basic_info:
 
 ---
 
-*This is a position-specific resume that can be further customized with more topics and metrics.*
+*This is a position-specific resume that can be further customized with more topics and metrics.*  
+*Last updated: September 2025*
