@@ -18,7 +18,7 @@ colab: "https://drive.google.com/file/d/1XSU_cRrz3Afg-fv1N-BJHx1Rk59pqnQ-/view?u
 
 ## Jupyter Notebook Preview
 <iframe 
-  src="https://modelscope.cn/notebook/share/ipynb/394bec82/spatiotemporal-forecasting.ipynb"
+  src="https://nbviewer.org/github/arkin-developer/notebooks/blob/main/spatiotemporal-forecasting/spatiotemporal-forecasting.ipynb"
   width="100%"
   height="600px"
   frameborder="0"
@@ -26,7 +26,7 @@ colab: "https://drive.google.com/file/d/1XSU_cRrz3Afg-fv1N-BJHx1Rk59pqnQ-/view?u
   allowfullscreen>
 </iframe>
 
-[*Open notebooks in new tab*](https://modelscope.cn/notebook/share/ipynb/394bec82/spatiotemporal-forecasting.ipynb)
+[*Open notebooks in new tab*](https://nbviewer.org/github/arkin-developer/notebooks/blob/main/spatiotemporal-forecasting/spatiotemporal-forecasting.ipynb)
 
 
 ## Project Overview

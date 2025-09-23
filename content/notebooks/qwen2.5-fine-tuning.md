@@ -18,7 +18,7 @@ colab: "https://drive.google.com/file/d/13lMw_lEE5uTNId8AuvvCtT7tmzAbeLWO/view?u
 
 ## Jupyter Notebook 预览
 <iframe 
-  src="https://modelscope.cn/notebook/share/ipynb/f98b76de/qwen2.5-fine-tuning.ipynb"
+  src="https://nbviewer.org/github/arkin-developer/notebooks/blob/main/qwen2.5-fine-tuning/qwen2.5-fine-tuning.ipynb"
   width="100%"
   height="600px"
   frameborder="0"
@@ -26,7 +26,7 @@ colab: "https://drive.google.com/file/d/13lMw_lEE5uTNId8AuvvCtT7tmzAbeLWO/view?u
   allowfullscreen>
 </iframe>
 
-[*新标签页打开notebooks*](https://modelscope.cn/notebook/share/ipynb/f98b76de/qwen2.5-fine-tuning.ipynb)
+[*新标签页打开notebooks*](https://nbviewer.org/github/arkin-developer/notebooks/blob/main/qwen2.5-fine-tuning/qwen2.5-fine-tuning.ipynb)
 
 ## 项目概述
 
