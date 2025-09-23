@@ -21,6 +21,3 @@ Those details that have been polished countless times by predecessors are no lon
 Thus, I can devote more energy to what truly deserves deep thought:  
 **The meaning of products, application scenarios, and the relationship between people and technology**.
 
-## Latest Posts
-
-Please check the article list below to see my recent posts.
