@@ -4,7 +4,7 @@ description: "A comprehensive guide to Java network programming fundamentals, co
 keywords: ["Java", "Network Programming", "TCP", "UDP", "Socket", "Network Communication", "Client", "Server", "Programming Fundamentals"]
 author: "Arkin"
 date: 2021-11-21T16:00:00+08:00
-lastmod: 2025-01-27T17:45:00+08:00
+lastmod: 2025-03-27T17:45:00+08:00
 draft: false
 tags: ["Java", "Network Programming", "TCP", "UDP", "Socket", "Network Communication", "Programming Fundamentals"]
 categories: ["Technology"]
@@ -427,3 +427,9 @@ Through this article, we learned the basics of Java network programming:
 4. **Practical applications**: Network programming is widely used in web development, distributed systems, and other fields
 
 Mastering these fundamentals is a prerequisite for advanced network programming and an important foundation for understanding modern network application architectures.
+
+---
+
+*Thanks for reading — feedback is welcome.*
+
+*Email📮 arkin-dev@qq.com (feel free to reach out by email).* 

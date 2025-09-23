@@ -4,7 +4,7 @@ description: "Comprehensive installation guide for ArcGIS Enterprise 10.6, inclu
 keywords: ["ArcGIS Enterprise", "Installation Guide", "GIS Server", "Geographic Information System", "Enterprise GIS"]
 author: "Arkin"
 date: 2021-09-23T10:00:00+08:00
-lastmod: 2025-01-27T10:00:00+08:00
+lastmod: 2021-09-23T10:00:00+08:00
 draft: false
 tags: ["ArcGIS", "Enterprise", "Installation Guide", "GIS Server", "Enterprise Deployment"]
 categories: ["GIS Geographic Information"]
@@ -235,3 +235,9 @@ If you encounter issues during installation, please refer to the ArcGIS Enterpri
 - [ArcGIS Enterprise Official Documentation](https://enterprise.arcgis.com/)
 - [ArcGIS Server Administration Guide](https://enterprise.arcgis.com/en/server/)
 - [Portal for ArcGIS User Guide](https://enterprise.arcgis.com/en/portal/)
+
+---
+
+*Thanks for reading — feedback is welcome.*
+
+*Email📮 arkin-dev@qq.com (feel free to reach out by email).* 

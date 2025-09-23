@@ -91,3 +91,9 @@ This article tests various features of Congo theme, including:
 - Links and images
 
 Hope all these features work properly!
+
+---
+
+*Thanks for reading — feedback is welcome.*
+
+*Email📮 arkin-dev@qq.com (feel free to reach out by email).* 

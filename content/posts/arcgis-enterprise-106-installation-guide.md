@@ -4,7 +4,7 @@ description: "详细的ArcGIS Enterprise 10.6安装步骤指南，包含IIS配�
 keywords: ["ArcGIS Enterprise", "安装教程", "GIS服务器", "地理信息系统", "企业级GIS"]
 author: "Arkin"
 date: 2021-09-23T10:00:00+08:00
-lastmod: 2025-01-27T10:00:00+08:00
+lastmod: 2021-09-23T10:00:00+08:00
 draft: false
 tags: ["ArcGIS", "Enterprise", "安装教程", "GIS服务器", "企业级部署"]
 categories: ["GIS地理信息"]
@@ -235,3 +235,9 @@ ArcGIS Enterprise 10.6 的安装需要按照特定的顺序进行，确保每个
 - [ArcGIS Enterprise 官方文档](https://enterprise.arcgis.com/)
 - [ArcGIS Server 管理指南](https://enterprise.arcgis.com/en/server/)
 - [Portal for ArcGIS 用户指南](https://enterprise.arcgis.com/en/portal/)
+
+---
+
+*感谢阅读，欢迎交流与反馈。*
+
+*我的邮箱📮 arkin-dev@qq.com（需要交流请发邮件）。*

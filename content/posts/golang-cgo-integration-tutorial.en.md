@@ -4,7 +4,7 @@ description: "A comprehensive guide on using CGo tools to integrate C/C++ librar
 keywords: ["Golang", "CGo", "C Language", "Cross-Language Programming", "DLL", "GDAL", "MSYS2", "MinGW", "Programming Practice"]
 author: "Arkin"
 date: 2024-05-02T17:30:00+08:00
-lastmod: 2025-01-27T18:15:00+08:00
+lastmod: 2024-05-02T17:30:00+08:00
 draft: false
 tags: ["Golang", "CGo", "C Language", "Cross-Language Programming", "DLL", "GDAL", "MSYS2", "MinGW"]
 categories: ["Technology"]
@@ -305,3 +305,9 @@ Through this article, we have mastered the complete process of Golang C interfac
 4. **Problem Solving**: Avoid third-party library conflicts in header files
 
 CGo provides Golang with powerful cross-language programming capabilities, enabling Go to fully leverage the existing C/C++ ecosystem and play an important role in system programming and high-performance application development.
+
+---
+
+*Thanks for reading — feedback is welcome.*
+
+*Email📮 arkin-dev@qq.com (feel free to reach out by email).* 

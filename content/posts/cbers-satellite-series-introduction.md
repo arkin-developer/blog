@@ -4,7 +4,7 @@ description: "详细介绍中巴地球资源卫星系列的发展历程、技术
 keywords: ["CBERS", "中巴地球资源卫星", "遥感卫星", "卫星技术", "资源卫星", "中巴合作"]
 author: "Arkin"
 date: 2022-11-07T16:00:00+08:00
-lastmod: 2025-01-27T16:00:00+08:00
+lastmod: 2022-11-07T16:00:00+08:00
 draft: false
 tags: ["CBERS", "中巴地球资源卫星", "遥感", "卫星技术", "国际合作"]
 categories: ["GIS地理信息"]
@@ -376,3 +376,9 @@ CBERS系列卫星代表了中巴两国在航天遥感领域的重要合作成果
 - [CBERS官方文档](https://rs-freedatasource.readthedocs.io/zh_CN/latest/CBERS.html)
 - [INPE/CBERS](http://www.cbers.inpe.br/)
 - [CBERS-1和2技术文档](https://grupoqd.com.br/aquisicao-dos-dados-do-cbers-04a/)
+
+---
+
+*感谢阅读，欢迎交流与反馈。*
+
+*我的邮箱📮 arkin-dev@qq.com（需要交流请发邮件）。*

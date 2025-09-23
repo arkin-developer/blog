@@ -4,7 +4,7 @@ description: "A comprehensive guide to Elasticsearch setup in Windows environmen
 keywords: ["Elasticsearch", "ES", "Search Engine", "Kibana", "ElasticSearch-head", "RESTful", "Database", "Setup Guide"]
 author: "Arkin"
 date: 2022-04-08T08:50:00+08:00
-lastmod: 2025-01-27T18:30:00+08:00
+lastmod: 2022-04-08T08:50:00+08:00
 draft: false
 tags: ["Elasticsearch", "ES", "Search Engine", "Kibana", "ElasticSearch-head", "RESTful", "Database"]
 categories: ["Technology"]
@@ -444,3 +444,9 @@ Through this article, we have mastered the complete setup and usage methods of E
 5. **Visualization Tools**: Usage of Kibana and ElasticSearch-head
 
 As a powerful search engine, Elasticsearch has wide applications in full-text search, log analysis, real-time data analysis and other fields. Mastering its basic setup and usage methods is of great significance for modern application development.
+
+---
+
+*Thanks for reading — feedback is welcome.*
+
+*Email📮 arkin-dev@qq.com (feel free to reach out by email).* 

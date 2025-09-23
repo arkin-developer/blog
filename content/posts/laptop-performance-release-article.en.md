@@ -160,4 +160,7 @@ Generally above 2000g (2kg). For Huawei to achieve nearly 40W in a 980g body, it
 
 It brings not just "faster" performance, but a "qualitative change" in workflow and experience, especially suitable for professionals who require efficiency. This is why Huawei's achievement of 40W thermal capability in such a thin and light body is so highly praised!
 
-*Last updated: 2025-09-02T00:35:28+08:00*
+---
+*Thanks for reading — feedback is welcome.*
+
+*Email📮 arkin-dev@qq.com (feel free to reach out by email).* 

@@ -4,7 +4,7 @@ description: "A comprehensive introduction to Redis basics, installation configu
 keywords: ["Redis", "NoSQL", "Caching", "Database", "In-Memory Database", "High Performance", "Quick Start", "Technical Guide"]
 author: "Arkin"
 date: 2022-06-24T10:30:00+08:00
-lastmod: 2025-01-27T18:45:00+08:00
+lastmod: 2022-06-24T10:30:00+08:00
 draft: false
 tags: ["Redis", "NoSQL", "Caching", "Database", "In-Memory Database", "High Performance", "Quick Start"]
 categories: ["Technology"]
@@ -368,3 +368,9 @@ Through this article, we learned about:
 5. **Performance Testing**: Using redis-benchmark for stress testing
 
 Redis, as an indispensable component in modern application development, mastering its basic concepts and installation configuration is the foundation for further learning Redis advanced features. In subsequent learning, we will delve into Redis data types, persistence mechanisms, cluster configuration, and other core functions.
+
+---
+
+*Thanks for reading — feedback is welcome.*
+
+*Email📮 arkin-dev@qq.com (feel free to reach out by email).* 

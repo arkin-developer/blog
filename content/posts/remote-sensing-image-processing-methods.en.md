@@ -4,7 +4,7 @@ description: "Detailed introduction to basic workflows and methods of remote sen
 keywords: ["Remote Sensing Image Processing", "Geometric Correction", "Image Fusion", "Orthorectification", "Radiometric Correction", "ENVI", "Remote Sensing Preprocessing"]
 author: "Arkin"
 date: 2021-11-04T13:00:00+08:00
-lastmod: 2025-01-27T17:00:00+08:00
+lastmod: 2021-11-04T13:00:00+08:00
 draft: false
 tags: ["Remote Sensing", "Image Processing", "ENVI", "Geometric Correction", "Image Fusion", "Radiometric Correction"]
 categories: ["GIS Geographic Information"]
@@ -368,3 +368,9 @@ The basic workflow and methods of remote sensing image processing cover the comp
 - [Remote Sensing Image Processing Workflow - GDAL Column](https://blog.csdn.net/liminlu0314/article/details/8757262)
 - [Remote Sensing Image Processing Fundamentals Tutorial](https://www.researchgate.net/publication/remote-sensing-image-processing)
 - [ENVI Image Processing Practical Guide](https://www.l3harrisgeospatial.com/Learn/Resources/ENVI-Tutorials)
+
+---
+
+*Thanks for reading — feedback is welcome.*
+
+*Email📮 arkin-dev@qq.com (feel free to reach out by email).* 

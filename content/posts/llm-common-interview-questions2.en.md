@@ -40,4 +40,6 @@ Write the summary section of the article here.
 
 ---
 
-*Last updated: 2025-09-22T15:01:25+08:00*
+*Thanks for reading — feedback is welcome.*
+
+*Email📮 arkin-dev@qq.com (feel free to reach out by email).* 

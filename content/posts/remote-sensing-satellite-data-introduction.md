@@ -4,7 +4,7 @@ description: "详细介绍GF-2、Landsat-8和MODIS等主流遥感卫星的原始
 keywords: ["遥感卫星", "GF-2", "Landsat-8", "MODIS", "卫星数据", "遥感数据处理"]
 author: "Arkin"
 date: 2021-10-22T16:00:00+08:00
-lastmod: 2025-01-27T16:00:00+08:00
+lastmod: 2021-10-22T16:00:00+08:00
 draft: false
 tags: ["遥感", "卫星数据", "GF-2", "Landsat-8", "MODIS", "数据格式"]
 categories: ["GIS地理信息"]
@@ -237,3 +237,9 @@ L5131035_03520090728_B10
 - [USGS Landsat数据](https://www.usgs.gov/landsat-missions)
 - [NASA MODIS数据](https://modis.gsfc.nasa.gov/)
 - [遥感数据处理软件推荐](https://www.arcgis.com/)
+
+---
+
+*感谢阅读，欢迎交流与反馈。*
+
+*我的邮箱📮 arkin-dev@qq.com（需要交流请发邮件）。*

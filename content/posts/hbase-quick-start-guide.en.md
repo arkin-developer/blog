@@ -4,7 +4,7 @@ description: "A detailed introduction to HBase distributed database core concept
 keywords: ["HBase", "NoSQL", "Distributed Database", "Big Data", "Hadoop", "Columnar Storage", "Quick Start", "Practical Guide"]
 author: "Arkin"
 date: 2022-04-12T15:00:00+08:00
-lastmod: 2025-01-27T19:15:00+08:00
+lastmod: 2025-03-27T19:15:00+08:00
 draft: false
 tags: ["HBase", "NoSQL", "Distributed Database", "Big Data", "Hadoop", "Columnar Storage", "Quick Start"]
 categories: ["Technology"]
@@ -232,3 +232,9 @@ Through this article, we mastered the core knowledge of HBase distributed NoSQL 
 7. **Advanced Applications**: Integration with Elasticsearch for secondary indexing
 
 HBase, as an important component of the big data ecosystem, has unique advantages in handling massive data storage and real-time queries. In practical applications, RowKey needs to be reasonably designed based on business requirements, column family structure optimized, to ensure system high performance and scalability.
+
+---
+
+*Thanks for reading — feedback is welcome.*
+
+*Email📮 arkin-dev@qq.com (feel free to reach out by email).* 

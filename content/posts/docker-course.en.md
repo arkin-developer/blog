@@ -3,7 +3,7 @@ title: "Docker Notes"
 description: "Detailed description of Docker-Course, containing keywords and core content overview"
 keywords: ["keyword1", "keyword2", "keyword3"]
 date: 2021-10-23T01:31:03+08:00
-lastmod: 2025-09-23T01:31:03+08:00
+lastmod: 2021-10-23T01:31:03+08:00
 draft: false
 tags: ["Docker", "Container Technology", "Tutorial", "DevOps"]
 categories: ["Technology"]
@@ -840,3 +840,9 @@ docker network create <name>    # Create network
 ## References and Extensions
 
 - Official Reference Manual: <https://docs.docker.com/reference/>
+
+---
+
+*Thanks for reading — feedback is welcome.*
+
+*Email📮 arkin-dev@qq.com (feel free to reach out by email).* 

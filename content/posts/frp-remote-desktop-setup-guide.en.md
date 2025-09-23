@@ -4,7 +4,7 @@ description: "Simple tutorial for setting up remote desktop service using FRP in
 keywords: ["FRP", "Remote Desktop", "Intranet Penetration", "Docker", "RDP"]
 author: "Arkin"
 date: 2021-10-15T15:00:00+08:00
-lastmod: 2025-01-27T15:00:00+08:00
+lastmod: 2021-10-15T15:00:00+08:00
 draft: false
 tags: ["FRP", "Remote Desktop", "Intranet Penetration", "Docker"]
 categories: ["Technology"]
@@ -221,3 +221,7 @@ remote_port = 10108
 
 - [FRP Official Documentation](https://gofrp.org/docs/)
 - [FRP GitHub Repository](https://github.com/fatedier/frp)
+
+---
+
+*Email📮 arkin-dev@qq.com (feel free to reach out by email).* 

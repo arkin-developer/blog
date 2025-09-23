@@ -4,7 +4,7 @@ description: "基于 Docker 部署 GeoServer，发布 WMS/WMTS 影像服务的�
 keywords: ["GeoServer", "WMS", "WMTS", "Docker", "GIS", "影像服务", "RESTful API"]
 author: "Arkin"
 date: 2022-06-08T15:00:00+08:00
-lastmod: 2025-09-23T01:58:12+08:00
+lastmod: 2022-06-08T15:00:00+08:00
 draft: false
 tags: ["GeoServer", "Docker", "GIS", "WMS", "WMTS"]
 categories: ["GIS地理信息"]
@@ -519,3 +519,9 @@ EPSG_4326_{level}/
 ---
 
 *本文基于实际项目经验整理，涵盖了 GeoServer 部署、配置和使用的完整流程。如有疑问，欢迎交流讨论。*
+
+---
+
+*感谢阅读，欢迎交流与反馈。*
+
+*我的邮箱📮 arkin-dev@qq.com（需要交流请发邮件）。*

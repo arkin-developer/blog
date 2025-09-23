@@ -4,7 +4,7 @@ description: "详细介绍遥感图像预处理的基本流程和方法，包括
 keywords: ["遥感图像处理", "几何纠正", "图像融合", "正射校正", "辐射校正", "ENVI", "遥感预处理"]
 author: "Arkin"
 date: 2021-11-04T13:00:00+08:00
-lastmod: 2025-01-27T17:00:00+08:00
+lastmod: 2021-11-04T13:00:00+08:00
 draft: false
 tags: ["遥感", "图像处理", "ENVI", "几何纠正", "图像融合", "辐射校正"]
 categories: ["GIS地理信息"]
@@ -368,3 +368,9 @@ Map/Orthorectification/QuickBird/Orthorectify QuickBird With Ground Control
 - [遥感图像处理流程 - GDAL专栏](https://blog.csdn.net/liminlu0314/article/details/8757262)
 - [遥感图像处理基础教程](https://www.researchgate.net/publication/remote-sensing-image-processing)
 - [ENVI图像处理实战指南](https://www.l3harrisgeospatial.com/Learn/Resources/ENVI-Tutorials)
+
+---
+
+*感谢阅读，欢迎交流与反馈。*
+
+*我的邮箱📮 arkin-dev@qq.com（需要交流请发邮件）。*

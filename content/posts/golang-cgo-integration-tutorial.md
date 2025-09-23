@@ -4,7 +4,7 @@ description: "详细介绍如何使用CGo工具在Golang中集成C/C++库，包�
 keywords: ["Golang", "CGo", "C语言", "跨语言编程", "DLL", "GDAL", "MSYS2", "MinGW", "编程实践"]
 author: "Arkin"
 date: 2024-05-02T17:30:00+08:00
-lastmod: 2025-01-27T18:15:00+08:00
+lastmod: 2024-05-02T17:30:00+08:00
 draft: false
 tags: ["Golang", "CGo", "C语言", "跨语言编程", "DLL", "GDAL", "MSYS2", "MinGW"]
 categories: ["技术"]
@@ -305,3 +305,9 @@ int TransformPoint(void* transformer, double* x, double* y, double* z);
 4. **问题解决**：避免头文件中的第三方库冲突问题
 
 CGo为Golang提供了强大的跨语言编程能力，使得Go能够充分利用现有的C/C++生态系统，在系统编程和高性能应用开发中发挥重要作用。
+
+---
+
+*感谢阅读，欢迎交流与反馈。*
+
+*我的邮箱📮 arkin-dev@qq.com（需要交流请发邮件）。*

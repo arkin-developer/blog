@@ -4,7 +4,7 @@ description: "深入解析地理学三大定律的理论内涵、提出背景、
 keywords: ["地理学定律", "Tobler第一定律", "空间自相关性", "空间异质性", "地理相似性", "空间分析", "GIS"]
 author: "Arkin"
 date: 2025-01-27T16:30:00+08:00
-lastmod: 2025-01-27T16:30:00+08:00
+lastmod: 2025-03-27T16:30:00+08:00
 draft: false
 tags: ["地理学", "空间分析", "GIS", "地理信息科学", "理论基础", "空间自相关性"]
 categories: ["GIS地理信息"]
@@ -119,3 +119,9 @@ showDateUpdated: true
 - [Spatial Analysis Methods - ESRI](https://www.esri.com/en-us/what-is-gis/spatial-analysis)
 - [Geographic Information Science - UCGIS](https://www.ucgis.org/)
 - [International Association of Mathematical Geosciences](https://www.iamg.org/)
+
+---
+
+*感谢阅读，欢迎交流与反馈。*
+
+*我的邮箱📮 arkin-dev@qq.com（需要交流请发邮件）。*

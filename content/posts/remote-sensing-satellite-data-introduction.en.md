@@ -4,7 +4,7 @@ description: "Detailed introduction to raw data formats, file structures, and na
 keywords: ["Remote Sensing Satellites", "GF-2", "Landsat-8", "MODIS", "Satellite Data", "Remote Sensing Data Processing"]
 author: "Arkin"
 date: 2021-10-22T16:00:00+08:00
-lastmod: 2025-01-27T16:00:00+08:00
+lastmod: 2021-10-22T16:00:00+08:00
 draft: false
 tags: ["Remote Sensing", "Satellite Data", "GF-2", "Landsat-8", "MODIS", "Data Format"]
 categories: ["GIS Geographic Information"]
@@ -237,3 +237,9 @@ Remote sensing satellite data is an important data source for earth observation 
 - [USGS Landsat Data](https://www.usgs.gov/landsat-missions)
 - [NASA MODIS Data](https://modis.gsfc.nasa.gov/)
 - [Recommended Remote Sensing Data Processing Software](https://www.arcgis.com/)
+
+---
+
+*Thanks for reading — feedback is welcome.*
+
+*Email📮 arkin-dev@qq.com (feel free to reach out by email).* 

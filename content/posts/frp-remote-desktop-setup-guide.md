@@ -4,7 +4,7 @@ description: "使用FRP内网穿透技术搭建远程桌面服务的简明教程
 keywords: ["FRP", "远程桌面", "内网穿透", "Docker", "RDP"]
 author: "Arkin"
 date: 2021-10-15T15:00:00+08:00
-lastmod: 2025-01-27T15:00:00+08:00
+lastmod: 2021-10-15T15:00:00+08:00
 draft: false
 tags: ["FRP", "远程桌面", "内网穿透", "Docker"]
 categories: ["技术"]
@@ -221,3 +221,9 @@ remote_port = 10108
 
 - [FRP 官方文档](https://gofrp.org/docs/)
 - [FRP GitHub 仓库](https://github.com/fatedier/frp)
+
+---
+
+*感谢阅读，欢迎交流与反馈。*
+
+*我的邮箱📮 arkin-dev@qq.com（需要交流请发邮件）。*

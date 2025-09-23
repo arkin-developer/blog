@@ -4,7 +4,7 @@ description: "Comprehensive introduction to the development history, technical p
 keywords: ["CBERS", "China-Brazil Earth Resources Satellite", "Remote Sensing Satellites", "Satellite Technology", "Resource Satellites", "Sino-Brazilian Cooperation"]
 author: "Arkin"
 date: 2022-11-07T16:00:00+08:00
-lastmod: 2025-01-27T16:00:00+08:00
+lastmod: 2022-11-07T16:00:00+08:00
 draft: false
 tags: ["CBERS", "China-Brazil Earth Resources Satellite", "Remote Sensing", "Satellite Technology", "International Cooperation"]
 categories: ["GIS Geographic Information"]
@@ -376,3 +376,9 @@ The CBERS satellite series represents important cooperation achievements between
 - [CBERS Official Documentation](https://rs-freedatasource.readthedocs.io/zh_CN/latest/CBERS.html)
 - [INPE/CBERS](http://www.cbers.inpe.br/)
 - [CBERS-1 and 2 Technical Documentation](https://grupoqd.com.br/aquisicao-dos-dados-do-cbers-04a/)
+
+---
+
+*Thanks for reading — feedback is welcome.*
+
+*Email📮 arkin-dev@qq.com (feel free to reach out by email).* 

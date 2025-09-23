@@ -4,7 +4,7 @@ description: "A comprehensive guide on successfully migrating Windows MCVS C++ p
 keywords: ["C++", "Linux", "Windows", "Project Migration", "CMake", "Compilation", "MCVS", "Cross-platform Development"]
 author: "Arkin"
 date: 2024-05-16T10:00:00+08:00
-lastmod: 2025-01-27T17:30:00+08:00
+lastmod: 2024-05-16T10:00:00+08:00
 draft: false
 tags: ["C++", "Linux", "Windows", "Project Migration", "CMake", "Compilation", "Cross-platform Development"]
 categories: ["Technology"]
@@ -318,3 +318,9 @@ Through the above steps, we successfully migrated the Windows MCVS C++ project t
 5. **Compilation Testing**: Use standard CMake build process for compilation and testing
 
 Although this process is tedious, through systematic methods, we can ensure projects run normally in Linux environment.
+
+---
+
+*Thanks for reading — feedback is welcome.*
+
+*Email📮 arkin-dev@qq.com (feel free to reach out by email).* 

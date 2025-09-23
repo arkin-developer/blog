@@ -119,3 +119,9 @@ Geography's three fundamental laws constitute the core theoretical framework of 
 - [Spatial Analysis Methods - ESRI](https://www.esri.com/en-us/what-is-gis/spatial-analysis)
 - [Geographic Information Science - UCGIS](https://www.ucgis.org/)
 - [International Association of Mathematical Geosciences](https://www.iamg.org/)
+
+---
+
+*Thanks for reading — feedback is welcome.*
+
+*Email📮 arkin-dev@qq.com (feel free to reach out by email).* 

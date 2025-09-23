@@ -4,7 +4,7 @@ description: "Complete tutorial on deploying GeoServer with Docker and publishin
 keywords: ["GeoServer", "WMS", "WMTS", "Docker", "GIS", "Image Services", "RESTful API"]
 author: "Arkin"
 date: 2022-06-08T15:00:00+08:00
-lastmod: 2025-09-23T01:58:16+08:00
+lastmod: 2022-06-08T15:00:00+08:00
 draft: false
 tags: ["GeoServer", "Docker", "GIS", "WMS", "WMTS"]
 categories: ["GIS Geographic Information"]
@@ -519,3 +519,9 @@ EPSG_4326_{level}/
 ---
 
 *This article is compiled based on actual project experience, covering the complete workflow of GeoServer deployment, configuration, and usage. Feel free to discuss if you have any questions.*
+
+---
+
+*Thanks for reading — feedback is welcome.*
+
+*Email📮 arkin-dev@qq.com (feel free to reach out by email).* 

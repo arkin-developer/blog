@@ -4,7 +4,7 @@ description: "LLM Interview Questions - Fundamentals (1)"
 keywords: ["LLM", "Interview"]
 author: "Arkin"
 date: 2025-08-04T17:45:10+08:00
-lastmod: 2025-09-19T17:45:10+08:00
+lastmod: 2025-08-04T17:45:10+08:00
 draft: false
 tags: ["LLM", "Interview", "Large Language Model", "Artificial Intelligence"]
 categories: ["Artificial Intelligence"]
@@ -160,4 +160,6 @@ showDateUpdated: true
 
 ---
 
-*Last updated: 2025-09-19T17:45:10+08:00*
+*Thanks for reading — feedback is welcome.*
+
+*Email📮 arkin-dev@qq.com (feel free to reach out by email).* 

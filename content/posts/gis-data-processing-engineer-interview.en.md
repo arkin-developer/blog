@@ -2,7 +2,7 @@
 title: "GIS Data Processing Engineer Interview Questions"
 description: "Comprehensive interview question bank for GIS data processing engineers, covering basic skills, conceptual understanding, and adaptability across three dimensions with detailed scoring criteria and assessment points."
 date: 2024-12-19T00:00:00+08:00
-lastmod: 2024-12-19T00:00:00+08:00
+lastmod: 2025-03-27T00:00:00+08:00
 draft: false
 tags: ["GIS", "Interview", "Data Processing", "Geographic Information System", "Engineer"]
 categories: ["Technical Interview"]
@@ -14,7 +14,7 @@ showWordCount: true
 showDateUpdated: true
 ---
 
-This article compiles a comprehensive interview question bank for GIS data processing engineers, systematically evaluating candidates' professional capabilities across three dimensions: basic skills, conceptual understanding, and adaptability. Each question includes detailed assessment points and scoring criteria to help interviewers better evaluate candidates.
+> This article compiles a comprehensive interview question bank for GIS data processing engineers, systematically evaluating candidates' professional capabilities across three dimensions: basic skills, conceptual understanding, and adaptability. Each question includes detailed assessment points and scoring criteria to help interviewers better evaluate candidates.
 
 ## 1. Basic Skills Assessment (30%)
 
@@ -341,3 +341,9 @@ This GIS data processing engineer interview question bank comprehensively evalua
 3. **Adaptability Assessment (30%)**: Evaluates candidates' problem-solving ability and innovative thinking when facing practical problems
 
 Each question is equipped with detailed assessment points and scoring criteria to help interviewers objectively and comprehensively evaluate candidates' professional level. It is recommended to adjust question weights and depth based on position requirements in actual interviews.
+
+---
+
+*Thanks for reading — feedback is welcome.*
+
+*Email📮 arkin-dev@qq.com (feel free to reach out by email).* 

@@ -4,7 +4,7 @@ description: "详细介绍Golang开发的核心技能，包括GVM多版本环境
 keywords: ["Golang", "Go语言", "环境管理", "GVM", "单元测试", "交叉编译", "开发指南", "编程基础"]
 author: "Arkin"
 date: 2021-11-21T16:30:00+08:00
-lastmod: 2025-01-27T18:00:00+08:00
+lastmod: 2021-11-21T16:30:00+08:00
 draft: false
 tags: ["Golang", "Go语言", "环境管理", "GVM", "单元测试", "交叉编译", "开发指南"]
 categories: ["技术"]
@@ -160,3 +160,9 @@ CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build
 3. **交叉编译**：实现跨平台部署，提高开发效率和部署便利性
 
 这些技能是Golang开发者必备的基础知识，掌握它们能够显著提升开发效率和代码质量。在实际开发中，合理运用这些工具和方法，能够更好地构建高质量的Golang应用程序。
+
+---
+
+*感谢阅读，欢迎交流与反馈。*
+
+*我的邮箱📮 arkin-dev@qq.com（需要交流请发邮件）。*
