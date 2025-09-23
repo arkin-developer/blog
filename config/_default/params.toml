@@ -76,6 +76,7 @@ fingerprintAlgorithm = "sha256"
   showTaxonomies = true
   groupByYear = true
   paginationWidth = 1
+  notebooksPaginate = 6
 
 [sitemap]
   excludedKinds = ["taxonomy", "term"]
