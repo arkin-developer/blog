@@ -1,67 +1,102 @@
 {{ define "main" }}
-  <!-- 页面标题 -->
   <header>
     <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
       {{ .Title }}
     </h1>
   </header>
 
-  <!-- 页面内容 -->
   <section class="prose mt-0 flex max-w-full flex-col dark:prose-invert">
     <div class="min-h-0 min-w-0 max-w-full grow">
       {{ .Content | emojify }}
     </div>
   </section>
 
-  <!-- 自定义样式 -->
+  {{ if .Data.Pages }}
+    {{ $perPage := or .Site.Params.list.casesPaginate 6 }}
+    {{ $paginator := .Paginate (.Pages.ByDate.Reverse) $perPage }}
+    {{ $.Scratch.Delete "lastYear" }}
+    <section>
+      {{ range $paginator.Pages }}
+        {{ $year := .Date.Format "2006" }}
+        {{ if ne $year ($.Scratch.Get "lastYear") }}
+          <h2 class="mt-12 text-2xl font-bold text-neutral-700 first:mt-8 dark:text-neutral-300">{{ $year }}</h2>
+          <hr class="w-36 border-dotted border-neutral-400 mb-6" />
+          {{ $.Scratch.Set "lastYear" $year }}
+        {{ end }}
+
+        <div class="case-card">
+          <article>
+            <div class="flex flex-col">
+              <div onclick="window.location='{{ .RelPermalink }}'">
+                <header>
+                  <h3 class="mt-0">
+                    <a href="{{ .RelPermalink }}" class="no-underline hover:underline">{{ .Title }}</a>
+                  </h3>
+                </header>
+                <p>{{ with .Params.description }}{{ . }}{{ else }}{{ .Summary | plainify | truncate 140 }}{{ end }}</p>
+                {{ with .Params.tags }}
+                  <div class="tech-stack">
+                    {{ range . }}
+                      <span class="bg-neutral-200 text-neutral-700 dark:bg-neutral-700 dark:text-neutral-200"># {{ . }}</span>
+                    {{ end }}
+                  </div>
+                {{ end }}
+              </div>
+              <div class="case-preview-area" onclick="window.location='{{ .RelPermalink }}'">
+                {{ if .Params.preview }}
+                  <img src="{{ .Params.preview }}" alt="preview of {{ $.Title }}" style="width:100%; height:100%; object-fit:cover;" />
+                {{ else if .Params.image }}
+                  <img src="{{ .Params.image }}" alt="image of {{ $.Title }}" style="width:100%; height:100%; object-fit:cover;" />
+                {{ else }}
+                  <div style="height:100%; display:flex; align-items:center; justify-content:center; border:1px dashed rgba(0,0,0,.1);">
+                    <a href="{{ $.RelPermalink }}" class="no-underline">View details →</a>
+                  </div>
+                {{ end }}
+              </div>
+            </div>
+          </article>
+        </div>
+      {{ end }}
+    </section>
+    {{ partial "pagination.html" . }}
+  {{ else }}
+    <section class="prose mt-10 dark:prose-invert">
+      <p class="border-t py-8">
+        <em>{{ i18n "list.no_articles" | emojify }}</em>
+      </p>
+    </section>
+  {{ end }}
+
   <style>
-  /* 卡片总高度设置和间距 */
   .case-card {
     height: 450px !important;
     min-height: 450px !important;
-    margin-bottom: 3rem !important; /* 增加卡片间距 */
+    margin-bottom: 3rem !important;
   }
-  
-  /* 最后一个卡片不需要下边距 */
-  .case-card:last-child {
-    margin-bottom: 0 !important;
-  }
-  
-  /* 文章容器高度和视觉效果 */
+  .case-card:last-child { margin-bottom: 0 !important; }
   .case-card article {
     height: 450px !important;
     min-height: 450px !important;
-    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1), 0 10px 25px -5px rgb(0 0 0 / 0.1) !important;
-    border: 2px solid rgb(229 229 229) !important; /* neutral-200 */
-    border-radius: 1.5rem !important; /* 24px 圆角 */
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1) !important;
+    border: 2px solid rgb(229 229 229) !important;
+    border-radius: 1.5rem !important;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
   }
-  
-  /* 悬停时的增强效果 */
   .case-card article:hover {
     box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1), 0 25px 50px -12px rgb(0 0 0 / 0.25) !important;
-    border-color: rgb(156 163 175) !important; /* neutral-400 */
+    border-color: rgb(156 163 175) !important;
     transform: translateY(-8px) scale(1.02) !important;
   }
-  
-  /* 暗色模式下的边框和背景 */
   .dark .case-card article {
-    border-color: rgb(82 82 91) !important; /* neutral-600 */
+    border-color: rgb(82 82 91) !important;
     box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.3), 0 2px 4px -2px rgb(0 0 0 / 0.2), 0 10px 25px -5px rgb(0 0 0 / 0.4) !important;
-    background-color: rgb(39 39 42) !important; /* neutral-800 - 更深的卡片背景 */
+    background-color: rgb(39 39 42) !important;
   }
-  
   .dark .case-card article:hover {
-    border-color: rgb(115 115 115) !important; /* neutral-500 */
+    border-color: rgb(115 115 115) !important;
     box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.4), 0 8px 10px -6px rgb(0 0 0 / 0.3), 0 25px 50px -12px rgb(0 0 0 / 0.6) !important;
   }
-  
-  /* 内容容器总高度 */
-  .case-card article .flex.flex-col {
-    height: 450px !important;
-  }
-  
-  /* 文字信息区域 - 150px */
+  .case-card article .flex.flex-col { height: 450px !important; }
   .case-card article .flex.flex-col > div:first-child {
     height: 150px !important;
     padding: 16px 24px 12px 24px !important;
@@ -70,97 +105,23 @@
     flex-direction: column !important;
     justify-content: flex-start !important;
   }
-  
-  /* 带边距的分割线 */
   .case-card article .flex.flex-col > div:first-child::after {
-    content: '' !important;
-    position: absolute !important;
-    bottom: 0 !important;
-    left: 24px !important;
-    right: 24px !important;
-    height: 2px !important;
-    background-color: rgb(229 229 229) !important; /* neutral-200 */
+    content: '' !important; position: absolute !important; bottom: 0 !important; left: 24px !important; right: 24px !important; height: 2px !important; background-color: rgb(229 229 229) !important;
   }
-  
-  /* 暗色模式下的分割线 */
-  .dark .case-card article .flex.flex-col > div:first-child::after {
-    background-color: rgb(82 82 91) !important; /* neutral-600 */
-  }
-  
-  /* 预览区域 - 300px */
-  .case-card article .flex.flex-col > div:last-child {
-    height: 300px !important;
-    padding: 12px 24px !important;
-  }
-  
-  /* 预览内容区域调整 */
+  .dark .case-card article .flex.flex-col > div:first-child::after { background-color: rgb(82 82 91) !important; }
+  .case-card article .flex.flex-col > div:last-child { height: 300px !important; padding: 12px 24px !important; }
   .case-card article .flex.flex-col > div:last-child img,
-  .case-card article .flex.flex-col > div:last-child > div {
-    height: calc(100% - 0px) !important;
-    border-radius: 12px !important;
-  }
-  
-  /* 点击区域的鼠标样式 */
-  .case-card article .flex.flex-col > div:first-child {
-    cursor: pointer !important;
-  }
-  
-  .case-card article .flex.flex-col > div:last-child.case-preview-area {
-    cursor: pointer !important;
-  }
-  
-  /* 悬停时的视觉反馈 */
-  .case-card article .flex.flex-col > div:first-child:hover {
-    background-color: rgb(249 250 251) !important; /* neutral-50 */
-  }
-  
-  .dark .case-card article .flex.flex-col > div:first-child:hover {
-    background-color: rgb(38 38 38) !important; /* neutral-800 */
-  }
-  
-  .case-card article .flex.flex-col > div:last-child.case-preview-area:hover {
-    background-color: rgb(249 250 251) !important; /* neutral-50 */
-  }
-  
-  .dark .case-card article .flex.flex-col > div:last-child.case-preview-area:hover {
-    background-color: rgb(38 38 38) !important; /* neutral-800 */
-  }
-  
-  /* 标题区域 */
-  .case-card article .flex.flex-col > div:first-child h3 {
-    margin: 0 0 6px 0 !important;
-    font-size: 1.25rem !important;
-    line-height: 1.4 !important;
-  }
-  
-  /* 标题容器的header元素 */
-  .case-card article .flex.flex-col > div:first-child header {
-    margin-bottom: 0 !important;
-  }
-  
-  /* 描述区域 */
-  .case-card article .flex.flex-col > div:first-child p {
-    margin: 0 0 8px 0 !important;
-    font-size: 0.875rem !important;
-    line-height: 1.4 !important;
-    overflow: hidden !important;
-    display: -webkit-box !important;
-    -webkit-line-clamp: 2 !important;
-    -webkit-box-orient: vertical !important;
-  }
-  
-  /* 技术栈标签样式 */
-  .case-card .tech-stack {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    gap: 0.5rem !important;
-    margin-top: 0.5rem !important;
-  }
-  
-  .case-card .tech-stack span {
-    font-size: 0.75rem !important;
-    padding: 0.25rem 0.5rem !important;
-    border-radius: 9999px !important;
-  }
+  .case-card article .flex.flex-col > div:last-child > div { height: calc(100% - 0px) !important; border-radius: 12px !important; }
+  .case-card article .flex.flex-col > div:first-child { cursor: pointer !important; }
+  .case-card article .flex.flex-col > div:last-child.case-preview-area { cursor: pointer !important; }
+  .case-card article .flex.flex-col > div:first-child:hover { background-color: rgb(249 250 251) !important; }
+  .dark .case-card article .flex.flex-col > div:first-child:hover { background-color: rgb(38 38 38) !important; }
+  .case-card article .flex.flex-col > div:last-child.case-preview-area:hover { background-color: rgb(249 250 251) !important; }
+  .dark .case-card article .flex.flex-col > div:last-child.case-preview-area:hover { background-color: rgb(38 38 38) !important; }
+  .case-card article .flex.flex-col > div:first-child h3 { margin: 0 0 6px 0 !important; font-size: 1.25rem !important; line-height: 1.4 !important; }
+  .case-card article .flex.flex-col > div:first-child header { margin-bottom: 0 !important; }
+  .case-card article .flex.flex-col > div:first-child p { margin: 0 0 8px 0 !important; font-size: 0.875rem !important; line-height: 1.4 !important; overflow: hidden !important; display: -webkit-box !important; line-clamp: 2 !important; -webkit-line-clamp: 2 !important; -webkit-box-orient: vertical !important; }
+  .case-card .tech-stack { display: flex !important; flex-wrap: wrap !important; gap: 0.5rem !important; margin-top: 0.5rem !important; }
+  .case-card .tech-stack span { font-size: 0.75rem !important; padding: 0.25rem 0.5rem !important; border-radius: 9999px !important; }
   </style>
 {{ end }}
