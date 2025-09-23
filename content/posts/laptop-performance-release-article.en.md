@@ -16,17 +16,12 @@ showWordCount: true
 showDateUpdated: true
 ---
 
-![屏幕截图 2025-09-02 010046](https://mr-lai.oss-cn-zhangjiakou.aliyuncs.com/huaweimetabook/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-09-02%20010046.jpg)
-
-## 🎯 Introduction
-
-Recently, Huawei's MateBook X Pro has been making waves! This ultra-thin laptop weighing only 980 grams can achieve 40W performance release! 🤯
-
+> Recently, Huawei's MateBook X Pro has been making waves! This ultra-thin laptop weighing only 980 grams can achieve 40W performance release! 🤯
 Wait... what is "performance release"? Why is achieving 40W in such a lightweight body so impressive?
-
 Don't worry, today we'll thoroughly understand this concept that sounds mysterious but is actually super important!
 
-![Screenshot 2025-09-02 010046](/posts/屏幕截图 2025-09-02 010046.jpg)
+![屏幕截图 2025-09-02 010046](https://mr-lai.oss-cn-zhangjiakou.aliyuncs.com/huaweimetabook/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202025-09-02%20010046.jpg)
+
 
 ## 🔥 What is "Performance Release"?
 
