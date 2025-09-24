@@ -11,10 +11,7 @@ modelscope: "https://modelscope.cn/notebook/share/ipynb/f98b76de/qwen2.5-fine-tu
 colab: "https://drive.google.com/file/d/13lMw_lEE5uTNId8AuvvCtT7tmzAbeLWO/view?usp=drive_link"
 ---
 
-{{< lead >}}
-🚀[ModelScope](https://modelscope.cn/notebook/share/ipynb/cfc09818/qwen2.5-fine-tuning.ipynb) 🚀[Colab](https://drive.google.com/file/d/13lMw_lEE5uTNId8AuvvCtT7tmzAbeLWO/view?usp=drive_link) 🚀[Github](https://github.com/arkin-developer/notebooks/blob/main/qwen2.5-fine-tuning/qwen2.5-fine-tuning.ipynb)
-{{< /lead >}}
-
+> Note: First use a compatible small model (e.g., `Qwen/Qwen2.5-1.5B-Instruct`) to run through the process, then replace the `MODEL_ID` with the DeepSeek model repository name you find, no code changes needed.
 
 ## Jupyter Notebook Preview
 <iframe 
@@ -26,11 +23,14 @@ colab: "https://drive.google.com/file/d/13lMw_lEE5uTNId8AuvvCtT7tmzAbeLWO/view?u
   allowfullscreen>
 </iframe>
 
+{{< lead >}}
+🚀[ModelScope](https://modelscope.cn/notebook/share/ipynb/cfc09818/qwen2.5-fine-tuning.ipynb) 🚀[Colab](https://drive.google.com/file/d/13lMw_lEE5uTNId8AuvvCtT7tmzAbeLWO/view?usp=drive_link) 🚀[Github](https://github.com/arkin-developer/notebooks/blob/main/qwen2.5-fine-tuning/qwen2.5-fine-tuning.ipynb)
+{{< /lead >}}
+
+
 [*Open notebooks in new tab*](https://nbviewer.org/github/arkin-developer/notebooks/blob/main/qwen2.5-fine-tuning/qwen2.5-fine-tuning.ipynb)
 
 ## Project Overview
-
-> Note: First use a compatible small model (e.g., `Qwen/Qwen2.5-1.5B-Instruct`) to run through the process, then replace the `MODEL_ID` with the DeepSeek model repository name you find, no code changes needed.
 
 **Objective**: On a single A10 (24GB) card, using a *small parameter* model as an example (this case uses ModelScope to replace HuggingFace), use **LoRA/QLoRA** to run through a complete *instruction fine-tuning* (Instruction Tuning) process.
 **Hardware Recommendation**: A10 24GB;

@@ -11,10 +11,7 @@ modelscope: "https://modelscope.cn/notebook/share/ipynb/394bec82/spatiotemporal-
 colab: "https://drive.google.com/file/d/1XSU_cRrz3Afg-fv1N-BJHx1Rk59pqnQ-/view?usp=drive_link"
 ---
 
-{{< lead >}}
-🚀[ModelScope](https://modelscope.cn/notebook/share/ipynb/394bec82/spatiotemporal-forecasting.ipynb) 🚀[Colab](https://drive.google.com/file/d/1XSU_cRrz3Afg-fv1N-BJHx1Rk59pqnQ-/view?usp=drive_link) 🚀[Github](https://github.com/arkin-developer/notebooks/blob/main/spatiotemporal-forecasting/spatiotemporal-forecasting.ipynb)
-{{< /lead >}}
-
+> 说明：本项目基于真实的NYC出租车GPS轨迹数据，利用空间PatchTST深度学习模型，实现对城市交通需求时空分布的预测。模型能够根据过去6小时（12个时间步）的交通流量数据，预测未来3小时（6个时间步）的流量分布情况。
 
 ## Jupyter Notebook 预览
 <iframe 
@@ -26,18 +23,17 @@ colab: "https://drive.google.com/file/d/1XSU_cRrz3Afg-fv1N-BJHx1Rk59pqnQ-/view?u
   allowfullscreen>
 </iframe>
 
-[*新标签页打开notebooks*](https://nbviewer.org/github/arkin-developer/notebooks/blob/main/spatiotemporal-forecasting/spatiotemporal-forecasting.ipynb)
+{{< lead >}}
+🚀[ModelScope](https://modelscope.cn/notebook/share/ipynb/394bec82/spatiotemporal-forecasting.ipynb) 🚀[Colab](https://drive.google.com/file/d/1XSU_cRrz3Afg-fv1N-BJHx1Rk59pqnQ-/view?usp=drive_link) 🚀[Github](https://github.com/arkin-developer/notebooks/blob/main/spatiotemporal-forecasting/spatiotemporal-forecasting.ipynb)
+{{< /lead >}}
 
 
 ## 项目概述
-
-> 说明：本项目基于真实的NYC出租车GPS轨迹数据，利用空间PatchTST深度学习模型，实现对城市交通需求时空分布的预测。模型能够根据过去6小时（12个时间步）的交通流量数据，预测未来3小时（6个时间步）的流量分布情况。
 
 **目标**：构建一个现代化的时空序列预测模型，用于城市交通调度优化和需求预测。模型采用Transformer架构，具有参数高效、训练快速的特点，能够处理32×32栅格规模的时空数据。
 **硬件建议**：支持Apple Silicon MPS或CUDA的设备（推荐4GB+内存）；
 **软件建议**：Python 3.8+、PyTorch 2.0+、支持MPS或CUDA。
 
-------
 
 ## ✅ 本教程包括
 

@@ -11,10 +11,7 @@ modelscope: "https://modelscope.cn/notebook/share/ipynb/f98b76de/qwen2.5-fine-tu
 colab: "https://drive.google.com/file/d/13lMw_lEE5uTNId8AuvvCtT7tmzAbeLWO/view?usp=drive_link"
 ---
 
-{{< lead >}}
-🚀[ModelScope](https://modelscope.cn/notebook/share/ipynb/cfc09818/qwen2.5-fine-tuning.ipynb) 🚀[Colab](https://drive.google.com/file/d/13lMw_lEE5uTNId8AuvvCtT7tmzAbeLWO/view?usp=drive_link) 🚀[Github](https://github.com/arkin-developer/notebooks/blob/main/qwen2.5-fine-tuning/qwen2.5-fine-tuning.ipynb)
-{{< /lead >}}
-
+> 说明：先用一个兼容的小模型（例如 `Qwen/Qwen2.5-1.5B-Instruct`）跑通流程，后续将 `MODEL_ID` 替换为你找到的 DeepSeek 模型仓库名即可，代码无需改动。
 
 ## Jupyter Notebook 预览
 <iframe 
@@ -26,11 +23,11 @@ colab: "https://drive.google.com/file/d/13lMw_lEE5uTNId8AuvvCtT7tmzAbeLWO/view?u
   allowfullscreen>
 </iframe>
 
-[*新标签页打开notebooks*](https://nbviewer.org/github/arkin-developer/notebooks/blob/main/qwen2.5-fine-tuning/qwen2.5-fine-tuning.ipynb)
+{{< lead >}}
+🚀[ModelScope](https://modelscope.cn/notebook/share/ipynb/cfc09818/qwen2.5-fine-tuning.ipynb) 🚀[Colab](https://drive.google.com/file/d/13lMw_lEE5uTNId8AuvvCtT7tmzAbeLWO/view?usp=drive_link) 🚀[Github](https://github.com/arkin-developer/notebooks/blob/main/qwen2.5-fine-tuning/qwen2.5-fine-tuning.ipynb)
+{{< /lead >}}
 
 ## 项目概述
-
-> 说明：先用一个兼容的小模型（例如 `Qwen/Qwen2.5-1.5B-Instruct`）跑通流程，后续将 `MODEL_ID` 替换为你找到的 DeepSeek 模型仓库名即可，代码无需改动。
 
 **目标**：在单卡 A10（24GB）上，以 *小参数量* 的模型为例（本案例采用ModelScope来替换HuggingFace），用 **LoRA/QLoRA** 跑通一次完整的 *指令微调*（Instruction Tuning）流程。
 **硬件建议**：A10 24GB；

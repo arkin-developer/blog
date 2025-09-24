@@ -11,10 +11,8 @@ modelscope: "https://modelscope.cn/notebook/share/ipynb/394bec82/spatiotemporal-
 colab: "https://drive.google.com/file/d/1XSU_cRrz3Afg-fv1N-BJHx1Rk59pqnQ-/view?usp=drive_link"
 ---
 
-{{< lead >}}
-🚀[ModelScope](https://modelscope.cn/notebook/share/ipynb/394bec82/spatiotemporal-forecasting.ipynb) 🚀[Colab](https://drive.google.com/file/d/1XSU_cRrz3Afg-fv1N-BJHx1Rk59pqnQ-/view?usp=drive_link) 🚀[Github](https://github.com/arkin-developer/notebooks/blob/main/spatiotemporal-forecasting/spatiotemporal-forecasting.ipynb)
-{{< /lead >}}
 
+> Note: This project is based on real NYC taxi GPS trajectory data, utilizing a spatial PatchTST deep learning model to predict the spatiotemporal distribution of urban traffic demand. The model can predict traffic flow distribution for the next 3 hours (6 time steps) based on the past 6 hours (12 time steps) of traffic flow data.
 
 ## Jupyter Notebook Preview
 <iframe 
@@ -25,19 +23,17 @@ colab: "https://drive.google.com/file/d/1XSU_cRrz3Afg-fv1N-BJHx1Rk59pqnQ-/view?u
   style="border: 1px solid #e9ecef; border-radius: 8px; margin: 2rem 0;"
   allowfullscreen>
 </iframe>
+{{< lead >}}
 
-[*Open notebooks in new tab*](https://nbviewer.org/github/arkin-developer/notebooks/blob/main/spatiotemporal-forecasting/spatiotemporal-forecasting.ipynb)
+🚀[ModelScope](https://modelscope.cn/notebook/share/ipynb/394bec82/spatiotemporal-forecasting.ipynb) 🚀[Colab](https://drive.google.com/file/d/1XSU_cRrz3Afg-fv1N-BJHx1Rk59pqnQ-/view?usp=drive_link) 🚀[Github](https://github.com/arkin-developer/notebooks/blob/main/spatiotemporal-forecasting/spatiotemporal-forecasting.ipynb)
+{{< /lead >}}
 
 
 ## Project Overview
 
-> Note: This project is based on real NYC taxi GPS trajectory data, utilizing a spatial PatchTST deep learning model to predict the spatiotemporal distribution of urban traffic demand. The model can predict traffic flow distribution for the next 3 hours (6 time steps) based on the past 6 hours (12 time steps) of traffic flow data.
-
 **Objective**: Build a modern spatiotemporal sequence prediction model for urban traffic scheduling optimization and demand forecasting. The model adopts Transformer architecture with parameter efficiency and fast training characteristics, capable of handling 32×32 grid-scale spatiotemporal data.
 **Hardware Requirements**: Devices supporting Apple Silicon MPS or CUDA (recommended 4GB+ memory);
 **Software Requirements**: Python 3.8+, PyTorch 2.0+, with MPS or CUDA support.
-
-------
 
 ## ✅ What This Tutorial Includes
 
