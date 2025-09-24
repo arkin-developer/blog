@@ -16,9 +16,7 @@ showWordCount: true
 showDateUpdated: true
 ---
 
-## 引言
-
-在这里写文章的引言部分，简要介绍文章的主要内容。
+> 在这里写文章的引言部分，简要介绍文章的主要内容。
 
 ## 主要内容
 
