@@ -11,6 +11,8 @@ homepage: "https://your.project.site"
 version: "v0.1"
 ---
 
+> Introduction Section
+
 {{< lead >}}
 Lightweight PRD template for personal projects: focus on goals, features, and milestones.
 {{< /lead >}}

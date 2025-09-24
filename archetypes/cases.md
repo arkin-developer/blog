@@ -11,6 +11,8 @@ homepage: "https://your.project.site"
 version: "v0.1"
 ---
 
+> 引言部分
+
 {{< lead >}}
 轻量级个人项目 PRD 模板：聚焦目标、功能与里程碑，便于快速推进。
 {{< /lead >}}

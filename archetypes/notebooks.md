@@ -10,9 +10,7 @@ modelscope: "your-modelscope-url"
 colab: "your-colab-url"
 ---
 
-{{< lead >}}
-🚀[ModelScope](your-modelscope-url) 🚀[Colab](your-colab-url) 🚀[Github](your-github-url)
-{{< /lead >}}
+> 引言部分
 
 ## Jupyter Notebook预览
 <iframe 
@@ -23,6 +21,10 @@ colab: "your-colab-url"
   style="border: 1px solid #e9ecef; border-radius: 8px; margin: 2rem 0;"
   allowfullscreen>
 </iframe>
+
+{{< lead >}}
+🚀[ModelScope](your-modelscope-url) 🚀[Colab](your-colab-url) 🚀[Github](your-github-url)
+{{< /lead >}}
 
 ## 项目概述
 
