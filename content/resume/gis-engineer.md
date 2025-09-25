@@ -4,6 +4,7 @@ avatar: "https://github.com/arkin-developer/blog/raw/main/assets/img/author-offi
 title: "GIS 工程师简历"
 description: "WebGIS/空间分析/遥感/三维/工程化"
 draft: false
+download: "https://mr-lai.oss-cn-zhangjiakou.aliyuncs.com/resume/GIS%E5%BC%80%E5%8F%91%E5%B7%A5%E7%A8%8B%E5%B8%88_%E8%B5%96%E4%B8%BA%E4%B9%BE_%E4%B8%9C%E8%8E%9E_4%E5%B9%B4.pdf"
 basic_info:
   name: "赖为乾"
   target_position: "GIS开发工程师"

@@ -3,7 +3,7 @@ layout: resume/single.profile
 title: "LLM Application Engineer Resume"
 avatar: "https://github.com/arkin-developer/blog/raw/main/assets/img/author-offical.jpg"
 draft: false
-download: "https://arkin666.oss-cn-beijing.aliyuncs.com/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BA%94%E7%94%A8%E5%B7%A5%E7%A8%8B%E5%B8%88_%E8%B5%96%E4%B8%BA%E4%B9%BE_%E4%B8%9C%E8%8E%9E_4%E5%B9%B4.pdf?Expires=1758825915&OSSAccessKeyId=TMP.3KsQZ4WcRxfmLGiP7U6cKjcq4LiUzKBrsZSULcCErsbXqjkSLmiWCEWDi3Za4DRg4GSDyHLMkKvVitib2R7Boz3m65sKou&Signature=4fFwsHT7GOT4Mdfbtt0WWMVATkw%3D"
+download: "https://mr-lai.oss-cn-zhangjiakou.aliyuncs.com/resume/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BA%94%E7%94%A8%E5%B7%A5%E7%A8%8B%E5%B8%88_%E8%B5%96%E4%B8%BA%E4%B9%BE_%E4%B8%9C%E8%8E%9E_4%E5%B9%B4.pdf"
 basic_info:
   name: "Lai Weiqian"
   target_position: "AI/LLM Application Development Engineer"
