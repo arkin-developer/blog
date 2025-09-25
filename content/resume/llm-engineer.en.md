@@ -60,32 +60,40 @@ basic_info:
 
   Systematic and comprehensive logical thinking and analytical abilities, efficient closed-loop, rapid adaptability, extremely strong pressure resistance and stress response capabilities, team collaboration awareness, good professional ethics and corporate loyalty.
 
-
-
 ## Project Experience
-- ### Project Name 1
+
+- ### Guangdong Provincial Water Resources Department "Smart River Chief" AI Intelligent Detection System
 
   - **Project Introduction**:
+    Addressing the Guangdong Provincial Water Resources Department's river "four chaos" governance intelligent inspection needs, traditional manual detection was inefficient, detection standards inconsistent, and lacked automated analysis capabilities. Developed river "four chaos" intelligent detection system based on computer vision and deep learning technologies, achieving remote sensing image automated analysis with detection accuracy reaching 80% of manual detection and processing speed improved by 4 times, providing AI technical support for smart water conservancy construction.
 
   - **Technical Solution**:
+    Used YOLO series object detection algorithms and semantic segmentation technology to build intelligent detection models, built ten-thousand-level "four chaos" remote sensing detection dataset from scratch, established standardized data annotation, cleaning, and enhancement processes. Through model lightweighting and inference acceleration optimization (quantization deployment + ONNX/TensorRT), combined with Docker microservice and distributed deployment architecture, achieved efficient processing of large-scale remote sensing images and high-concurrency online detection services.
 
   - **Project Results**:
+    Successfully built ten-thousand-level "four chaos" dataset reusable in the industry, forming standardized data assets. AI detection model prediction accuracy reached 75-80% of manual detection, single image detection time reduced from 12 seconds to 3 seconds, overall efficiency improved by 4 times+. Through distributed deployment, supported processing thousands of tile images per hour, achieving high-concurrency online inspection, providing reliable AI technical support for river governance, significantly improving supervision efficiency and intelligence level.
 
-- ### Project Name 2
+- ### Songshan Lake Drone Low-Altitude Police Intelligent Application System
 
   - **Project Introduction**:
+    Addressing the Songshan Lake dense road section drone frequent patrol scenarios, traditional manual traffic accident monitoring was inefficient and manpower insufficient. Built hundred-drone concurrent AI detection system based on computer vision and multimodal large model technologies, achieving intelligent identification and automatic evidence collection of traffic accidents and abnormal personnel, providing intelligent solutions for low-altitude economy police applications.
 
   - **Technical Solution**:
+    Used YOLOv8 small model combined with TensorRT inference acceleration to build real-time detection engine, achieving <280ms ultra-low latency traffic accident detection. Based on Beidou grid spatial encoding to achieve multi-drone identification deduplication, ensuring event uniqueness recording. Built intelligent review system based on Qwen2.5-VL multimodal large model, through instruction engineering and vision-text fusion technology, achieving intelligent review and optimization of detection results.
 
   - **Project Results**:
+    Successfully built AI detection system supporting hundred-drone concurrent operation, single frame traffic accident detection latency reduced to <280ms, meeting real-time requirements for continuous patrol. Multimodal large model intelligent review system achieved 60% average accuracy in accident identification, processing efficiency improved to reviewing hundreds of events per hour, significantly reducing manual misdetection processing workload. Beidou grid encoding-based event deduplication mechanism ensured unique recording of each accident, improving event accuracy, providing complete technical solutions for low-altitude police intelligent applications.
 
-- ### Project Name 3
+- ### GeoAI Intelligent Agent Internal R&D Project
 
   - **Project Introduction**:
+    Addressing traditional GIS systems' complex operation requiring professional technical personnel, developed spatiotemporal intelligent agent system based on large model technology. Combined Beidou grid encoding engine with MCP protocol to achieve natural language instruction-driven GIS system spatiotemporal task automation, including drone scheduling, spatial query and other core functions, promoting product intelligence transformation, enabling non-professionals to interact with GIS systems through natural language.
 
   - **Technical Solution**:
+    Based on DeepSeek large model for instruction fine-tuning and private deployment, learning spatiotemporal grid task concepts and GIS domain knowledge. Designed and implemented MCP services and frontend display interfaces, building seamless connection between intelligent agents and business systems. Developed GIS data parsing and context interfaces, converting complex spatiotemporal data (remote sensing images, vector data, etc.) into structured information processable by models, achieving intelligent agents' deep understanding of spatial data.
 
   - **Project Results**:
+    Successfully achieved natural language-driven spatiotemporal grid task reasoning execution, model task understanding accuracy reached 60%+, first application of large model technology to GIS spatiotemporal task automation field. Developed MCP services supported intelligent agentization of typical tasks such as drone scheduling and spatial query, system could simultaneously respond to hundreds of task requests, achieving high-concurrency intelligent services. GIS data parsing and context interfaces significantly improved task execution accuracy by about 40%, greatly reducing manual intervention requirements, providing complete technical solutions for GIS product intelligence transformation.
 
 ---
 
