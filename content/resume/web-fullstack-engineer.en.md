@@ -56,49 +56,51 @@ basic_info:
 
 ## Project Experience
 
-- ### Smart River Management GIS Platform
-  
-  - **Project Overview**: River management system built with React + FastAPI + PostgreSQL, supporting river data visualization, inspection record management, and statistical analysis.
+- ### Bilibili Video Summary Website (2024.08-2025.01)
+
+  - **Project Overview**:
+    AI-powered video content summarization platform based on LLM APIs, addressing the challenge of efficiently digesting long videos through automated AI-generated content summaries. The platform enables video parsing and core information extraction, generating quick reading notes to assist users in rapid learning and knowledge management.
 
   - **Technical Solution**:
-    - Frontend: React + TypeScript + OpenLayers mapping + Ant Design UI
-    - Backend: Python FastAPI + SQLAlchemy ORM + PostgreSQL + PostGIS spatial database
-    - Deployment: Docker containerization + Nginx reverse proxy + Redis caching
+    Frontend built on open-source Open SaaS framework for web interface, supporting user upload/input of video links and summary viewing. Backend uses Golang + Eino framework to build LLM inference and toolchain services, handling video parsing, text generation, and summary output. Integrated existing LLM APIs for video content understanding and summary generation, achieving end-to-end intelligent video processing workflow.
 
   - **Project Results**:
-    - Built complete GIS data management platform supporting CRUD operations and spatial analysis for river vector data
-    - Implemented automated data processing workflows, improving data delivery efficiency by 50%
-    - Supports multi-user role-based access control, meeting business needs of different user levels
+    Achieved automated video content parsing and summary generation, enabling users to obtain core content of long videos within minutes. Platform supports multi-format video input and provides clear, readable note output, improving information acquisition efficiency by approximately 5-10x (compared to manual video watching). Completely independently developed, covering frontend pages, backend inference services, and toolchain integration, demonstrating full-stack development capabilities and AI application implementation skills.
 
-- ### Low-Altitude Smart Network Management Platform
+- ### Digital Platform Tour Guide Project (2024.05-2024.12)
 
-  - **Project Overview**: UAV scheduling management system built with Vue3 + Golang + MongoDB, supporting flight path planning, real-time monitoring, and task scheduling.
+  - **Project Overview**:
+    Web-based tour guide application combining GIS technology with LLM intelligent services, addressing tourism platform users' difficulties in quickly planning itineraries in unfamiliar cities. Developed intelligent tour guide platform that automatically generates personalized travel route recommendations and visualizes them on digital Earth, while providing interactive explanations to help users quickly understand attraction characteristics and regional information.
 
   - **Technical Solution**:
-    - Frontend: Vue3 + Vite + Cesium 3D Earth + Element Plus UI
-    - Backend: Golang Gin + MongoDB + WebSocket real-time communication
-    - Microservices: gRPC inter-service communication + NATS message queue
-    - Deployment: Kubernetes cluster + Helm package management
+    Frontend uses Cesium + TypeScript + MCP SDK for digital Earth display and interactive control, supporting real-time map operations and attraction visualization. Backend uses Node.js + WebSocket for frontend operation control, Python + FastAPI for LLM service interfaces. Integrated OpenAI + LangChain for generating personalized route recommendations and explanatory text, achieving high-concurrency access capability and real-time map operation support.
 
   - **Project Results**:
-    - Supports concurrent scheduling of hundreds of UAVs, achieving city-level low-altitude traffic management
-    - Built real-time monitoring system supporting flight trajectory playback and anomaly alerts
-    - System runs stably, becoming core management module of Songshan Lake low-altitude economy demonstration zone
+    Users can quickly view travel routes through digital Earth and receive AI-generated personalized explanations. System can control frontend maps in real-time, achieving attraction highlighting, route display, and explanation synchronization, significantly improving user experience. Independently completed frontend/backend development and LLM integration, achieving end-to-end intelligent tour guide service implementation with high-concurrency access capability and real-time map operation support.
 
-- ### Enterprise Data Visualization Platform
+- ### GeoAI Agent Web Platform (2024.11-2025.07)
 
-  - **Project Overview**: Enterprise data analysis platform built with Next.js + Node.js + PostgreSQL, supporting multi-data source integration and custom chart configuration.
+  - **Project Overview**:
+    LLM-based intelligent agent web platform that transforms traditional GIS systems into intelligent systems, achieving natural language-driven spatiotemporal task automation. Through web frontend interface, users can complete complex GIS operations such as UAV scheduling, spatial queries, and data analysis through natural language interaction, significantly reducing system usage barriers.
 
   - **Technical Solution**:
-    - Frontend: Next.js + TypeScript + ECharts visualization + TailwindCSS
-    - Backend: Node.js Express + Prisma ORM + PostgreSQL
-    - Real-time data: Socket.io + Redis Pub/Sub
-    - Deployment: Docker Swarm + Traefik load balancing
+    Frontend built with modern React + TypeScript for interactive web interface, integrated WebSocket for real-time communication. Backend uses Python FastAPI to build RESTful API services, integrated DeepSeek LLM for instruction fine-tuning and private deployment. Developed MCP (Model Context Protocol) service to connect agents with business systems, built GIS data parsing and context interfaces to transform complex spatiotemporal data into structured information for model processing.
 
   - **Project Results**:
-    - Supports multiple data source integration (MySQL, PostgreSQL, API interfaces)
-    - Provides drag-and-drop chart configuration interface with real-time data updates
-    - Built complete user permission system and data security mechanisms
+    Successfully achieved natural language-driven spatiotemporal grid task inference execution, with model task understanding accuracy reaching 60%+. Developed complete web platform supporting agentization of typical tasks such as UAV scheduling and spatial queries, system capable of simultaneously responding to hundreds of task requests. Built GIS data parsing and context interfaces improved task execution accuracy by approximately 40%, significantly reducing manual intervention.     Platform became the intelligent upgrade solution for company's core products.
+
+## Education Background
+
+### Bachelor of Science (2017-2021)
+
+*Geographic Information Science, focused on innovative applications combining AI and remote sensing technology.*
+
+**Jiaying University** - Meizhou, Guangdong
+
+- Graduation Thesis: "[Individual Grapefruit Tree Identification Method in Meizhou Based on Faster R-CNN and UAV Multispectral Imagery](https://mr-lai.oss-cn-zhangjiakou.aliyuncs.com/%E5%9F%BA%E4%BA%8EFaster%20R-CNN%E5%92%8C%E6%97%A0%E4%BA%BA%E6%9C%BA%E5%A4%9A%E5%85%89%E8%B0%B1%E5%BD%B1%E5%83%8F%E7%9A%84%E6%A2%85%E5%B7%9E%E6%9F%9A%E6%A0%91%E5%8D%95%E6%A0%AA%E8%AF%86%E5%88%AB%E6%96%B9%E6%B3%95%E7%A0%94%E7%A9%B6_%E7%BB%88%E7%A8%BF.pdf)"
+- IEEE Journal: "[Detecting and Mapping Individual Fruit Trees in Complex Natural Environments via UAV Remote Sensing and Optimized YOLOv5](https://doi.org/10.1109/JSTARS.2024.3379522)"
+- General Journal: "[Impact of Urban Landscape Pattern Changes on Ecosystem Service Value](https://www.zhangqiaokeyan.com/academic-journal-cn_popular-science-technology_thesis/0201279726706.html)"
+- Invention Patent: "[Plant Recognition and Mapping Method and System Based on Deep Learning of UAV Images](https://patents.qizhidao.com/search/detail/WZIP_8aa30efc33b17eb6ca4e401ed2d6e97e?orderColumn=undefined&searchType=simple_search&orderType=undefined&filter=&tab=0&from=simple&businessSource=%E6%9F%A5%E4%B8%93%E5%88%A9-%E6%90%9C%E7%B4%A2%E7%BB%93%E6%9E%9C%E5%88%97%E8%A1%A8-%E6%90%9C%E7%B4%A2%E6%9B%B4%E5%A4%9A&statement=%E8%B5%96%E4%B8%BA%E4%B9%BE&semanticId=&patentName=%E5%9F%BA%E4%BA%8E%E6%97%A0%E4%BA%BA%E6%9C%BA%E5%9B%BE%E5%83%8F%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%9A%84%E6%A4%8D%E6%A0%AA%E8%AF%86%E5%88%AB%E5%88%B6%E5%9B%BE%E6%96%B9%E6%B3%95%E5%92%8C%E7%B3%BB%E7%BB%9F&rightSidebar=false&imageSessionKey=&simpleMode=1&proVersion=&sortType=0&current=1&pageSize=20&viewMode=1&leftTabVal=0&rightTabVal=3&norefetch=true)" - Substantive Examination
 
 ---
 
