@@ -3,6 +3,7 @@ layout: resume/single.profile
 title: "大模型应用工程师简历"
 avatar: "https://github.com/arkin-developer/blog/raw/main/assets/img/author-offical.jpg"
 draft: false
+download: "https://arkin666.oss-cn-beijing.aliyuncs.com/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%BA%94%E7%94%A8%E5%B7%A5%E7%A8%8B%E5%B8%88_%E8%B5%96%E4%B8%BA%E4%B9%BE_%E4%B8%9C%E8%8E%9E_4%E5%B9%B4.pdf?Expires=1758825915&OSSAccessKeyId=TMP.3KsQZ4WcRxfmLGiP7U6cKjcq4LiUzKBrsZSULcCErsbXqjkSLmiWCEWDi3Za4DRg4GSDyHLMkKvVitib2R7Boz3m65sKou&Signature=4fFwsHT7GOT4Mdfbtt0WWMVATkw%3Ds"
 basic_info:
   name: "赖为乾"
   target_position: "AI/大模型应用开发工程"
