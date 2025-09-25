@@ -117,22 +117,72 @@ basic_info:
 
 **Zhongke Yunyao (Dongguan) Technology Co., Ltd.** - Dongguan
 
-#### 1) 🏞️ Guangdong Provincial Water Resources Department "Guangdong Smart River Chief" Service Project (2022.03-2023.12)
-*Developed intelligent detection system for river "four chaos" based on YOLO series algorithms, achieving automated analysis of remote sensing images with 80% detection accuracy compared to manual inspection and 4x processing speed improvement.*
+#### 1) 🧠 GeoAI Intelligent Agent Internal R&D Project (2024.11-2025.07)
+*Developed spatiotemporal intelligent agent based on large models, combining Beidou grid coding engine with MCP protocol, achieving automated tasks like drone scheduling and spatial query, promoting product intelligentization.*
 
-  - **Role**: Remote Sensing Image Algorithm Engineer
-  - **Background**: Facing the intelligent inspection and detection needs for river "four chaos" governance (illegal occupation, illegal mining, illegal stacking, illegal construction), lacking high-quality datasets and automated inspection models.
+  - **Role**: Team Leader (Solution Organization)
+  - **Background**: With the development of MCP protocol and open-source large models, the company hoped to intelligentize core spatiotemporal products, achieving natural language instruction-driven GIS system spatiotemporal task automation.
   - **Tasks**:
-    - Build remote sensing detection dataset covering "new/remediation" scenarios (annotation, cleaning, enhancement) to support model training.
-    - Design and implement automated detection process for "four chaos" inspection, meeting the efficient processing needs of large-scale remote sensing images.
-    - Establish standardized data processing and inference pipeline to improve business automation level.
-  - **Key Contributions/Results**:
-    - Built ten-thousand-level "four chaos" dataset from scratch, forming reusable data assets in the industry.
-    - Introduced object detection and change detection models (YOLO series, semantic segmentation, image differencing, etc.), achieving prediction accuracy of **75-80%** compared to manual detection.
-    - **Through model lightweighting and inference acceleration optimization** (quantized deployment + ONNX/TensorRT), reduced single image detection time from **12 seconds to 3 seconds**, overall efficiency improved **4x+**, meeting platform high-concurrency inspection needs.
-    - Through Docker microservices and distributed deployment, inference services can scale horizontally, supporting processing of thousands of tile images per hour, achieving high-concurrency online inspection.
+    - Fine-tune large models for spatiotemporal grid task concepts and support privatized deployment.
+    - Design and implement MCP services and frontend display interfaces, achieving intelligent agent integration with business systems.
+    - Build context parsing mechanisms to convert complex GIS data (remote sensing images, vector data, etc.) into structured information processable by models.
+  - **Key Contributions**:
+    - **Based on DeepSeek large model for instruction fine-tuning and privatized deployment**, first achieved spatiotemporal grid task reasoning execution under natural language, model task understanding accuracy reached **60%+**.
+    - **Developed MCP services and frontend interfaces**, supporting agentization of typical tasks like drone scheduling and spatial query, system can simultaneously respond to hundreds of task requests.
+    - **Built GIS data parsing and context interfaces**, safely and efficiently providing complex spatiotemporal data to intelligent agents, improving task execution accuracy by **about 40%**, significantly reducing manual intervention.
 
-#### 2) 🛰️ Beidou Grid Coding Engine Internal R&D Project
+#### 2) 🚁 Songshan Lake Drone Low-altitude Police Intelligence Application Project (2024.10-2025.07)
+*Built hundred-drone concurrent AI detection system, optimized model inference based on TensorRT, achieved <280ms real-time detection latency, supporting traffic accident and abnormal personnel intelligent recognition.*
+
+  - **Role**: Drone Traffic Accident Detection Solution Leader
+  - **Background**: With the development of low-altitude economy, drones frequently patrol dense road sections in Songshan Lake, making it difficult for administrative personnel to monitor traffic accidents in real-time. The project aimed to develop automated traffic accident detection and evidence collection system based on drones, alleviating manpower shortage and improving patrol efficiency.
+  - **Tasks**:
+    - Design real-time traffic accident detection solution from drone perspective, ensuring high-frequency video stream processing capability.
+    - Build auxiliary review process to improve manual review efficiency and reduce manual visual review processing pressure.
+  - **Key Contributions**:
+    - **Adopted YOLOv8 small model combined with TensorRT inference acceleration**, reduced single-frame traffic accident detection latency to **<280ms**, meeting real-time requirements for continuous drone patrol.
+    - **Implemented multi-drone identification deduplication based on Beidou grid spatial encoding**, ensuring each accident is uniquely recorded in the system, improving event accuracy.
+    - **Built traffic accident review intelligent agent based on Qwen2.5-VL multimodal large model**, combining visual frames with accident metadata, through instruction engineering to intelligently review drone detection results, accident identification average accuracy reached **about 60%**, processing efficiency improved to review **hundreds of events per hour**, significantly reducing manual false detection processing workload.
+
+#### 3) 🌆 Guangzhou Nansha Low-altitude Smart Network Project (2024.10-2025.07)
+*Built city-level low-altitude scheduling and task allocation system, achieving drone airspace division, task scheduling and real-time monitoring closed loop, becoming district-level key pilot project.*
+
+  - **Role**: Drone Scheduling and Low-altitude Airspace Management Technical Leader
+  - **Background**: Nansha District is building Guangdong-Hong Kong-Macao Greater Bay Area low-altitude economy pilot zone, needing to build city-level low-altitude drone scheduling and task allocation system.
+  - **Tasks**:
+    - Design city-level low-altitude economy platform overall solution and technical route.
+    - Build airspace division and control solutions, integrating AI detection and path planning services.
+    - Build city-level drone task scheduling system, achieving task allocation and real-time monitoring.
+  - **Key Contributions/Results**:
+    - Successfully delivered Nansha low-altitude economy platform core modules, supporting **hundred-drone simultaneous scheduling**.
+    - Built low-altitude airspace grid management system, achieving **airspace division → flight application → path planning → real-time monitoring** closed-loop management, improving city-level drone operation safety and efficiency.
+
+#### 4) 🏢 Songshan Lake Low-altitude Smart Network Project (2024.09-2025.07)
+*Developed drone flight simulation and path planning system, supporting park-level low-altitude economy demonstration zone drone intelligent scheduling and airspace management.*
+
+  - **Role**: Drone Path Planning Solution Provider
+  - **Background**: Songshan Lake is building a low-altitude economy demonstration zone, but drone scheduling and airspace management capabilities are insufficient, so needed to develop low-altitude intelligent management and task planning systems.
+  - **Tasks**:
+    - Build drone flight simulation system, supporting path planning verification and scheduling strategy testing.
+    - Develop drone path planning service based on Beidou grid coding engine, achieving airspace division and intelligent scheduling.
+  - **Key Contributions**:
+    - **Based on Beidou grid coding for path planning and airspace division**, improving flight planning accuracy and scheduling flexibility.
+    - System became **core management module** of Songshan Lake low-altitude economy demonstration zone, supporting safe and efficient scheduling of park-level drone missions.
+
+#### 5) 🚀 Civil Aerospace Technology Pre-research Project (Vertical Project) (2024.04-2026.02)
+*Undertook civil aerospace technology pre-research tasks, explored spatial information intelligent processing and AI application feasibility, completed 4 invention patent applications covering spatiotemporal information processing, remote sensing intelligent interpretation and other fields.*
+
+  - **Role**: Team Leader
+  - **Background**: Under civil aerospace application research background, the company undertook vertical research tasks, needing to explore spatial information intelligent processing and AI application feasibility to serve future aerospace industry layout.
+  - **Tasks**:
+    - Complete project application
+    - Write mid-term progress reports
+    - Technical feasibility reports
+    - Patent and paper achievement applications
+  - **Key Contributions**:
+    - Completed **four invention patent applications** (covering spatiotemporal information processing, remote sensing intelligent interpretation, grid coding and other directions).
+
+#### 6) 🛰️ Beidou Grid Coding Engine Internal R&D Project (2023.04-2025.07)
 *Independently developed Beidou grid coding core engine, responsible for implementing 3D spatial coding algorithms based on C/C++ CGAL library, built visualization modules and drone path planning services.*
 
   - **Role**: Team Leader
@@ -148,70 +198,20 @@ basic_info:
     - **Built drone path planning service**, achieved precise flight path planning in urban building clusters and complex terrain, mission success rate improved to **95%+**.
     - **Developed microserviced encoding engine and Python SDK**, achieved cross-platform calling and multi-system integration, enabling multiple business systems to access simultaneously, engine response capability improved **dozens of times**.
 
-#### 3) 🚁 Songshan Lake Drone Low-altitude Police Intelligence Application Project
-*Built hundred-drone concurrent AI detection system, optimized model inference based on TensorRT, achieved <280ms real-time detection latency, supporting traffic accident and abnormal personnel intelligent recognition.*
+#### 7) 🏞️ Guangdong Provincial Water Resources Department "Guangdong Smart River Chief" Service Project (2022.03-2023.12)
+*Developed intelligent detection system for river "four chaos" based on YOLO series algorithms, achieving automated analysis of remote sensing images with 80% detection accuracy compared to manual inspection and 4x processing speed improvement.*
 
-  - **Role**: Drone Traffic Accident Detection Solution Leader
-  - **Background**: With the development of low-altitude economy, drones frequently patrol dense road sections in Songshan Lake, making it difficult for administrative personnel to monitor traffic accidents in real-time. The project aimed to develop automated traffic accident detection and evidence collection system based on drones, alleviating manpower shortage and improving patrol efficiency.
+  - **Role**: Remote Sensing Image Algorithm Engineer
+  - **Background**: Facing the intelligent inspection and detection needs for river "four chaos" governance (illegal occupation, illegal mining, illegal stacking, illegal construction), lacking high-quality datasets and automated inspection models.
   - **Tasks**:
-    - Design real-time traffic accident detection solution from drone perspective, ensuring high-frequency video stream processing capability.
-    - Build auxiliary review process to improve manual review efficiency and reduce manual visual review processing pressure.
-  - **Key Contributions**:
-    - **Adopted YOLOv8 small model combined with TensorRT inference acceleration**, reduced single-frame traffic accident detection latency to **<280ms**, meeting real-time requirements for continuous drone patrol.
-    - **Implemented multi-drone identification deduplication based on Beidou grid spatial encoding**, ensuring each accident is uniquely recorded in the system, improving event accuracy.
-    - **Built traffic accident review intelligent agent based on Qwen2.5-VL multimodal large model**, combining visual frames with accident metadata, through instruction engineering to intelligently review drone detection results, accident identification average accuracy reached **about 60%**, processing efficiency improved to review **hundreds of events per hour**, significantly reducing manual false detection processing workload.
-
-#### 4) 🚀 Civil Aerospace Technology Pre-research Project (Vertical Project)
-*Undertook civil aerospace technology pre-research tasks, explored spatial information intelligent processing and AI application feasibility, completed 4 invention patent applications covering spatiotemporal information processing, remote sensing intelligent interpretation and other fields.*
-
-  - **Role**: Team Leader
-  - **Background**: Under civil aerospace application research background, the company undertook vertical research tasks, needing to explore spatial information intelligent processing and AI application feasibility to serve future aerospace industry layout.
-  - **Tasks**:
-    - Complete project application
-    - Write mid-term progress reports
-    - Technical feasibility reports
-    - Patent and paper achievement applications
-  - **Key Contributions**:
-    - Completed **four invention patent applications** (covering spatiotemporal information processing, remote sensing intelligent interpretation, grid coding and other directions).
-
-#### 5) 🧠 GeoAI Intelligent Agent Internal R&D Project
-*Developed spatiotemporal intelligent agent based on large models, combining Beidou grid coding engine with MCP protocol, achieving automated tasks like drone scheduling and spatial query, promoting product intelligentization.*
-
-  - **Role**: Team Leader (Solution Organization)
-  - **Background**: With the development of MCP protocol and open-source large models, the company hoped to intelligentize core spatiotemporal products, achieving natural language instruction-driven GIS system spatiotemporal task automation.
-  - **Tasks**:
-    - Fine-tune large models for spatiotemporal grid task concepts and support privatized deployment.
-    - Design and implement MCP services and frontend display interfaces, achieving intelligent agent integration with business systems.
-    - Build context parsing mechanisms to convert complex GIS data (remote sensing images, vector data, etc.) into structured information processable by models.
-  - **Key Contributions**:
-    - **Based on DeepSeek large model for instruction fine-tuning and privatized deployment**, first achieved spatiotemporal grid task reasoning execution under natural language, model task understanding accuracy reached **60%+**.
-    - **Developed MCP services and frontend interfaces**, supporting agentization of typical tasks like drone scheduling and spatial query, system can simultaneously respond to hundreds of task requests.
-    - **Built GIS data parsing and context interfaces**, safely and efficiently providing complex spatiotemporal data to intelligent agents, improving task execution accuracy by **about 40%**, significantly reducing manual intervention.
-
-#### 6) 🏢 Songshan Lake Low-altitude Smart Network Project
-*Developed drone flight simulation and path planning system, supporting park-level low-altitude economy demonstration zone drone intelligent scheduling and airspace management.*
-
-  - **Role**: Drone Path Planning Solution Provider
-  - **Background**: Songshan Lake is building a low-altitude economy demonstration zone, but drone scheduling and airspace management capabilities are insufficient, so needed to develop low-altitude intelligent management and task planning systems.
-  - **Tasks**:
-    - Build drone flight simulation system, supporting path planning verification and scheduling strategy testing.
-    - Develop drone path planning service based on Beidou grid coding engine, achieving airspace division and intelligent scheduling.
-  - **Key Contributions**:
-    - **Based on Beidou grid coding for path planning and airspace division**, improving flight planning accuracy and scheduling flexibility.
-    - System became **core management module** of Songshan Lake low-altitude economy demonstration zone, supporting safe and efficient scheduling of park-level drone missions.
-
-#### 7) 🌆 Guangzhou Nansha Low-altitude Smart Network Project
-*Built city-level low-altitude scheduling and task allocation system, achieving drone airspace division, task scheduling and real-time monitoring closed loop, becoming district-level key pilot project.*
-
-  - **Role**: Drone Scheduling and Low-altitude Airspace Management Technical Leader
-  - **Background**: Nansha District is building Guangdong-Hong Kong-Macao Greater Bay Area low-altitude economy pilot zone, needing to build city-level low-altitude drone scheduling and task allocation system.
-  - **Tasks**:
-    - Design city-level low-altitude economy platform overall solution and technical route.
-    - Build airspace division and control solutions, integrating AI detection and path planning services.
-    - Build city-level drone task scheduling system, achieving task allocation and real-time monitoring.
+    - Build remote sensing detection dataset covering "new/remediation" scenarios (annotation, cleaning, enhancement) to support model training.
+    - Design and implement automated detection process for "four chaos" inspection, meeting the efficient processing needs of large-scale remote sensing images.
+    - Establish standardized data processing and inference pipeline to improve business automation level.
   - **Key Contributions/Results**:
-    - Successfully delivered Nansha low-altitude economy platform core modules, supporting **hundred-drone simultaneous scheduling**.
-    - Built low-altitude airspace grid management system, achieving **airspace division → flight application → path planning → real-time monitoring** closed-loop management, improving city-level drone operation safety and efficiency.
+    - Built ten-thousand-level "four chaos" dataset from scratch, forming reusable data assets in the industry.
+    - Introduced object detection and change detection models (YOLO series, semantic segmentation, image differencing, etc.), achieving prediction accuracy of **75-80%** compared to manual detection.
+    - **Through model lightweighting and inference acceleration optimization** (quantized deployment + ONNX/TensorRT), reduced single image detection time from **12 seconds to 3 seconds**, overall efficiency improved **4x+**, meeting platform high-concurrency inspection needs.
+    - Through Docker microservices and distributed deployment, inference services can scale horizontally, supporting processing of thousands of tile images per hour, achieving high-concurrency online inspection.
 
 ### 🗺️ GIS Development Engineer (2021.07-2022.03)
 
