@@ -119,6 +119,19 @@ basic_info:
   - **Project Results**:
     Achieved efficient decoding and encoding of common data formats, ensuring core algorithm autonomy and control. Built visualization modules providing scalable data display capability, supporting OCR standard tiles and 3D Tiles data services. Built drone path planning service achieving precise flight path planning in urban building clusters and complex terrain, task success rate improved to 95%+. Developed microservice encoding engine and Python SDK for cross-platform calling and multi-system integration, engine response capability improved by dozens of times, enabling multi-business systems simultaneous access.
 
+## Education Background
+
+### Bachelor of Science (2017-2021)
+
+*Geographic Information Science major, focusing on innovative applications combining AI and remote sensing technologies.*
+
+**Jiaying University** - Meizhou, Guangdong
+
+- Graduation Thesis: "[Research on Individual Pomelo Tree Recognition Methods in Meizhou Based on Faster R-CNN and UAV Multispectral Images](https://mr-lai.oss-cn-zhangjiakou.aliyuncs.com/%E5%9F%BA%E4%BA%8EFaster%20R-CNN%E5%92%8C%E6%97%A0%E4%BA%BA%E6%9C%BA%E5%A4%9A%E5%85%89%E8%B0%B1%E5%BD%B1%E5%83%8F%E7%9A%84%E6%A2%85%E5%B7%9E%E6%9F%9A%E6%A0%91%E5%8D%95%E6%A0%AA%E8%AF%86%E5%88%AB%E6%96%B9%E6%B3%95%E7%A0%94%E7%A9%B6_%E7%BB%88%E7%A8%BF.pdf)"
+- IEEE Journal: "[Detecting and Mapping Individual Fruit Trees in Complex Natural Environments via UAV Remote Sensing and Optimized YOLOv5](https://doi.org/10.1109/JSTARS.2024.3379522)"
+- General Journal: "[Impact of Urban Landscape Pattern Changes on Ecosystem Service Value](https://www.zhangqiaokeyan.com/academic-journal-cn_popular-science-technology_thesis/0201279726706.html)"
+- Patent: "[Plant Recognition and Mapping Method and System Based on UAV Image Deep Learning](https://patents.qizhidao.com/search/detail/WZIP_8aa30efc33b17eb6ca4e401ed2d6e97e?orderColumn=undefined&searchType=simple_search&orderType=undefined&filter=&tab=0&from=simple&businessSource=%E6%9F%A5%E4%B8%93%E5%88%A9-%E6%90%9C%E7%B4%A2%E7%BB%93%E6%9E%9C%E5%88%97%E8%A1%A8-%E6%90%9C%E7%B4%A2%E6%9B%B4%E5%A4%9A&statement=%E8%B5%96%E4%B8%BA%E4%B9%BE&semanticId=&patentName=%E5%9F%BA%E4%BA%8E%E6%97%A0%E4%BA%BA%E6%9C%BA%E5%9B%BE%E5%83%8F%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E7%9A%84%E6%A4%8D%E6%A0%AA%E8%AF%86%E5%88%AB%E5%88%B6%E5%9B%BE%E6%96%B9%E6%B3%95%E5%92%8C%E7%B3%BB%E7%BB%9F&rightSidebar=false&imageSessionKey=&simpleMode=1&proVersion=&sortType=0&current=1&pageSize=20&viewMode=1&leftTabVal=0&rightTabVal=3&norefetch=true)" - Under Substantive Examination
+
 ---
 
 *Personal Blog: https://arkin-developer.github.io/blog*  
