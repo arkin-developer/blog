@@ -56,7 +56,7 @@ basic_info:
 
 ## Project Experience
 
-- ### Bilibili Video Summary Website (2024.08-2025.01)
+- ### Bilibili Video Summary Website (2024.12-2025.01)
 
   - **Project Overview**:
     AI-powered video content summarization platform based on LLM APIs, addressing the challenge of efficiently digesting long videos through automated AI-generated content summaries. The platform enables video parsing and core information extraction, generating quick reading notes to assist users in rapid learning and knowledge management.
@@ -67,7 +67,7 @@ basic_info:
   - **Project Results**:
     Achieved automated video content parsing and summary generation, enabling users to obtain core content of long videos within minutes. Platform supports multi-format video input and provides clear, readable note output, improving information acquisition efficiency by approximately 5-10x (compared to manual video watching). Completely independently developed, covering frontend pages, backend inference services, and toolchain integration, demonstrating full-stack development capabilities and AI application implementation skills.
 
-- ### Digital Platform Tour Guide Project (2024.05-2024.12)
+- ### Digital Platform Tour Guide Project (2024.08-2024.11)
 
   - **Project Overview**:
     Web-based tour guide application combining GIS technology with LLM intelligent services, addressing tourism platform users' difficulties in quickly planning itineraries in unfamiliar cities. Developed intelligent tour guide platform that automatically generates personalized travel route recommendations and visualizes them on digital Earth, while providing interactive explanations to help users quickly understand attraction characteristics and regional information.

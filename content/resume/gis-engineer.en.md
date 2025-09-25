@@ -97,18 +97,18 @@ basic_info:
   - **Project Results**:
     Successfully delivered Nansha low-altitude economy platform core modules, supporting hundreds of drones simultaneous scheduling, achieving large-scale drone cluster management capability. Built low-altitude airspace grid management system, improved city-level drone operation safety and efficiency, became an important technical pilot project for the Greater Bay Area low-altitude economy pilot zone, providing replicable technical solutions for low-altitude economic development.
 
-- ### Shenzhen City "Smart Urban Planning" WebGIS Platform Project
+- ### Songshan Lake Low-Altitude Smart Network Project (2024.09-2025.07)
 
   - **Project Introduction**:
-    Addressing Shenzhen City urban planning management department's needs for multi-source spatial data integration display and planning analysis decision support, traditional GIS systems lacked web-based, real-time and multi-user collaborative capabilities. Built WebGIS-based urban planning comprehensive management platform, integrating multi-source spatial data, providing spatial analysis tools, achieving planning solution visualization display, providing technical support for urban planning decisions.
+    Addressing Songshan Lake's goal of building a low-altitude economy demonstration zone, but lacking drone scheduling and airspace management capabilities. Developed drone flight simulation and path planning system, supporting park-level low-altitude economy demonstration zone drone intelligent scheduling and airspace management, providing technical support for low-altitude economic development.
 
   - **Technical Solution**:
-    Adopted PostGIS + GeoServer + OpenLayers technology stack to build WebGIS platform, based on PostGIS for spatial data storage and spatial analysis, publishing WMS/WFS/WMTS services through GeoServer. Used TypeScript + React to develop frontend interactive interface, integrated ArcGIS API for JavaScript to achieve advanced spatial analysis functions. Used Python FastAPI to build backend service interfaces, implementing spatial data management and analysis services.
+    Built drone flight simulation system, supporting path planning verification and scheduling strategy testing. Developed drone path planning services based on Beidou grid encoding engine, achieving airspace division and intelligent scheduling, integrated AI detection and path planning services, building complete low-altitude intelligent management and task planning system.
 
   - **Project Results**:
-    Successfully built PostGIS database supporting TB-level spatial data storage and query, spatial query response time controlled within 200ms. Published 50+ WMS/WFS services, supporting thousand-level concurrent user access, system availability reached 99.9%. Integrated 20+ spatial analysis tools including buffer analysis, overlay analysis, network analysis, providing decision support for urban planning departments, improving planning solution evaluation efficiency by 60%+.
+    Achieved path planning and airspace division based on Beidou grid encoding, improving flight planning accuracy and scheduling flexibility. System became the core management module of Songshan Lake low-altitude economy demonstration zone, supporting safe and efficient scheduling of park-level drone tasks, providing important technical support for low-altitude economy demonstration zone construction.
 
-- ### Beidou Grid Encoding Engine Internal R&D Project
+- ### Beidou Grid Encoding Engine Internal R&D Project (2023.04-2025.07)
 
   - **Project Introduction**:
     Addressing the company's original reliance on external vendors' Beidou grid encoding engines, with business deepening external services unable to meet needs in functional scalability, 3D support and performance. Independently developed Beidou grid encoding core engine, responsible for implementing 3D spatial encoding algorithms based on C/C++ CGAL library, building visualization modules and drone path planning services, creating controllable and scalable core engine replacement solution.

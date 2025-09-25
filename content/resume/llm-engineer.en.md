@@ -84,7 +84,7 @@ basic_info:
   - **Project Results**:
     Successfully built AI detection system supporting hundred-drone concurrent operation, single frame traffic accident detection latency reduced to <280ms, meeting real-time requirements for continuous patrol. Multimodal large model intelligent review system achieved 60% average accuracy in accident identification, processing efficiency improved to reviewing hundreds of events per hour, significantly reducing manual misdetection processing workload. Beidou grid encoding-based event deduplication mechanism ensured unique recording of each accident, improving event accuracy, providing complete technical solutions for low-altitude police intelligent applications.
 
-- ### GeoAI Intelligent Agent Internal R&D Project
+- ### GeoAI Intelligent Agent Internal R&D Project (2024.11-2025.07)
 
   - **Project Introduction**:
     Addressing traditional GIS systems' complex operation requiring professional technical personnel, developed spatiotemporal intelligent agent system based on large model technology. Combined Beidou grid encoding engine with MCP protocol to achieve natural language instruction-driven GIS system spatiotemporal task automation, including drone scheduling, spatial query and other core functions, promoting product intelligence transformation, enabling non-professionals to interact with GIS systems through natural language.
