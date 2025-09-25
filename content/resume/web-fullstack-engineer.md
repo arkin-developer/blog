@@ -56,21 +56,22 @@ basic_info:
 
 ## 项目经历
 
-- ### 智慧河长GIS平台
-  
-  - **项目简介**：基于React + FastAPI + PostgreSQL构建的河道管理系统，支持河道数据可视化、巡查记录管理和统计分析功能。
+- ### 企业级数据可视化平台 (2024.06-2025.08)
+
+  - **项目简介**：基于Next.js + Node.js + PostgreSQL构建的企业数据分析平台，支持多数据源接入和自定义图表配置。
 
   - **技术方案**：
-    - 前端：React + TypeScript + OpenLayers地图组件 + Ant Design UI
-    - 后端：Python FastAPI + SQLAlchemy ORM + PostgreSQL + PostGIS空间数据库
-    - 部署：Docker容器化 + Nginx反向代理 + Redis缓存
+    - 前端：Next.js + TypeScript + ECharts可视化 + TailwindCSS
+    - 后端：Node.js Express + Prisma ORM + PostgreSQL
+    - 实时数据：Socket.io + Redis Pub/Sub
+    - 部署：Docker Swarm + Traefik负载均衡
 
   - **项目成果**：
-    - 构建了完整的GIS数据管理平台，支持河道矢量数据的增删改查和空间分析
-    - 实现了自动化数据处理流程，数据交付效率提升50%
-    - 支持多用户角色权限管理，满足不同层级用户的业务需求
+    - 支持多种数据源接入（MySQL、PostgreSQL、API接口）
+    - 提供拖拽式图表配置界面，支持实时数据更新
+    - 构建了完整的用户权限体系和数据安全机制
 
-- ### 低空智联网管理平台
+- ### 低空智联网管理平台 (2024.10-2025.07)
 
   - **项目简介**：基于Vue3 + Golang + MongoDB构建的无人机调度管理系统，支持飞行路径规划、实时监控和任务调度。
 
@@ -85,20 +86,19 @@ basic_info:
     - 构建了实时监控系统，支持飞行轨迹回放和异常告警
     - 系统稳定运行，成为松山湖低空经济示范区核心管理模块
 
-- ### 企业级数据可视化平台
-
-  - **项目简介**：基于Next.js + Node.js + PostgreSQL构建的企业数据分析平台，支持多数据源接入和自定义图表配置。
+- ### 智慧河长GIS平台 (2021.07-2022.12)
+  
+  - **项目简介**：基于React + FastAPI + PostgreSQL构建的河道管理系统，支持河道数据可视化、巡查记录管理和统计分析功能。
 
   - **技术方案**：
-    - 前端：Next.js + TypeScript + ECharts可视化 + TailwindCSS
-    - 后端：Node.js Express + Prisma ORM + PostgreSQL
-    - 实时数据：Socket.io + Redis Pub/Sub
-    - 部署：Docker Swarm + Traefik负载均衡
+    - 前端：React + TypeScript + OpenLayers地图组件 + Ant Design UI
+    - 后端：Python FastAPI + SQLAlchemy ORM + PostgreSQL + PostGIS空间数据库
+    - 部署：Docker容器化 + Nginx反向代理 + Redis缓存
 
   - **项目成果**：
-    - 支持多种数据源接入（MySQL、PostgreSQL、API接口）
-    - 提供拖拽式图表配置界面，支持实时数据更新
-    - 构建了完整的用户权限体系和数据安全机制
+    - 构建了完整的GIS数据管理平台，支持河道矢量数据的增删改查和空间分析
+    - 实现了自动化数据处理流程，数据交付效率提升50%
+    - 支持多用户角色权限管理，满足不同层级用户的业务需求
 
 ## 教育背景
 
