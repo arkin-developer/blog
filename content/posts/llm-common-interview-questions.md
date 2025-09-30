@@ -1,5 +1,5 @@
 ---
-title: "大模型面试题-基础篇（1）"
+title: "📝 LLM面试题-基础篇（1）"
 description: "大模型面试题-基础篇（1）"
 keywords: ["LLM", "面试"]
 author: "Arkin"

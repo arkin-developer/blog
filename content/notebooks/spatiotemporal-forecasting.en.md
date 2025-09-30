@@ -1,5 +1,5 @@
 ---
-title: "NYC Taxi Pick-up and Drop-off Spatiotemporal Flow Forecasting Case Study"
+title: "🚗 NYC Taxi Pick-up and Drop-off Spatiotemporal Flow Forecasting Case Study"
 description: "Urban traffic demand spatiotemporal prediction based on spatial PatchTST"
 date: 2025-01-27
 lastmod: 2025-09-19T17:45:10+08:00

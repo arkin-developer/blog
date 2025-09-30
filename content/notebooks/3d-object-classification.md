@@ -1,5 +1,5 @@
 ---
-title: "3D物体分类案例 - ModelNet40数据集"
+title: "🧊 3D视觉篇 - 3D点云物体分类案例"
 description: "基于PointMLP的轻量级3D点云分类模型"
 date: 2025-09-30
 lastmod: 2025-09-30T00:00:00+08:00

@@ -1,5 +1,5 @@
 ---
-title: "Geography's Three Laws: Spatial Autocorrelation, Heterogeneity, and Similarity"
+title: "🌍 Geography's Three Laws: Spatial Autocorrelation, Heterogeneity, and Similarity"
 description: "Comprehensive analysis of geography's three fundamental laws, including Tobler's First Law, spatial heterogeneity law, and geographic similarity law, providing theoretical foundation for geographic information science and spatial analysis"
 keywords: ["Geography Laws", "Tobler's First Law", "Spatial Autocorrelation", "Spatial Heterogeneity", "Geographic Similarity", "Spatial Analysis", "GIS"]
 author: "Arkin"

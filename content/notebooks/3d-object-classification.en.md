@@ -1,5 +1,5 @@
 ---
-title: "3D Object Classification Case - ModelNet40 Dataset"
+title: "🧊 3D Object Classification Case - ModelNet40 Dataset"
 description: "Lightweight 3D point cloud classification model based on PointMLP"
 date: 2025-01-27
 lastmod: 2025-09-30T00:00:00+08:00

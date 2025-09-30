@@ -1,5 +1,5 @@
 ---
-title: "LLM Interview Questions - Fundamentals (1)"
+title: "📝 LLM Interview Questions - Fundamentals (1)"
 description: "LLM Interview Questions - Fundamentals (1)"
 keywords: ["LLM", "Interview"]
 author: "Arkin"
