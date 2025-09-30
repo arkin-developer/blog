@@ -16,7 +16,8 @@
   {{ if $allContent }}
     <section>
       {{ if $.Params.groupByYear | default ($.Site.Params.list.groupByYear | default true) }}
-        {{ range ($allContent.GroupByDate "2006") }}
+        {{/* 按年份分组并分页 */}}
+        {{ range (.Paginate ($allContent.GroupByDate "2006")).PageGroups }}
           <h2 class="mt-12 text-2xl font-bold text-neutral-700 first:mt-8 dark:text-neutral-300">
             {{ .Key }}
           </h2>
@@ -26,11 +27,14 @@
           {{ end }}
         {{ end }}
       {{ else }}
-        {{ range $allContent }}
+        {{/* 不按年份分组，直接分页 */}}
+        {{ range (.Paginate $allContent).Pages }}
           {{ partial "article-link.html" . }}
         {{ end }}
       {{ end }}
     </section>
+    {{/* 分页导航 */}}
+    {{ partial "pagination.html" . }}
   {{ else }}
     <section class="prose mt-10 dark:prose-invert">
       <p class="border-t py-8">
