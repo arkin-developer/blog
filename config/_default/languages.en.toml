@@ -8,7 +8,7 @@ title = "Arkin's Blog"
 [params]
   dateFormat = "2 January 2006"
 
-  mainSections = ["posts"]
+  mainSections = ["posts", "notebooks", "cases"]
   description = "A personal blog built with Hugo and Congo theme"
 
 [params.author]

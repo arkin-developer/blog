@@ -1,0 +1,41 @@
+{{ define "main" }}
+  <header>
+    {{ if .Params.showBreadcrumbs | default (.Site.Params.list.showBreadcrumbs | default false) }}
+      {{ partial "breadcrumbs.html" . }}
+    {{ end }}
+    <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">{{ .Title }}</h1>
+  </header>
+  
+  {{/* 聚合 posts、notebooks、cases 的所有内容 */}}
+  {{ $pages := .Site.RegularPages }}
+  {{ $posts := where $pages "Section" "posts" }}
+  {{ $notebooks := where $pages "Section" "notebooks" }}
+  {{ $cases := where $pages "Section" "cases" }}
+  {{ $allContent := union $posts (union $notebooks $cases) }}
+  
+  {{ if $allContent }}
+    <section>
+      {{ if $.Params.groupByYear | default ($.Site.Params.list.groupByYear | default true) }}
+        {{ range ($allContent.GroupByDate "2006") }}
+          <h2 class="mt-12 text-2xl font-bold text-neutral-700 first:mt-8 dark:text-neutral-300">
+            {{ .Key }}
+          </h2>
+          <hr class="w-36 border-dotted border-neutral-400" />
+          {{ range .Pages }}
+            {{ partial "article-link.html" . }}
+          {{ end }}
+        {{ end }}
+      {{ else }}
+        {{ range $allContent }}
+          {{ partial "article-link.html" . }}
+        {{ end }}
+      {{ end }}
+    </section>
+  {{ else }}
+    <section class="prose mt-10 dark:prose-invert">
+      <p class="border-t py-8">
+        <em>{{ i18n "list.no_articles" | emojify }}</em>
+      </p>
+    </section>
+  {{ end }}
+{{ end }}
